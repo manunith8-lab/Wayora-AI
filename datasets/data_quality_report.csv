@@ -1,0 +1,5 @@
+table,input_records,output_records,duplicates_removed,missing_cells,notes
+tourist_places,335,333,2,125,Removed source index column; standardized column names; deduplicated place name within city.
+food_recommendations,612,612,0,204,"Converted wide city columns into long records; separated tourist attractions, breakfast and dinner."
+city_information,71,58,13,0,Removed repeated city entries after normalized city-name comparison.
+city_master,combined,263,normalized city keys consolidated,705,Joined city attributes where city names matched after normalization; not all cities necessarily have all attributes.

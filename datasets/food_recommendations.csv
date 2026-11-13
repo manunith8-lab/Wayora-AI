@@ -1,0 +1,613 @@
+recommendation_id,city,recommendation_name,recommendation_type,meal,source_dataset,source_file
+REC0001,Mumbai,Gateway of India,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0002,Mumbai,Marine Drive,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0003,Mumbai,Elephanta Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0004,Mumbai,"Ram Ashraya, Matunga",food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0005,Mumbai,"Cafe Madras, Matunga",food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0006,Mumbai,"Kyani & Co., Marine Lines",food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0007,Mumbai,"Aaswad, Dadar",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0008,Mumbai,"Sarvi, Byculla",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0009,Mumbai,"Candies, Bandra",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0010,Delhi,Red Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0011,Delhi,India Gate,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0012,Delhi,Qutub Minar,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0013,Delhi,"Saravana Bhavan, CP",food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0014,Delhi,"Sita Ram Diwan Chand, Paharganj",food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0015,Delhi,Andhra Bhavan Canteen,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0016,Delhi,"Karim's, Jama Masjid",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0017,Delhi,"Rajinder Da Dhaba, Safdarjung",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0018,Delhi,"Saravana Bhavan, CP",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0019,Bangalore,Lalbagh Botanical Garden,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0020,Bangalore,Bangalore Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0021,Bangalore,Cubbon Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0022,Bangalore,Vidyarthi Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0023,Bangalore,CTR (Sri Sagar),food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0024,Bangalore,Airlines Hotel,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0025,Bangalore,"MTR, Lalbagh",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0026,Bangalore,"Nagarjuna, Residency Road",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0027,Bangalore,Rameshwaram Cafe,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0028,Hyderabad,Charminar,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0029,Hyderabad,Golconda Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0030,Hyderabad,Hussain Sagar Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0031,Hyderabad,"Chutneys, Banjara Hills",food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0032,Hyderabad,Govind Dosas,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0033,Hyderabad,Ram ki Bandi,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0034,Hyderabad,Shah Ghouse Cafe,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0035,Hyderabad,Hotel Shadab,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0036,Hyderabad,"Bawarchi, RTC X Roads",food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0037,Chennai,Marina Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0038,Chennai,Kapaleeshwarar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0039,Chennai,Fort St. George,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0040,Chennai,Murugan Idli Shop,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0041,Chennai,Rayar's Mess,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0042,Chennai,Ratna Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0043,Chennai,Junior Kuppanna,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0044,Chennai,Mathsya,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0045,Chennai,Sangeetha Veg Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0046,Kolkata,Victoria Memorial,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0047,Kolkata,Howrah Bridge,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0048,Kolkata,Indian Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0049,Kolkata,Kewpies Kitchen,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0050,Kolkata,Balwant Singh Eating House,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0051,Kolkata,Flurys,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0052,Kolkata,6 Ballygunge Place,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0053,Kolkata,Peter Cat,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0054,Kolkata,Arsalan,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0055,Pune,Shaniwar Wada,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0056,Pune,Aga Khan Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0057,Pune,Sinhagad Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0058,Pune,Vaishali Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0059,Pune,Good Luck Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0060,Pune,Vohuman Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0061,Pune,SP's Biryani House,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0062,Pune,Durvankur Dining Hall,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0063,Pune,Rasoi Dining Hall,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0064,Ahmedabad,Sabarmati Ashram,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0065,Ahmedabad,Adalaj Stepwell,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0066,Ahmedabad,Kankaria Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0067,Ahmedabad,The Project Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0068,Ahmedabad,Gopi Dining Hall,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0069,Ahmedabad,Jay Bhavani,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0070,Ahmedabad,Agashiye,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0071,Ahmedabad,Gordhan Thal,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0072,Ahmedabad,Swati Snacks,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0073,Jaipur,Hawa Mahal,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0074,Jaipur,Amber Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0075,Jaipur,City Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0076,Jaipur,Laxmi Misthan Bhandar (LMB),food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0077,Jaipur,Rawat Mishtan Bhandar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0078,Jaipur,Indian Coffee House,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0079,Jaipur,Niros,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0080,Jaipur,Spice Court,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0081,Jaipur,Handi Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0082,Lucknow,Bara Imambara,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0083,Lucknow,Rumi Darwaza,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0084,Lucknow,Hazratganj Market,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0085,Lucknow,Rati Lal’s Khasta Kachori,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0086,Lucknow,Netram Ajay Kumar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0087,Lucknow,Sharma Ji Ki Chai,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0088,Lucknow,Tunday Kababi,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0089,Lucknow,Dastarkhwan,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0090,Lucknow,Mubeen's,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0091,Indore,Rajwada Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0092,Indore,Kanch Mandir,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0093,Indore,Bada Ganapati Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0094,Indore,56 Dukan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0095,Indore,Apna Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0096,Indore,Shreemaya Celebrity,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0097,Indore,Nafees Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0098,Indore,Vijay Chaat House,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0099,Indore,Guru Kripa Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0100,Bhopal,Upper Lake (Bhojtal),tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0101,Bhopal,Van Vihar National Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0102,Bhopal,Madhya Pradesh Tribal Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0103,Bhopal,Manohar Dairy & Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0104,Bhopal,Sagar Gaire Fast Food Corner,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0105,Bhopal,Raju Tea Stall,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0106,Bhopal,Zam Zam,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0107,Bhopal,Under the Jamun Tree,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0108,Bhopal,Green House Bistro,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0109,Nagpur,Deekshabhoomi,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0110,Nagpur,Futala Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0111,Nagpur,Sitabuldi Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0112,Nagpur,Mintleaf Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0113,Nagpur,The Breakfast Story,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0114,Nagpur,Reddy's All About Idli,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0115,Nagpur,Barbecue Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0116,Nagpur,Ashoka Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0117,Nagpur,Thaat Baat,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0118,Visakhapatnam,INS Kurusura Submarine Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0119,Visakhapatnam,Kailasagiri Hill Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0120,Visakhapatnam,Yarada Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0121,Visakhapatnam,Sri Sairam Parlour,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0122,Visakhapatnam,R&G - Hotel GreenPark,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0123,Visakhapatnam,Uma Parlour,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0124,Visakhapatnam,Shree Shyam Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0125,Visakhapatnam,Jai Ganesh MAEN Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0126,Visakhapatnam,Sarvani Sweets,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0127,Surat,Jagdishchandra Bose Aquarium,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0128,Surat,Dutch Garden,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0129,Surat,Sarthana Nature Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0130,Surat,Radhe Dhokla,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0131,Surat,Jaani Locho,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0132,Surat,Lijjat Khwasa,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0133,Surat,Sasumaa Gujarati Thali,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0134,Surat,Sizzling Salsa,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0135,Surat,Kansar Gujarati Thali,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0136,Vadodara,Laxmi Vilas Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0137,Vadodara,Sayaji Garden,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0138,Vadodara,Baroda Golf Club,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0139,Vadodara,The House of MG,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0140,Vadodara,Shree Vithal's,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0141,Vadodara,Cafe 9,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0142,Vadodara,Saffron Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0143,Vadodara,The Earth Plate,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0144,Vadodara,Indian Pavilion,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0145,Nashik,Trimbakeshwar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0146,Nashik,Saptashrungi,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0147,Nashik,Pandav Leni Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0148,Nashik,Chai Shai,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0149,Nashik,Vaishali Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0150,Nashik,Shree Sagar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0151,Nashik,Mehfil Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0152,Nashik,Swaad Sutra,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0153,Nashik,Beverly Hills,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0154,Patna,Golghar,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0155,Patna,Patna Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0156,Patna,Mahavir Mandir,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0157,Patna,Bansi Vihari,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0158,Patna,Patna Rasoi,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0159,Patna,Shree Narmada,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0160,Patna,Spice Court,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0161,Patna,Biryani Mahal,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0162,Patna,17 Degrees,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0163,Ranchi,Rock Garden,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0164,Ranchi,Tagore Hill,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0165,Ranchi,Kanke Dam,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0166,Ranchi,Kaveri Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0167,Ranchi,The Kitchen,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0168,Ranchi,Biryani House,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0169,Ranchi,The Chaiwala,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0170,Ranchi,Red Mango,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0171,Ranchi,Ranchi Rasoi,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0172,Bhubaneswar,Lingaraj Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0173,Bhubaneswar,Udayagiri and Khandagiri Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0174,Bhubaneswar,Brahmeswar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0175,Bhubaneswar,Anand Biri,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0176,Bhubaneswar,Bengal Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0177,Bhubaneswar,Rasa Kitchen,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0178,Bhubaneswar,The Talk,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0179,Bhubaneswar,Kalinga Hotel,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0180,Bhubaneswar,Green Hut,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0181,Raipur,Mahant Ghasidas Memorial Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0182,Raipur,Doodhadhari Monastery,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0183,Raipur,Nandan Van Zoo,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0184,Raipur,Sagar Ratna,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0185,Raipur,Bhogpuri,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0186,Raipur,Ravi Bhojanalay,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0187,Raipur,Sagar Ratna,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0188,Raipur,Suyash Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0189,Raipur,Shree Ram Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0190,Jodhpur,Mehrangarh Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0191,Jodhpur,Jaswant Thada,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0192,Jodhpur,Umaid Bhawan Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0193,Jodhpur,Shankar’s Chaat Bhandar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0194,Jodhpur,Janta Sweet Home,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0195,Jodhpur,Shahi Samosa,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0196,Jodhpur,Gypsy Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0197,Jodhpur,Kalinga Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0198,Jodhpur,Indique,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0199,Udaipur,City Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0200,Udaipur,Lake Pichola,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0201,Udaipur,Jagdish Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0202,Udaipur,Natraj Dining Hall,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0203,Udaipur,JMB Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0204,Udaipur,Cafe Edelweiss,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0205,Udaipur,Ambrai Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0206,Udaipur,Upre,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0207,Udaipur,Savage Garden,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0208,Chandigarh,Rock Garden,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0209,Chandigarh,Sukhna Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0210,Chandigarh,Rose Garden,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0211,Chandigarh,Indian Coffee House,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0212,Chandigarh,Gopal Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0213,Chandigarh,Sindhi Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0214,Chandigarh,Pal Dhaba,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0215,Chandigarh,Barbeque Nation,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0216,Chandigarh,Swagath Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0217,Amritsar,Golden Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0218,Amritsar,Jallianwala Bagh,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0219,Amritsar,Wagah Border,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0220,Amritsar,Kesar Da Dhaba,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0221,Amritsar,Gurdas Ram Jalebi Wala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0222,Amritsar,Kanha Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0223,Amritsar,Bharawan Da Dhaba,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0224,Amritsar,Crystal Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0225,Amritsar,Kesar Da Dhaba,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0226,Ludhiana,Punjab Agricultural University Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0227,Ludhiana,Gurudwara Nanaksar Jagraon,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0228,Ludhiana,Rakh Bagh,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0229,Ludhiana,Bille Di Hatti,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0230,Ludhiana,Lovely Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0231,Ludhiana,Chawla’s,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0232,Ludhiana,Yellow Chilli,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0233,Ludhiana,Barbeque Nation,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0234,Ludhiana,Kitchen at 95,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0235,Dehradun,Robber’s Cave,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0236,Dehradun,Sahastradhara,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0237,Dehradun,Mindrolling Monastery,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0238,Dehradun,Chetan Puri Wala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0239,Dehradun,Doon Darbar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0240,Dehradun,Kumar Vegetarian,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0241,Dehradun,Black Pepper Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0242,Dehradun,Town Table,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0243,Dehradun,Punjab Grill,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0244,Noida,DLF Mall of India,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0245,Noida,ISKCON Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0246,Noida,Okhla Bird Sanctuary,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0247,Noida,The Yellow Chilli,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0248,Noida,Desi Vibes,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0249,Noida,Cafe Coffee Day,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0250,Noida,Pirates of Grill,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0251,Noida,Barbeque Nation,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0252,Noida,The Great Kabab Factory,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0253,Gurgaon,Kingdom of Dreams,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0254,Gurgaon,Cyber Hub,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0255,Gurgaon,Damdama Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0256,Gurgaon,Om Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0257,Gurgaon,Cafe Delhi Heights,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0258,Gurgaon,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0259,Gurgaon,Carnatic Cafe,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0260,Gurgaon,Burma Burma,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0261,Gurgaon,Prego,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0262,Faridabad,Surajkund Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0263,Faridabad,Badkhal Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0264,Faridabad,Raja Nahar Singh Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0265,Faridabad,Anupam Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0266,Faridabad,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0267,Faridabad,Cafe Coffee Day,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0268,Faridabad,Haveli,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0269,Faridabad,World Cafe,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0270,Faridabad,Murthal Paratha,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0271,Ghaziabad,Swarna Jayanti Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0272,Ghaziabad,ISKCON Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0273,Ghaziabad,Drizzling Land,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0274,Ghaziabad,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0275,Ghaziabad,Shree Rathnam,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0276,Ghaziabad,Cafe Coffee Day,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0277,Ghaziabad,The Yellow Chilli,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0278,Ghaziabad,Walk in the Woods,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0279,Ghaziabad,Country Inn,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0280,Thiruvananthapuram,Padmanabhaswamy Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0281,Thiruvananthapuram,Kovalam Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0282,Thiruvananthapuram,Napier Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0283,Thiruvananthapuram,Arya Nivas,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0284,Thiruvananthapuram,Indian Coffee House,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0285,Thiruvananthapuram,Maveli Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0286,Thiruvananthapuram,Villa Maya,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0287,Thiruvananthapuram,Zam Zam Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0288,Thiruvananthapuram,Mothers Veg Plaza,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0289,Kochi,Fort Kochi,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0290,Kochi,Mattancherry Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0291,Kochi,Cherai Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0292,Kochi,Kashi Art Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0293,Kochi,Sri Annapoorna,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0294,Kochi,Dhe Puttu,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0295,Kochi,Fusion Bay,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0296,Kochi,Grand Pavilion,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0297,Kochi,The Rice Boat,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0298,Coimbatore,Marudhamalai Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0299,Coimbatore,VOC Park and Zoo,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0300,Coimbatore,Dhyanalinga,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0301,Coimbatore,Annapoorna,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0302,Coimbatore,Shree Anandhaas,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0303,Coimbatore,Sree Annapoorna,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0304,Coimbatore,Hari Bhavan,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0305,Coimbatore,RHR Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0306,Coimbatore,Valarmathi Biryani,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0307,Madurai,Meenakshi Amman Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0308,Madurai,Thirumalai Nayakkar Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0309,Madurai,Gandhi Memorial Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0310,Madurai,Murugan Idli Shop,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0311,Madurai,Amma Mess,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0312,Madurai,Konar Kadai,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0313,Madurai,Kumar Mess,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0314,Madurai,Phil’s Bistro,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0315,Madurai,Amsavalli Bhavan,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0316,Trichy,Sri Ranganathaswamy Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0317,Trichy,Rock Fort Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0318,Trichy,Jambukeswarar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0319,Trichy,Banana Leaf,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0320,Trichy,Shri Sangeetas,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0321,Trichy,Vasanta Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0322,Trichy,Meridian Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0323,Trichy,Kannappa Chettinad,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0324,Trichy,Ezham Suvai,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0325,Jamshedpur,Jubilee Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0326,Jamshedpur,Dimna Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0327,Jamshedpur,Tata Steel Zoological Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0328,Jamshedpur,The Blue Diamond,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0329,Jamshedpur,Novelty Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0330,Jamshedpur,Anand Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0331,Jamshedpur,The Yellow Chilli,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0332,Jamshedpur,Brubeck Bakery,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0333,Jamshedpur,Little Italy,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0334,Dhanbad,Topchanchi Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0335,Dhanbad,Maithon Dam,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0336,Dhanbad,Bhatinda Falls,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0337,Dhanbad,Mithu’s Chat Corner,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0338,Dhanbad,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0339,Dhanbad,Annapurna Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0340,Dhanbad,Zaika Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0341,Dhanbad,Spice Villa,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0342,Dhanbad,Hotel Black Rock,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0343,Guwahati,Kamakhya Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0344,Guwahati,Umananda Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0345,Guwahati,Assam State Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0346,Guwahati,Kalita Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0347,Guwahati,Momo Ghar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0348,Guwahati,Jain Tea Stall,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0349,Guwahati,Paradise Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0350,Guwahati,Gam’s Delicacy,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0351,Guwahati,Khorika,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0352,Shillong,Shillong Peak,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0353,Shillong,Ward’s Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0354,Shillong,Don Bosco Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0355,Shillong,City Hut Dhaba,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0356,Shillong,Bread Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0357,Shillong,Cafe Shillong,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0358,Shillong,La Galerie,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0359,Shillong,Heritage Club,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0360,Shillong,Dylan’s Cafe,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0361,Imphal,Kangla Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0362,Imphal,Loktak Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0363,Imphal,Shree Govindajee Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0364,Imphal,Luxmi Kitchen,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0365,Imphal,Shree Shyam Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0366,Imphal,Cafe Moirang,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0367,Imphal,Chakluk Hotel,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0368,Imphal,OK Hotel,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0369,Imphal,Fire Bowl,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0370,Aizawl,Durtlang Hills,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0371,Aizawl,Vantawng Falls,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0372,Aizawl,Mizoram State Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0373,Aizawl,Zote Bakery,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0374,Aizawl,David’s Kitchen,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0375,Aizawl,Mizo Diner,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0376,Aizawl,Red Rose Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0377,Aizawl,Hotel Regency,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0378,Aizawl,Cafe Oak,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0379,Gangtok,Tsomgo Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0380,Gangtok,Rumtek Monastery,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0381,Gangtok,Nathula Pass,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0382,Gangtok,Baker’s Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0383,Gangtok,Cafe Live & Loud,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0384,Gangtok,Taste of Tibet,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0385,Gangtok,Rasoi Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0386,Gangtok,The Coffee Shop,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0387,Gangtok,Parivar Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0388,Itanagar,Ganga Lake (Geker Sinying),tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0389,Itanagar,Itanagar Wildlife Sanctuary,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0390,Itanagar,Jawaharlal Nehru Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0391,Itanagar,Momos Corner,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0392,Itanagar,Bamboo Hut,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0393,Itanagar,City Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0394,Itanagar,BBQ Nation,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0395,Itanagar,The Royal Kitchen,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0396,Itanagar,Hotel Blue Pine,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0397,Agartala,Ujjayanta Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0398,Agartala,Neermahal,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0399,Agartala,Tripura State Museum,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0400,Agartala,Shankar’s Fast Food,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0401,Agartala,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0402,Agartala,Cafe Coffee Day,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0403,Agartala,Ginger Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0404,Agartala,Hotel Polo Towers,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0405,Agartala,Kwai Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0406,Panaji,Basilica of Bom Jesus,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0407,Panaji,Fort Aguada,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0408,Panaji,Dona Paula,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0409,Panaji,Cafe Bodega,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0410,Panaji,Cafe Tato,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0411,Panaji,Navtara,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0412,Panaji,The Black Sheep Bistro,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0413,Panaji,Ritz Classic,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0414,Panaji,Mum’s Kitchen,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0415,Puducherry,Auroville,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0416,Puducherry,Promenade Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0417,Puducherry,Sri Aurobindo Ashram,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0418,Puducherry,Cafe des Arts,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0419,Puducherry,Surguru,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0420,Puducherry,Baker Street,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0421,Puducherry,Villa Shanti,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0422,Puducherry,La Maison Rose,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0423,Puducherry,Tanto Pizzeria,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0424,Mysore,Mysore Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0425,Mysore,Chamundeshwari Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0426,Mysore,Brindavan Gardens,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0427,Mysore,Vinayaka Mylari,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0428,Mysore,Hotel RRR,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0429,Mysore,Dosa Point,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0430,Mysore,Parklane Hotel,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0431,Mysore,Green Leaf,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0432,Mysore,Oyster Bay,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0433,Hubli,Unkal Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0434,Hubli,Chandramouleshwara Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0435,Hubli,Nrupatunga Hill,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0436,Hubli,Basava Vana,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0437,Hubli,Kamat Hotel,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0438,Hubli,Shree Sagar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0439,Hubli,Gufha Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0440,Hubli,The Sigdi,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0441,Hubli,Ayodhya Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0442,Warangal,Thousand Pillar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0443,Warangal,Warangal Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0444,Warangal,Bhadrakali Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0445,Warangal,Sri Geetha Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0446,Warangal,Annapurna Hotel,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0447,Warangal,Balaji Grand,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0448,Warangal,Eat N Enjoy,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0449,Warangal,Vikrant Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0450,Warangal,Royal Dine,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0451,Tirupati,Sri Venkateswara Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0452,Tirupati,Talakona Waterfall,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0453,Tirupati,Chandragiri Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0454,Tirupati,Srivari Udupi Hotel,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0455,Tirupati,Mayura Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0456,Tirupati,Sri Vari Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0457,Tirupati,Hyderabadi Spice,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0458,Tirupati,Rainbow Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0459,Tirupati,Hotel Bliss,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0460,Vijayawada,Kanaka Durga Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0461,Vijayawada,Bhavani Island,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0462,Vijayawada,Undavalli Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0463,Vijayawada,Sweet Magic,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0464,Vijayawada,Amaravathi Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0465,Vijayawada,Idli Factory,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0466,Vijayawada,Barbeque Nation,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0467,Vijayawada,Minerva Grand,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0468,Vijayawada,The Spicy Venue,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0469,Gwalior,Gwalior Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0470,Gwalior,Jai Vilas Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0471,Gwalior,Tansen Tomb,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0472,Gwalior,SS Kachori Wala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0473,Gwalior,Moti Mahal Delux,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0474,Gwalior,Bahadura Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0475,Gwalior,Silver Saloon,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0476,Gwalior,The Mansingh,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0477,Gwalior,Kwality Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0478,Bareilly,Fun City,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0479,Bareilly,Trivati Nath Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0480,Bareilly,Alakhnath Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0481,Bareilly,Gupta Chaat House,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0482,Bareilly,Sharma Ji Ki Chai,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0483,Bareilly,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0484,Bareilly,Tikka House,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0485,Bareilly,The Bamboo Shoots,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0486,Bareilly,Mezbaan Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0487,Moradabad,Prem Wonderland,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0488,Moradabad,Sai Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0489,Moradabad,Raza Library,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0490,Moradabad,Janta Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0491,Moradabad,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0492,Moradabad,Cafe Coffee Day,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0493,Moradabad,Zaika Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0494,Moradabad,Tunday Kababi,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0495,Moradabad,Punjabi Tadka,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0496,Meerut,Augarnath Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0497,Meerut,St. John’s Church,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0498,Meerut,Suraj Kund,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0499,Meerut,Pappu Chaat Bhandar,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0500,Meerut,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0501,Meerut,Shivam Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0502,Meerut,Cafe Bella Vista,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0503,Meerut,The Yellow Chilli,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0504,Meerut,Khalsa Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0505,Kolhapur,Mahalakshmi Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0506,Kolhapur,Panhala Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0507,Kolhapur,Rankala Lake,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0508,Kolhapur,Hotel Bawda Misal,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0509,Kolhapur,Padma Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0510,Kolhapur,Komal Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0511,Kolhapur,Opal Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0512,Kolhapur,Patlacha Wada,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0513,Kolhapur,Niyaaz Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0514,Solapur,Siddheshwar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0515,Solapur,Bhuikot Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0516,Solapur,Great Maratha Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0517,Solapur,Kamat Hotel,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0518,Solapur,Shreeji’s Pure Veg,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0519,Solapur,Balaji Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0520,Solapur,Jagdamba Devi,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0521,Solapur,Pushpvihar Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0522,Solapur,Fratelli Wines,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0523,Latur,Ausa Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0524,Latur,Udgir Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0525,Latur,Kharosa Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0526,Latur,Shri Venkatesh Udupi,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0527,Latur,Annapurna Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0528,Latur,Bikanervala,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0529,Latur,Sai Bhojanalay,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0530,Latur,Hotel Grand,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0531,Latur,Maratha Darbar,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0532,Amravati,Ambadevi Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0533,Amravati,Melghat Tiger Reserve,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0534,Amravati,Chikhaldara Hill Station,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0535,Amravati,Shree Krishna Misal,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0536,Amravati,Anand Bhojanalay,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0537,Amravati,Siddhivinayak Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0538,Amravati,Gulshan Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0539,Amravati,Sankalp Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0540,Amravati,Amba Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0541,Chhatrapati Sambhajinagar,Ajanta Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0542,Chhatrapati Sambhajinagar,Ellora Caves,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0543,Chhatrapati Sambhajinagar,Bibi Ka Maqbara,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0544,Chhatrapati Sambhajinagar,Shree Gajanan Bhojanalay,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0545,Chhatrapati Sambhajinagar,Annapurna Hotel,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0546,Chhatrapati Sambhajinagar,Jai Bhawani Vada Pav,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0547,Chhatrapati Sambhajinagar,Naivedya Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0548,Chhatrapati Sambhajinagar,Green Leaf Cafe,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0549,Chhatrapati Sambhajinagar,Swad Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0550,Nanded,Sachkhand Gurudwara,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0551,Nanded,Sahastrakund Waterfall,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0552,Nanded,Kaleshwar Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0553,Nanded,The Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0554,Nanded,Shree Balaji Udupi,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0555,Nanded,Anand Stall,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0556,Nanded,Guru Nanak Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0557,Nanded,Tulsi Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0558,Nanded,New Punjab Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0559,Raigad,Raigad Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0560,Raigad,Murud-Janjira Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0561,Raigad,Diveagar Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0562,Raigad,Visawa Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0563,Raigad,Shree Datta Snacks,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0564,Raigad,Konkan Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0565,Raigad,Hotel Vinayak,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0566,Raigad,Malvan Tadka,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0567,Raigad,Konkan Kinara,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0568,Ratnagiri,Ganpatipule Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0569,Ratnagiri,Thibaw Palace,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0570,Ratnagiri,Ratnadurg Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0571,Ratnagiri,Hotel Annapurna,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0572,Ratnagiri,Kokani Katta,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0573,Ratnagiri,Sawant Snacks,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0574,Ratnagiri,Atharva Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0575,Ratnagiri,Konkan Villa,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0576,Ratnagiri,Hotel Sea Rock,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0577,Sindhudurg,Sindhudurg Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0578,Sindhudurg,Tarkarli Beach,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0579,Sindhudurg,Malvan Marine Sanctuary,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0580,Sindhudurg,Chaitanya Restaurant,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0581,Sindhudurg,Gajanan Snacks,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0582,Sindhudurg,Malvani Mess,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0583,Sindhudurg,Atithi Bamboo Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0584,Sindhudurg,Sawant Malvani,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0585,Sindhudurg,Malvan Kinara,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0586,Satara,Kaas Plateau,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0587,Satara,Ajinkyatara Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0588,Satara,Thoseghar Waterfalls,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0589,Satara,Sai Bhojanalay,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0590,Satara,Annapurna Bhavan,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0591,Satara,Manohar’s Misal,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0592,Satara,Hotel Shreeman,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0593,Satara,Maratha Samrat,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0594,Satara,Lake View Restaurant,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0595,Ahilyanagar,Shirdi Sai Baba Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0596,Ahilyanagar,Ahmednagar Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0597,Ahilyanagar,Wet N Joy Water Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0598,Ahilyanagar,The Project Cafe,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0599,Ahilyanagar,Gopi Dining Hall,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0600,Ahilyanagar,Jay Bhavani,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0601,Ahilyanagar,Agashiye,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0602,Ahilyanagar,Gordhan Thal,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0603,Ahilyanagar,Swati Snacks,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0604,Sangli,Ganpati Temple,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0605,Sangli,Sangli Fort,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0606,Sangli,Chandoli National Park,tourist_attraction,,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0607,Sangli,Krishna Bhojanalay,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0608,Sangli,Sangli Sweets,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0609,Sangli,Shree Datta Snacks,food,breakfast,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0610,Sangli,Hotel Ambika,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0611,Sangli,Maratha Darbar,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv
+REC0612,Sangli,Sangli Spice,food,dinner,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv

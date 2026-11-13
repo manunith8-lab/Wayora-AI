@@ -1,0 +1,4 @@
+source_id,dataset_name,local_file,source_platform,original_dataset_url,creator,license,accessed_date,notes
+SRC01,"India Tourism, Attractions and Food Dataset",india-tourism-food-dataset(1).csv,Kaggle,TO_BE_FILLED_WITH_EXACT_KAGGLE_DATASET_URL,Verify on original dataset page,Verify on original dataset page,2026-11-03,Contains city-wise attraction and food-place suggestions.
+SRC02,Top Indian Places to Visit (Updated & Cleaned),Kaggle_Top_Indian_Places_Updated.csv,Kaggle,TO_BE_FILLED_WITH_EXACT_KAGGLE_DATASET_URL,Verify on original dataset page,Verify on original dataset page,2026-11-03,Contains 335 attraction records and place attributes.
+SRC03,Holidify city information dataset,holidify.csv,Holidify / verify original source,TO_BE_FILLED_WITH_EXACT_ORIGINAL_SOURCE_URL,Verify original source and attribution terms,Verify permission and reuse terms,2026-11-03,"Contains city descriptions, ratings and recommended seasons. Confirm reuse permissions before redistribution."

@@ -1,0 +1,264 @@
+city_id,city,state,zone,holidify_rating,city_description,best_time_to_visit,has_food_recommendations,has_tourist_place_records,source_datasets
+CITY001,Agartala,Tripura,North Eastern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY002,Agra,Uttar Pradesh,Central,4.9,"Located on the banks of River Yamuna in Uttar Pradesh, Agra is a popular tourist destination as it is home to one of the 7 wonders of the world, the Taj Mahal. It is a sneak peek into the architectural history and legacy of the Mughal empire with two other UNESCO World Heritage S...",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY003,Ahilyanagar,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY004,Ahmedabad,Gujarat,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY005,Aizawl,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY006,Ajanta,Maharashtra,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY007,Ajanta and Ellora,,,4.7,"Ajanta and Ellora caves, considered to be one of the finest examples of ancient rock-cut caves, are located near Aurangabad in Maharashtra, India. Ajanta and Ellora caves complex is adorned with beautiful sculptures, paintings, and frescoes and include Buddhist monasteries, Hindu and Jain temples. T...",June to March,False,False,Holidify city information dataset
+CITY008,Ajmer,Rajasthan,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY009,Alappuzha,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY010,Alibaug,Maharastra,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY011,Aligarh,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY012,Allahabad,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY013,Alleppey,,,4.8,"Officially called Alappuzha, Alleppey is known for its network of canals and lagoons with beautiful backwaters and the houseboats offering overnight stays. Located in the southern part of Kerala, the coastline of Alleppey offers some of the best beaches with water sports during the dry sea...",June to March,False,False,Holidify city information dataset
+CITY014,Almora,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY015,Amarkantak,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY016,Amravati,Andhra Pradesh,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY017,Amritsar,Punjab,Northern,4.7,"Amritsar, colloquially known as Ambarsar, is a city steeped in history and spirituality. It stands as a prominent cultural and religious hub in the heart of Punjab, as the second largest city of India. The city is most renowned for the Golden Temple, the holiest shrine in Sikhism. The resplende...",October to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY018,Anantapur,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY019,Anantnag,Jammu and Kashmir,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY020,Andaman and Nicobar,,,4.6,"Replete with turquoise blue water beaches and a bit of history, Andaman & Nicobar Islands is a little slice of paradise tucked around 1,400 km away from the east coast of mainland India. Port Blair, the capital of this union territory, has a major airport and seaport connected with the rest of t...",October to Jun,False,False,Holidify city information dataset
+CITY021,Auli,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY022,Aurangabad,Maharastra,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY023,Auroville,Puducherry,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY024,Ayodhya,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY025,Badami,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY026,Badrinath,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY027,Balasore,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY028,Bandhavgarh,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY029,Bandipur,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY030,Bangalore,Karnataka,Southern,4.7,"Having evolved gradually from being the Garden city to the Silicon Valley of India, Bangalore is India's third-largest city. Bangalore is loved for its pleasant weather, beautiful parks and the many lakes here. Bangalore is renowned for its eateries, street food corners, quirky cafes, coffee ro...",Throughout the year,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY031,Baratang Island,Andaman and Nicobar Islands,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY032,Bareilly,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY033,Barot,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY034,Bastar,Chhattisgarh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY035,Bekal,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY036,Bengaluru,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY037,Berhampur,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY038,Bhimbetka,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY039,Bhopal,Madhya Pradesh,Central,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY040,Bhubaneswar,Odisha,Eastern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY041,Bhuj,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY042,Bijapur,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY043,Bikaner,Rajasthan,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY044,Bir Billing,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY045,Bodh Gaya,Bihar,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY046,Bolpur,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY047,Chamba,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY048,Chandigarh,Punjab,Northern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY049,Char Dham Yatra,,,4.7,"Char Dham, which translates to ""four abodes,"" holds significant spiritual prominence in India. Located in the majestic state of Uttarakhand, this pilgrimage circuit encompasses four sacred sites: Yamunotri, Gangotri, Kedarnath, and Badrinath. Each of these destinations is deeply intertwined with Hin...","May - June, September - October",False,False,Holidify city information dataset
+CITY050,Chennai,Tamil Nadu,Southern,4.3,"Formerly known as Madras, Chennai is the capital city of the state of Tamil Nadu, in the southern part of India. Located on the Coromandel coast of Bay of Bengal, Chennai is as dynamic as it is immersed in tradition. This 'capital of the south', is one among the four metropolitan siblings of In...",October to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY051,Cherrapunji,Meghalaya,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY052,Chhatrapati Sambhajinagar,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY053,Chidambaram,Tamil Nadu,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY054,Chikmagalur,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY055,Chilika,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY056,Chitrakoot,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY057,Chittorgarh,Rajasthan,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY058,Chopta,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY059,Coimbatore,Tamil Nadu,Southern,4.2,"Often termed as 'Manchester of South India', Coimbatore, the second-largest city in Tamil Nadu, photographically situated on the banks of River Noyyal. Coimbatore, also known as Kovai, is a welcoming area with the backdrop of hustle-bustle and charm of activity and industry. From ancient temple...",September to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY060,Cooch Behar,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY061,Coorg,Karnataka,Southern,4.2,"Located amidst imposing mountains in Karnataka with a perpetually misty landscape, Coorg is a popular coffee producing hill station. It is popular for its beautiful green hills and the streams cutting right through them. It also stands as a popular destination because of its culture and people....",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY062,Cuttack,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY063,Darjeeling,West Bengal,Eastern,4.8,"Darjeeling, the former summer capital of India under the British Raj, has evolved into one of India's most sought-after hill stations. This picturesque hill destination in West Bengal is ideal for a romantic honeymoon. Darjeeling, nestled among acres of tea estates, is 2,050 metres above sea level a...","February to March, September to December",False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY064,Dehradun,Uttarakhand,Northern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY065,Delhi,Delhi,Northern,4.7,"The capital of India, Delhi is a cosmopolitan city with a historic old Delhi and the modern New Delhi. From historical monuments to crowded shopping malls, from an extensive network of the modern metro system to Delhi University campus, Dilli has multiple personalities and is considered to be the ci...",October to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY066,Deoghar,Jharkhand,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY067,Dhanbad,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY068,Dharamshala,,,4.3,"Dharamshala is a beautiful hill town in the Dhauladhar range of Himalayas. It is the winter capital of Himachal Pradesh and is located in the upper slopes of the Kangra valley. Once known as a british hill station during the colonial era, Dharamsala soon became occupied by Tibetan communities and is...",October to June,False,False,Holidify city information dataset
+CITY069,Digha,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY070,Diskit,Ladakh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY071,Diu,Daman and Diu,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY072,Dras,Ladakh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY073,Dumboor,Tripura,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY074,Dwarka,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY075,Dzükou Valley,Nagaland,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY076,Faridabad,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY077,Fatehpur Sikri,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY078,Gandhinagar,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY079,Gangtok,Sikkim,Eastern,4.6,"Incredibly alluring, pleasantly boisterous and wreathed in clouds - Gangtok, the capital of Sikkim, is one of the most popular hill stations in India. Lying at the height of 1650 m above sea level, the town during its bright sunny days offers spectacular views of Mt. Kanchenjunga. Gangtok is a base ...",Throughout the year,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY080,Ghaziabad,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY081,Goa,Goa,Southern,4.9,"Lying on the western coast, Goa is India's smallest state and unlike any other, known for its endless beaches, stellar nightlife, eclectic seafood, world-heritage listed architecture. Spread across just 3,702 km, Goa lies in the Konkan region. It is a far cry from the hippie haven or ...",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY082,Gokarna,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY083,Golden Triangle India,,,4.1,"The Golden Triangle, a popular tourist circuit in India, encompasses three of the country's most iconic cities: Delhi, Agra, and Jaipur. This triangular journey, marked by roughly equidistant points on the Indian map, promises a rich tapestry of history, culture, and architectural marvels. Spanning ...",October - March,False,False,Holidify city information dataset
+CITY084,Greater Noida,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY085,Gulmarg,,,4.4,"Situated at an altitude of 2730 m above sea level, Gulmarg is a popular skiing destination located in Pir Panjal Range of Union territory of Jammu and Kashmir. Surrounded by snow-covered lofty Himalayas, meadows of flowers, deep ravines, evergreen forested valleys, Gulmarg also has the world's secon...",October to June,False,False,Holidify city information dataset
+CITY086,Guntur,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY087,Gurgaon,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY088,Gurugram,Haryana,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY089,Guwahati,Assam,North Eastern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY090,Gwalior,Madhya Pradesh,Central,4.1,"Gwalior is a historic city located in the state of Madhya Pradesh. Popular because of the hilltop fort, Gwalior is full of palaces and glorious temples giving this city a majestic charm which speaks volumes of its glorious past.",July to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY091,Hajo,Assam,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY092,Halebidu,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY093,Hampi,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY094,Haridwar,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY095,Havelock Island,Andaman and Nicobar Islands,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY096,Hemis,Ladakh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY097,Hooghly,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY098,Hubli,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY099,Hyderabad,Telangana,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY100,Imphal,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY101,Indore,Madhya Pradesh,Central,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY102,Itanagar,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY103,Jabalpur,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY104,Jaipur,Rajasthan,Northern,4.8,"Jaipur, the capital city of Rajasthan, stands as a jewel in the crown of the Golden Triangle, alongside Delhi and Agra. This enchanting city, often referred to as the ""Pink City,"" owes its nickname to the terracotta-pink hue that adorns many of its buildings. The Pink City is a testament to the roya...",November to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY105,Jaisalmer,Rajasthan,Northern,4.4,"Jaisalmer, a mesmerizing destination nestled in the heart of the Thar Desert, is a jewel in the crown of Rajasthan. Often referred to as the ""Golden City,"" Jaisalmer captivates visitors with its sandstone architecture, picturesque landscapes, and rich cultural heritage. The city is adorned with...",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY106,Jalpaiguri,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY107,Jammu,Jammu and Kashmir,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY108,Jamshedpur,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY109,Jhansi,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY110,Jibhi,,,4.3,"Located in the serene valleys of Himachal Pradesh, Jibhi is a hidden gem that offers a tranquil retreat amidst nature's bounty. Situated in the Banjar Valley, Jibhi is known for its breathtaking landscapes, lush greenery, and serene ambiance, making it an ideal destination for those seeking solace a...",October to May,False,False,Holidify city information dataset
+CITY111,Jim Corbett,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY112,Jodhpur,Rajasthan,Northern,4.3,"Jodhpur, fondly known as the ""Blue City"" due to the indigo hues of its houses, is a historic city located in the heart of Rajasthan, India. Situated on the eastern edge of the Thar Desert, Jodhpur is renowned for its majestic Mehrangarh Fort, one of the largest forts in India, offering panoramic vie...",November to February,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY113,Joshimath,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY114,Junagadh,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY115,Kadapa,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY116,Kalimpong,,,4.2,"Kalimpong is a virgin hill station in West Bengal renowned for its panoramic valley views, Buddhists monasteries and churches and Tibetan handicrafts etc.","March to June, September to December",False,False,Holidify city information dataset
+CITY117,Kangra,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY118,Kanha,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY119,Kannur,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY120,Kanpur,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY121,Kanyakumari,Tamil Nadu,Southern,4.3,"Located at the southernmost tip of the Indian subcontinent, Kanyakumari is a captivating coastal town in the state of Tamil Nadu. Renowned for its breathtaking confluence of three vast water bodies – the Arabian Sea, the Bay of Bengal, and the Indian Ocean – Kanyakumari is celebrated for its stunnin...",October to February,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY122,Kargil,Ladakh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY123,Kashmir,,,4.6,"Popularly referred to as the ""Paradise on Earth,"" Kashmir is a breathtaking valley in Jammu & Kashmir union territory in 2019. Offering unique experiences year-round, it captivates visitors with Shikara rides and Mughal gardens in Srinagar during summers and autumn where the ...",September - November; March - May,False,False,Holidify city information dataset
+CITY124,Kaziranga,Assam,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY125,Kedarnath,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY126,Kendujhar,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY127,Keonjhar,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY128,Kevadia,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY129,Khajuraho,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY130,Khandala,,,4.6,"Khandala is a popular hill station in Maharashtra, perched on the foothills of Sahyadri in the Western Ghats. Khandala provides for a perfect weekend respite for the Mumbai population, with its scenic valleys, grassy hills, serene lakes and misty waterfalls.",Throughout the year,False,False,Holidify city information dataset
+CITY131,Kinnaur,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY132,Kishtwar,Jammu and Kashmir,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY133,Kochi,Kerala,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY134,Kodaikanal,Tamil Nadu,Southern,4.0,"Located in the state of Tamil Nadu, Kodaikanal is one of the most famous honeymoon destinations in India. A Lakeside resort town of Tamil Nadu, Kodaikanal has a beautiful climate, mist-covered manicured cliffs and waterfall that come together to create the ideal setting for a perfect getaway. Kodaik...",September to May,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY135,Kolhapur,Maharastra,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY136,Kolkata,West Bengal,Eastern,4.7,"Kolkata, India's second biggest city, is a perpetually ongoing festival of human existence, concurrently luxurious and squalid, refined and frantic, pointedly futuristic, while beautifully in decay. A vibrant 350-year-old metropolis located on India's Eastern Coast, the capital of West Bengal thrive...",October to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY137,Kollam,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY138,Konark,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY139,Kovalam,Kerala,Southern,4.6,"Famous for its resorts and ayurvedic massage centres, Kovalam is a coastal town located around 13 km from Thiruvananthapuram in Kerala. The largest beach in Kovalam is the lighthouse beach that features a 30-metre tall lighthouse. The other two adjacent beaches are Samudra beach and Hawa beach....",September to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY140,Kozhikode,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY141,Kufri,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY142,Kullu,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY143,Kumarakom,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY144,Kurnool,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY145,Ladakh,,,4.7,"Ladakh, located in the northernmost region of India, is a high-altitude desert renowned for its breathtaking landscapes, serene monasteries, and unique cultural heritage. Formerly falling in the state of Jammu & Kashmir, Ladakh was administered a union territory on 31st October 2019. Extending f...",April - Mid-July,False,False,Holidify city information dataset
+CITY146,Lakshadweep,,,4.0,"Formerly known as Laccadive Islands, Lakshadweep translates to 'one hundred thousand islands' in Malayalam. Home to a few of the most beautiful and exotic islands and beaches of India, Lakshadweep lies 400km off the southwest coast of the Arabian Sea. The smallest union territory of India has 3...",September to May,False,False,Holidify city information dataset
+CITY147,Latur,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY148,Leh,Ladakh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY149,Lonavala,Maharastra,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY150,Lucknow,Uttar Pradesh,Central,4.1,"The capital and the largest city of Uttar Pradesh, Lucknow, situated on the banks of river Gomti, welcomes you with a heartwarming note of ""Muskuraiyein, kyunki aap Lucknow mein hai"". A city of kebabs and nawabs, of architecture and history, of literature and culture – that is Lucknow in a nuts...",October to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY151,Ludhiana,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY152,Madikeri,,,4.5,"Generally covered as a part of trips to Coorg, Madikeri is a hill town in Karnataka with vast coffee plantations, lush forests and misty hills, all culminating into a breathtaking view. Located in Kodagu District around 6 hours from Bengaluru, Madikeri is a perfect weekend getaway. There is no ...",February to September,False,False,Holidify city information dataset
+CITY153,Madurai,Tamil Nadu,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY154,Mahabalipuram,Tamil Nadu,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY155,Majuli,Assam,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY156,Manali,Himachal Pradesh,Northern,4.8,"With spectacular valleys, breathtaking views, snowcapped mountains, and lush forests of oak, deodar, and pine, Manali is a magical hill station at the northern end of Kullu valley in Himachal Pradesh. Gifted to the world by the mighty Himalayas, it is known to be one of the most popular destinations...",October to June,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY157,Manas,Assam,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY158,Mandi,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY159,Mandu,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY160,Mangalore,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY161,Manikaran,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY162,Matheran,Maharashtra,Western,4.1,"Nestled amidst the Sahyadri range on the Western Ghats, Matheran is a cosy little hill station that stands at an elevation of 2600 feet above sea level, and is just 100 kilometres away from Mumbai, making it the perfect weekend getaway. With its name literally translating to “overhead forest”, Mathe...",Throughout the year,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY163,Mathura,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY164,McLeod Ganj,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY165,Mcleodganj,,,4.2,"Mcleodganj, Himachal Pradesh is one of the most popular tourist destinations for it's tibetan culture, nature treks, greenery, ancient temples & monasteries, and british influence. Located in the Kangra district, it's on the outskirts of Dharamshala.Famous for being home to the Tibetan spir...",October to June,False,False,Holidify city information dataset
+CITY166,Meerut,Uttar Pradesh,Central,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY167,Moradabad,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY168,Mount Abu,Rajasthan,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY169,Mumbai,Maharastra,Western,4.7,"Mumbai, the capital city of the Indian state of Maharashtra, is a spectacular paradox of chaos and hope, glamour and squalor, modernity and tradition. Famously known as the City of Dreams, Mumbai – formerly known as Bombay - Mumbai is a beautifully blended melting pot of cultures and lifestyles.",October to February,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY170,Munnar,Kerala,Southern,4.2,"Famous for the tea estates, greenery, winding roads, blanket of mist, and viewpoints, Munnar is a hill station in Kerala, located in the Idukki district. Lying in the Western Ghats at 1600 metres, it is one of the most sought after and visited travel destinations globally, especially popular amongst...",September to May,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY171,Murshidabad,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY172,Murudeshwar,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY173,Mussoorie,Uttarakhand,Northern,4.8,"Mussoorie, often referred to as the ""Queen of the Hills,"" is a picturesque hill station located in the Dehradun district of Uttarakhand, India. Perched at an altitude of approximately 2,000 meters (6,600 feet) above sea level, Mussoorie offers breathtaking views of the Shivalik ranges and the Doon V...",September to June,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY174,Mysore,Karnataka,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY175,Nagpur,Maharastra,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY176,Nainital,Uttarakhand,Northern,4.4,"Nainital, a picturesque hill station in the Kumaon region of Uttarakhand, is known for its serene lakes, lush green hills, and pleasant climate. Located approximately 300 kilometers from Delhi, Nainital town is centered around the emerald-green Naini Lake, which offers boating opportunities aga...",Throughout the year,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY177,Namchi,Sikkim,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY178,Nanded,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY179,Narkanda,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY180,Nashik,Maharastra,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY181,Nathdwara,Rajasthan,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY182,Neil Island,Andaman and Nicobar Islands,Southern,4.5,"Neil Island, located in the Andaman and Nicobar archipelago, is a tranquil paradise known for its pristine beaches, crystal-clear waters, and vibrant coral reefs. With its laid-back atmosphere and natural beauty, Neil Island is a perfect getaway for those seeking a peaceful retreat. The island'...",October to February,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY183,Nelliyampathy,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY184,New Delhi,Delhi,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY185,Noida,Uttar Pradesh,Central,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY186,Nubra Valley,Ladakh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY187,Ooty,Tamil Nadu,Southern,4.5,"Nestled amidst Nilgiri hills, Ooty, also known as Udagamandalam, is a hill station in Tamil Nadu which serves as a top-rated tourist destination. Once regarded as the summer headquarters of the East India Company, the Queen of the hills is a picturesque getaway.",Throughout the year,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY188,Orchha,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY189,Pachmarhi,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY190,Pahalgam,Jammu and Kashmir,Northern,4.0,"Situated in the Anantnag district, about 90km away from Srinagar, Pahalgam is a beautiful hill station and a popular tourist attraction of Jammu & Kashmir. Pahalgam is located on the banks of the Liddar River, and the rugged terrains, green meadows, and snow-capped mountains make it a perfect sp...",Throughout the year,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY191,Palampur,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY192,Panaji,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY193,Patna,Bihar,Eastern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY194,Pelling,Sikkim,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY195,Pondicherry,,,4.5,"Pondicherry, officially known as Puducherry, is a charming coastal town and one of the Union Territories of India, located on the southeastern coast, about 160 kilometers south of Chennai. Famous for its unique blend of French and Indian cultures, Pondicherry offers visitors a taste of its rich hist...",October to March,False,False,Holidify city information dataset
+CITY196,Porbandar,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY197,Port Blair,Andaman and Nicobar Islands,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY198,Puducherry,Puducherry,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY199,Pune,Maharastra,Western,4.7,"Pune is a bustling metropolis of Maharashtra, ranked number one in India in the ease of living. Often referred to as the Oxford of the East, it is a hub of diverse people and activities and is in rapidly growing into one of the top metropolitan cities in the country. Pune is a city that pe...",July to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY200,Puri,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY201,Purulia,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY202,Pushkar,Rajasthan,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY203,Puttaparthi,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY204,Raigad,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY205,Raipur,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY206,Rajahmundry,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY207,Rajgir,Bihar,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY208,Rameswaram,Tamil Nadu,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY209,Ranchi,Jharkhand,Eastern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY210,Ranikhet,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY211,Rann of Kutch,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY212,Ratnagiri,Maharastra,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY213,Ravangla,Sikkim,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY214,Reasi,Jammu and Kashmir,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY215,Rishikesh,Uttarakhand,Northern,4.5,"Located in the foothills of the Himalayas along the convergence of Ganga and Chandrabhaga River, Rishikesh is a small town in the Dehradun district, located close to Haridwar in Uttarakhand. Rishikesh (also called as Hrishikesh) is known for its adventure activities, ancient temples, popular ca...",Throughout the year,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY216,Rourkela,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY217,Sambalpur,Odisha,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY218,Sangli,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY219,Sarnath,Uttar Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY220,Satara,Maharashtra,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY221,Sawai Madhopur,Rajasthan,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY222,Shillong,,,4.2,"Nestled amidst the pine-clad hills, Shillong, the capital of Meghalaya, unfolds like a picturesque canvas at an elevation of 1496 meters. Revered as the 'Scotland of the East,' the city offers a delightful blend of captivating landscapes, pleasant weather, and rich traditions. Shillong derives its n...",September to May,True,False,"Holidify city information dataset; India Tourism, Attractions and Food Dataset"
+CITY223,Shimla,Himachal Pradesh,Northern,4.8,"Shimla is the capital of Himachal Pradesh and a popular hill-station among Indian families and honeymooners. Situated at the height of 2200m, it was the summer capital of British India. The hill station still retains its old-world charm with beautiful colonial architecture, pedestrian...",October to June,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY224,Shimoga (Shivamogga),,,4.4,"With nature in its full bloom, the town of Shimoga has been home to several great dynasties and kingdoms. Packed with several marvels of nature in the form of picturesque landscape, gorgeous waterfalls, mystical temples and lush green surroundings, its raw beauty will leave you absolutely enchanted....",July to December,False,False,Holidify city information dataset
+CITY225,Shirdi,Maharastra,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY226,Shivamogga,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY227,Shoja,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY228,Siliguri,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY229,Sindhudurg,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY230,Sivasagar,Assam,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY231,Solapur,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY232,Somnath,Gujarat,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY233,Spiti Valley,Himachal Pradesh,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY234,Srinagar,Jammu and Kashmir,Northern,4.2,"Famously known as 'Heaven on Earth, Srinagar is located in the union territory of Jammu & Kashmir, on the banks of river Jhelum. Known for its serene lakes, lush gardens, and Mughal-era architecture, Srinagar is a timeless destination that beckons travelers from around the world. Srinagar is kno...",April to October,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY235,Srisailam,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY236,Sundarbans,West Bengal,Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY237,Surat,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY238,Tarkarli,Maharashtra,Western,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY239,Tawang,Arunachal Pradesh,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY240,Thanjavur,Tamil Nadu,Southern,4.2,"Also known as Tanjore or the city of temples, Thanjavur has a lot of cultural value and is known for its famous Tanjore paintings, antiques and handicrafts, textiles and saris , its Carnatic music and musical instruments and of course the temples.",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY241,Thekkady,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY242,Thiruvananthapuram,Kerala,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY243,Tirunelveli,Tamil Nadu,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY244,Tirupati,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY245,Trichy,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY246,Udaipur,Rajasthan,Northern,4.6,"Udaipur, the ""City of Lakes,"" stands as a jewel in the crown of Rajasthan, India. Nestled amidst the Aravalli Range, this city captivates visitors with its regal charm, historic grandeur, and scenic landscapes. Located around stunning water lakes and enveloped by the Aravalli Hills in all direc...",October to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY247,Udhampur,Jammu and Kashmir,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY248,Udupi,Karnataka,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY249,Ujjain,Madhya Pradesh,Central,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY250,Unakoti,Tripura,North Eastern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY251,Uttarkashi,Uttarakhand,Northern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY252,Vadodara,Gujarat,Western,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY253,Vaishno Devi,,,4.1,"Vaishno Devi is a temple town that's home to the famous Vaishno Devi Mandir. Located in Trikuta hills, 13 kms from Katra (in the union territory of Jammu and Kashmir); this renowned shrine allures millions of devotees from all over the world. Popularly known as Mata Rani, Vaishnavi and Tr...",October to June,False,False,Holidify city information dataset
+CITY254,Varanasi,Uttar Pradesh,Central,4.8,"World's oldest living city, Varanasi - also known as Kashi (City of Life) and Benaras, is the spiritual capital of India. It is one of Hinduism's seven holy cities. The old city of Varanasi lies along the western banks of the Ganges, spread across a labyrinth of narrow galis. Be&...",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY255,Varkala,Kerala,Southern,4.5,"Varkala is a coastal town in the southern part of Kerala known for the unique 15m high 'Northern Cliff' adjacent to the Arabian Sea. Located approximately 50 kilometers north of Thiruvananthapuram (Trivandrum), the capital city of Kerala, Varkala offers a perfect blend of natural beauty, s...",October to February,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY256,Vijayawada,Andhra Pradesh,Southern,,,,True,True,"India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY257,Visakhapatnam,Andhra Pradesh,Southern,4.6,"Visakhapatnam, also commonly known as Vizag, is one of the oldest port cities in the country. Situated in the heart of Andhra Pradesh, Vizag was announced as the state capital of Andhra Pradesh on January 31, 2023. The city is known for its picturesque beaches and serene landscape, as well as a...",September to March,True,True,"Holidify city information dataset; India Tourism, Attractions and Food Dataset; Top Indian Places to Visit (Updated & Cleaned)"
+CITY258,Vizianagaram,Andhra Pradesh,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY259,Vrindavan,Uttar Pradesh,Central,4.6,"One of the oldest cities on the banks of Yamuna, Vrindavan is considered to be one of the most important places of pilgrimage for the devotees of Krishna. It is said that Lord Krishna had spent his childhood in Vrindavan. The name of the city has been derived from Vrinda (meaning basil) and van (mea...",October to March,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
+CITY260,Warangal,,,,,,True,False,"India Tourism, Attractions and Food Dataset"
+CITY261,Wayanad,Kerala,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY262,Yercaud,Tamil Nadu,Southern,,,,False,True,Top Indian Places to Visit (Updated & Cleaned)
+CITY263,dalhousie,Himachal Pradesh,Northern,4.6,"Dalhousie is a popular hill station spread out over five hills in Himachal Pradesh boasting views of the snow-capped peaks of the Dhauladhar ranges. Famous for its meadows, dense forests, and waterfalls, it is especially a favourite amongst honeymooners and family vacationers.",Throughout the year,False,True,Holidify city information dataset; Top Indian Places to Visit (Updated & Cleaned)
