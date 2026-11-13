@@ -8,7 +8,8 @@ import { indiaGeoService } from './indiaGeoService';
 import { locationRecognitionEngine, RecognizedLocation } from './locationRecognitionEngine';
 import { destinationInfoEngine } from './destinationInfoEngine';
 import { usageMonitorService } from './usageMonitorService';
-import { datasetService, DatasetLookupResult } from './datasetService';
+import { datasetService, DatasetLookupResult, VerifiedSeasonalDestination } from './datasetService';
+import { imageRetrievalService } from './imageRetrievalService';
 
 export interface AIResponse {
   text: string;
@@ -149,7 +150,10 @@ export function extractDestinationName(query: string, context?: ConversationCont
       const stopwords = [
         'the', 'my', 'a', 'an', 'some', 'me', 'our', 'cheap', 'budget', 'luxury', 
         'best', 'top', 'good', 'affordable', 'hidden', 'famous', 'there', 'it', 
-        'december', 'january', 'winter', 'summer', '3 days', 'only 3 days'
+        'december', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 
+        'august', 'september', 'october', 'november', 'winter', 'summer', 'monsoon', 
+        'autumn', 'spring', 'india', 'south india', 'north india', 'year', 'season',
+        '3 days', 'only 3 days', 'weekend', 'family'
       ];
       if (!stopwords.includes(candidate.toLowerCase()) && candidate.length > 2) {
         return candidate.charAt(0).toUpperCase() + candidate.slice(1);
@@ -228,9 +232,315 @@ export async function processUserQuery(
   const detectedDays = daysMatch ? parseInt(daysMatch[1], 10) : (context.days || 4);
 
   // ==========================================
-  // SCENARIO 00: DIRECT VERIFIED ATTRACTION LOOKUP FROM DATASET
-  // E.g., "Taj Mahal", "India Gate", "Qutub Minar", "Hawa Mahal", "Humayun's Tomb", "Mysore Palace"
+  // SCENARIO S0: PRACTICAL BUDGET & COST ESTIMATION (Dataset-Powered)
+  // E.g., "What is the cheapest way to visit Munnar?", "How much will a 3-day Manali trip cost?",
+  // "Can I visit Goa within ₹5,000?", "Best budget destinations under ₹5,000", "Which destinations are affordable during winter?"
   // ==========================================
+  const isBudgetQuery =
+    query.includes('cheapest way') ||
+    query.includes('within ₹') ||
+    query.includes('within 5000') ||
+    query.includes('within 5,000') ||
+    query.includes('under ₹') ||
+    query.includes('under 5000') ||
+    query.includes('under 5,000') ||
+    query.includes('affordable during winter') ||
+    (query.includes('budget') && (query.includes('destinations') || query.includes('under') || query.includes('trip')));
+
+  const targetBudgetDest = destinationName || (datasetMatch?.seasonalData?.destinationName);
+
+  if (isBudgetQuery && targetBudgetDest && !query.includes('destinations under') && !query.includes('destinations are affordable')) {
+    const budgetData = datasetService.calculateTripBudget(targetBudgetDest, detectedDays, 1, 'budget');
+    const midData = datasetService.calculateTripBudget(targetBudgetDest, detectedDays, 1, 'midRange');
+
+    if (budgetData && midData) {
+      let budgetText = `### 💰 Travel Budget & Cost Estimation: ${budgetData.destinationName}, ${budgetData.state}\n\n`;
+      budgetText += `Here is the realistic, itemized expenditure estimate for a **${detectedDays}-day trip** (per person at destination):\n\n`;
+
+      budgetText += `#### 🎒 Budget Explorer Style (~₹${budgetData.indicativeDailyPerPersonINR}/day)\n`;
+      budgetText += `- **Total for ${detectedDays} Days:** **₹${budgetData.totalPerPersonINR.toLocaleString('en-IN')}** per person\n`;
+      budgetText += `- **Accommodation (Budget Homestay / Hostel):** ~₹${budgetData.dailyBreakdownINR.accommodation}/day\n`;
+      budgetText += `- **Meals & Dining (Local Eateries & Street Food):** ~₹${budgetData.dailyBreakdownINR.food}/day\n`;
+      budgetText += `- **Local Transportation (Public Bus / Shared Jeeps):** ~₹${budgetData.dailyBreakdownINR.localTransport}/day\n`;
+      budgetText += `- **Sightseeing & Entry Fees:** ~₹${budgetData.dailyBreakdownINR.sightseeingAndActivities}/day\n\n`;
+
+      budgetText += `#### 🧳 Mid-Range Comfort Style (~₹${midData.indicativeDailyPerPersonINR}/day)\n`;
+      budgetText += `- **Total for ${detectedDays} Days:** **₹${midData.totalPerPersonINR.toLocaleString('en-IN')}** per person\n`;
+      budgetText += `- **Accommodation (3-Star Hotel / Boutique Estate Stay):** ~₹${midData.dailyBreakdownINR.accommodation}/day\n`;
+      budgetText += `- **Meals & Dining (Traditional Restaurants & Cafes):** ~₹${midData.dailyBreakdownINR.food}/day\n`;
+      budgetText += `- **Local Transportation (Dedicated Taxi / Auto):** ~₹${midData.dailyBreakdownINR.localTransport}/day\n`;
+      budgetText += `- **Sightseeing & Guided Experiences:** ~₹${midData.dailyBreakdownINR.sightseeingAndActivities}/day\n\n`;
+
+      if (query.includes('goa') && (query.includes('5000') || query.includes('5,000'))) {
+        budgetText += `#### 💡 Can you visit Goa within ₹5,000?\n`;
+        budgetText += `**Yes, absolutely!** ₹5,000 is feasible for a compact **2-day budget getaway** at the destination (excluding transit from origin):\n`;
+        budgetText += `1. **Stay (2 Nights):** ₹1,600 (₹800/night in backpacker hostel dorms at Anjuna, Arambol, or Vagator).\n`;
+        budgetText += `2. **Transport (2 Days):** ₹1,000 (Honda Activa rental at ₹400/day + ₹200 petrol).\n`;
+        budgetText += `3. **Food (2 Days):** ₹1,800 (Local Goan fish curry thali, poi sandwiches, and beach shacks at ₹900/day).\n`;
+        budgetText += `4. **Activities:** ₹600 (Free beach sunsets, Chapora & Aguada fort visits).\n`;
+        budgetText += `**Total Estimated Cost:** **~₹5,000**.\n\n`;
+      } else if (query.includes('cheapest way') && targetBudgetDest.toLowerCase().includes('munnar')) {
+        budgetText += `#### 💡 Tips for the Absolute Cheapest Way to Visit Munnar:\n`;
+        budgetText += `1. **Transit:** Take a KSRTC ordinary or fast-passenger bus from Aluva Railway Station or Ernakulam (₹120–₹160 one way) instead of private taxis (which charge ₹3,000+).\n`;
+        budgetText += `2. **Stay:** Choose budget guesthouses or hostels in Old Munnar town (₹700–₹1,200/night) rather than luxury tea estate bungalows.\n`;
+        budgetText += `3. **Food:** Enjoy authentic Kerala parotta, appam, and vegetable/fish curry meals at local town restaurants (₹100–₹150 per meal).\n`;
+        budgetText += `4. **Sightseeing:** Use public KSRTC buses to Mattupetty Dam and Top Station, or join shared jeeps; enjoy scenic tea estate walking trails for free.\n\n`;
+      }
+
+      budgetText += `*⚠️ Disclaimer: ${budgetData.disclaimer}*`;
+
+      return {
+        text: budgetText,
+        intent: 'budget',
+        destinationFound: { id: targetBudgetDest.toLowerCase(), name: targetBudgetDest, country: 'India' },
+        destinationMentioned: targetBudgetDest,
+        suggestedFollowUps: [
+          `Plan a ${detectedDays}-day trip to ${targetBudgetDest}`,
+          `Tell me about ${targetBudgetDest}`,
+          `Best time to visit ${targetBudgetDest}`,
+          `Famous food in ${targetBudgetDest}`,
+        ],
+        liveDataLoaded: true,
+      };
+    }
+  }
+
+  // General budget destinations under a specific amount (e.g., "Best budget destinations under ₹5,000")
+  if (isBudgetQuery && (query.includes('under') || query.includes('affordable') || query.includes('below'))) {
+    const budgetDestinations = datasetService.searchSeasonalDestinations({
+      maxDailyBudgetINR: 2000,
+      season: query.includes('winter') ? 'winter' : undefined,
+      limit: 6,
+    });
+
+    if (budgetDestinations.length > 0) {
+      let bListText = `### 🏷️ Top Verified Budget Destinations in India (Under ₹2,000–₹3,000/day)\n\n`;
+      bListText += `These destinations are highly affordable, allowing you to comfortably enjoy a 2 to 3-day trip within ₹5,000 to ₹7,000 at the destination:\n\n`;
+
+      bListText += budgetDestinations.map((d) => datasetService.formatSeasonalRecommendationCard(d)).join('\n\n---\n\n');
+      bListText += `\n\n*All budgets are indicative per-person daily estimates at destination, excluding long-distance travel.*`;
+
+      return {
+        text: bListText,
+        intent: 'budget',
+        suggestedFollowUps: [
+          'What is the cheapest way to visit Munnar?',
+          'Can I visit Goa within ₹5,000?',
+          'Best places to visit in winter in India',
+          'Places suitable throughout the year',
+        ],
+        liveDataLoaded: true,
+      };
+    }
+  }
+
+  // ==========================================
+  // SCENARIO S1: SEASONAL & REGIONAL DISCOVERY ENGINE
+  // Handles:
+  // - "Best places to visit in winter in India"
+  // - "Where should I travel during summer?"
+  // - "Best monsoon destinations in India"
+  // - "Best places to visit during autumn"
+  // - "Places suitable throughout the year"
+  // - "Destinations suitable for families in every season"
+  // - "Places that are good during both summer and winter"
+  // - "Destinations suitable for a weekend trip regardless of season"
+  // - "Best summer destinations in South India"
+  // - "Waterfalls to visit in Karnataka during monsoon"
+  // - "Best hill stations in Kerala"
+  // - "Best mountain destinations in Himachal Pradesh"
+  // - "Best beaches to visit in winter"
+  // ==========================================
+  const isSeasonalDiscovery =
+    query.includes('best places to visit') ||
+    query.includes('where should i travel') ||
+    query.includes('where to travel') ||
+    query.includes('where to go') ||
+    query.includes('where can i go') ||
+    query.includes('places to explore') ||
+    query.includes('suggest winter') ||
+    query.includes('suggest summer') ||
+    query.includes('suggest monsoon') ||
+    query.includes('suggest autumn') ||
+    query.includes('recommend cold places') ||
+    query.includes('places to visit') ||
+    query.includes('destinations in') ||
+    query.includes('waterfalls to visit') ||
+    query.includes('hill stations in') ||
+    query.includes('mountain destinations in') ||
+    query.includes('beaches to visit') ||
+    query.includes('suitable throughout the year') ||
+    query.includes('throughout the year') ||
+    query.includes('every season') ||
+    query.includes('summer and winter') ||
+    query.includes('regardless of season') ||
+    query.includes('all-season') ||
+    query.includes('all season');
+
+  if (isSeasonalDiscovery) {
+    // 1. Detect Season
+    let detectedSeason: 'winter' | 'summer' | 'monsoon' | 'autumn' | 'all_season' | undefined = undefined;
+    if (query.includes('winter') || query.includes('december') || query.includes('january') || query.includes('february') || query.includes('cold places')) {
+      detectedSeason = 'winter';
+    } else if (query.includes('summer') || query.includes('march') || query.includes('april') || query.includes('may') || query.includes('june')) {
+      detectedSeason = 'summer';
+    } else if (query.includes('monsoon') || query.includes('rainy season') || query.includes('july') || query.includes('august') || query.includes('september')) {
+      detectedSeason = 'monsoon';
+    } else if (query.includes('autumn') || query.includes('fall') || query.includes('october') || query.includes('november')) {
+      detectedSeason = 'autumn';
+    } else if (
+      query.includes('throughout the year') ||
+      query.includes('every season') ||
+      query.includes('summer and winter') ||
+      query.includes('regardless of season') ||
+      query.includes('all-season') ||
+      query.includes('all season')
+    ) {
+      detectedSeason = 'all_season';
+    }
+
+    // 2. Detect Specific Month
+    let detectedMonth: string | undefined = undefined;
+    const months = ['december', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november'];
+    for (const m of months) {
+      if (query.includes(m)) {
+        detectedMonth = m;
+        break;
+      }
+    }
+
+    // 3. Detect Region
+    let detectedRegion: 'south' | 'north' | 'west' | 'east' | 'northeast' | 'central' | undefined = undefined;
+    if (query.includes('south india') || query.includes('south')) detectedRegion = 'south';
+    if (query.includes('north india') || query.includes('north')) detectedRegion = 'north';
+    if (query.includes('west india') || query.includes('west')) detectedRegion = 'west';
+    if (query.includes('east india') || query.includes('east')) detectedRegion = 'east';
+    if (query.includes('northeast')) detectedRegion = 'northeast';
+    if (query.includes('central india') || query.includes('central')) detectedRegion = 'central';
+
+    // 4. Detect State
+    let detectedState: string | undefined = undefined;
+    const indianStates = [
+      'kerala', 'karnataka', 'himachal pradesh', 'himachal', 'tamil nadu', 'rajasthan', 
+      'uttarakhand', 'goa', 'maharashtra', 'gujarat', 'ladakh', 'jammu and kashmir', 
+      'sikkim', 'meghalaya', 'madhya pradesh', 'odisha', 'west bengal'
+    ];
+    for (const st of indianStates) {
+      if (query.includes(st)) {
+        detectedState = st === 'himachal' ? 'himachal pradesh' : st;
+        break;
+      }
+    }
+
+    // 5. Detect Category
+    let detectedCategory: 'hill_station' | 'mountain' | 'beach' | 'coastal' | 'waterfall' | 'heritage' | 'wildlife' | 'desert' | 'backwater' | undefined = undefined;
+    if (query.includes('hill station') || query.includes('hill stations')) detectedCategory = 'hill_station';
+    else if (query.includes('mountain') || query.includes('mountains')) detectedCategory = 'mountain';
+    else if (query.includes('waterfall') || query.includes('waterfalls')) detectedCategory = 'waterfall';
+    else if (query.includes('beach') || query.includes('beaches')) detectedCategory = 'beach';
+    else if (query.includes('heritage') || query.includes('fort') || query.includes('forts')) detectedCategory = 'heritage';
+    else if (query.includes('wildlife') || query.includes('safari') || query.includes('tiger reserve')) detectedCategory = 'wildlife';
+
+    // Query dataset
+    const matchedDestinations = datasetService.searchSeasonalDestinations({
+      season: detectedSeason,
+      month: detectedMonth,
+      region: detectedRegion,
+      state: detectedState,
+      category: detectedCategory,
+      allSeasonOnly: detectedSeason === 'all_season',
+      limit: 8,
+    });
+
+    if (matchedDestinations.length > 0) {
+      let titleHeader = '🌟 Curated Destination Recommendations';
+      if (detectedSeason === 'winter') titleHeader = '❄️ Best Places to Visit in Winter in India (December–February)';
+      else if (detectedSeason === 'summer') titleHeader = '☀️ Best Summer Destinations in India (March–June)';
+      else if (detectedSeason === 'monsoon') titleHeader = '🌧️ Best Monsoon Destinations in India (July–September)';
+      else if (detectedSeason === 'autumn') titleHeader = '🍂 Best Autumn Destinations in India (October–November)';
+      else if (detectedSeason === 'all_season') titleHeader = '🌍 Destinations Visitable Throughout the Year in India';
+
+      if (detectedCategory === 'waterfall' && detectedState === 'karnataka') titleHeader = '🌊 Spectacular Waterfalls to Visit in Karnataka During Monsoon';
+      else if (detectedCategory === 'hill_station' && detectedState === 'kerala') titleHeader = '🌿 Best Hill Stations to Visit in Kerala';
+      else if (detectedCategory === 'mountain' && (detectedState === 'himachal pradesh' || query.includes('himachal'))) titleHeader = '🏔️ Best Mountain Destinations in Himachal Pradesh';
+      else if (detectedCategory === 'beach' && detectedSeason === 'winter') titleHeader = '🏖️ Best Beaches to Visit in Winter in India';
+      else if (detectedRegion === 'south' && detectedSeason === 'summer') titleHeader = '☀️ Best Summer Hill Stations & Escapes in South India';
+
+      let responseText = `### ${titleHeader}\n\n`;
+
+      if (detectedSeason === 'monsoon' || query.includes('monsoon')) {
+        responseText += `> ⚠️ **Monsoon Travel Advisory:** While waterfalls and mountain ghats are at their most breathtaking during the monsoon, heavy rainfall can trigger flash floods, rockfalls, and sudden landslides. Always verify local district administration (DDMA) road status, avoid stepping onto slippery waterfall edges, and follow official lifeguards.\n\n`;
+      } else if (detectedSeason === 'all_season') {
+        responseText += `> 💡 **All-Season Travel Understanding:** True year-round destinations maintain open road access, functional civic infrastructure, and indoor/shaded heritage options across every month. However, temperature and comfort still fluctuate (e.g. summer afternoons are hot, while monsoon brings heavy rain showers). Visitable does not necessarily mean identical weather in every month.\n\n`;
+      }
+
+      responseText += matchedDestinations
+        .map((dest) => datasetService.formatSeasonalRecommendationCard(dest, detectedSeason || detectedMonth))
+        .join('\n\n---\n\n');
+
+      responseText += `\n\n*Data Source: Verified Dataset (Wayora_India_Seasonal_Destinations.csv). All budgets are indicative daily planning estimates at destination.*`;
+
+      return {
+        text: responseText,
+        intent: 'destination',
+        suggestedFollowUps: [
+          'Best places to visit in winter in India',
+          'Best summer destinations in South India',
+          'Best places to visit during monsoon',
+          'Best autumn destinations in India',
+          'Places suitable throughout the year',
+          'Waterfalls to visit in Karnataka during monsoon',
+          'Best hill stations in Kerala',
+        ],
+        liveDataLoaded: true,
+      };
+    }
+  }
+
+  // ==========================================
+  // SCENARIO S2: VERIFIED SEASONAL INDIA DESTINATION PROFILE
+  // Handles inquiries about Munnar, Wayanad, Vagamon, Manali, Auli, Hampi, etc.
+  // Displays accurate geographical classification (NOT generic city!), verified photos,
+  // recommended months, seasons, cautions, indicative budgets, and interactive travel plans.
+  // ==========================================
+  if (datasetMatch && datasetMatch.matchType === 'seasonal_destination' && datasetMatch.seasonalData) {
+    const s = datasetMatch.seasonalData;
+    const plan = await travelPlanService.generateTravelPlan(s.destinationName, detectedDays);
+    const verifiedImg = datasetMatch.verifiedImage || imageRetrievalService.getVerifiedImage(s.destinationName, s.imageCategory);
+
+    let profileText = `### 📍 **${s.destinationName}** (${s.stateOrUT})\n\n`;
+    if (verifiedImg) {
+      profileText += `![${verifiedImg.caption}](${verifiedImg.imageUrl})\n*Photo: ${verifiedImg.caption} (${verifiedImg.photographerOrSource})*\n\n`;
+    }
+    profileText += `**Destination category:** ${s.destinationType}\n`;
+    profileText += `**Why visit:** ${s.keyAttractions}\n`;
+    profileText += `**Best months:** **${s.recommendedMonths}** (${s.suitableSeasons.join(', ')})\n`;
+    profileText += `**Weather:** ${s.destinationType.toLowerCase().includes('hill') ? 'Cool mountain climate with mist and tea-carpeted slopes' : 'Pleasant regional seasonal climate'}\n`;
+    profileText += `**Main attractions:** ${s.keyAttractions}\n`;
+    profileText += `**Estimated budget per person:** **${s.budgetBudgetInt.raw}**/day (Budget) | **${s.budgetMidRangeInt.raw}**/day (Mid-range)\n`;
+    profileText += `**Suggested trip duration:** **${s.suggestedDuration}** (Planned for ${detectedDays} days below)\n`;
+    profileText += `**All-season status:** ${s.allSeasonStatus}\n`;
+    profileText += `**Travel cautions:** *${s.seasonalCautions}*\n\n`;
+    profileText += `*Data Source: Verified Dataset (Wayora_India_Seasonal_Destinations.csv)*`;
+
+    return {
+      text: profileText,
+      intent: 'destination',
+      destinationFound: { id: s.destinationId.toLowerCase(), name: s.destinationName, country: s.country },
+      destinationMentioned: s.destinationName,
+      cards: {
+        type: 'travelPlan',
+        data: plan,
+      },
+      suggestedFollowUps: [
+        `What is the cheapest way to visit ${s.destinationName}?`,
+        `How much will a ${detectedDays}-day ${s.destinationName} trip cost?`,
+        `Plan a ${detectedDays}-day trip to ${s.destinationName}`,
+        `Best time to visit ${s.destinationName}`,
+      ],
+      liveDataLoaded: true,
+    };
+  }
   if (datasetMatch && datasetMatch.matchType === 'attraction' && datasetMatch.attractionData) {
     const attr = datasetMatch.attractionData;
     const plan = await travelPlanService.generateTravelPlan(attr.city || attr.placeName, detectedDays);
@@ -484,14 +794,14 @@ ${plan.neighborhoodGuides.map(nh => `• **${nh.name}** (~$${nh.avgPricePerNight
   // SCENARIO E: BUDGET & COST INQUIRY
   // E.g., "What will it cost?", "How much budget do I need?", "Cost breakdown"
   // ==========================================
-  const isBudgetQuery =
+  const isGeneralBudgetQuery =
     query.includes('cost') ||
     query.includes('budget') ||
     query.includes('expense') ||
     query.includes('how much') ||
     query.includes('price');
 
-  if (isBudgetQuery && destinationName) {
+  if (isGeneralBudgetQuery && destinationName) {
     const dsPlan = datasetService.lookup(destinationName);
     if (dsPlan && dsPlan.travelPlans && dsPlan.travelPlans.length > 0) {
       const pl = dsPlan.travelPlans[0];

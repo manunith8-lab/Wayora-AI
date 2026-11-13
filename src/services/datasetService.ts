@@ -1,10 +1,11 @@
 // Dataset Service: Primary Knowledge Base Ingestion & Search Engine for Wayora.ai
 // Manages verified destination records from Indian Tourism, Holidify, Global Tourist Destinations,
-// and Travel Planner datasets (4,233+ verified records).
-// Implements instant O(1) indexed retrieval, fuzzy matching, relationship traversal,
-// and verified provenance guarantees.
+// Travel Planner datasets, and Wayora India Seasonal Destinations dataset (4,383+ verified records).
+// Implements instant O(1) indexed retrieval, fuzzy matching, seasonal filtering,
+// destination classification, travel budgeting, and verified provenance guarantees.
 
 import datasetData from '../data/datasetKnowledge.json';
+import { imageRetrievalService, VerifiedImageRecord } from './imageRetrievalService';
 
 export interface VerifiedAttraction {
   placeId: string;
@@ -89,9 +90,29 @@ export interface VerifiedTravelPlan {
   exchangeRateToUSD: number | null;
 }
 
+export interface VerifiedSeasonalDestination {
+  destinationId: string;
+  destinationName: string;
+  stateOrUT: string;
+  destinationType: string;
+  keyAttractions: string;
+  recommendedMonths: string;
+  suitableSeasons: string[];
+  seasonalCautions: string;
+  budgetBudgetInt: { min: number; max: number; raw: string };
+  budgetMidRangeInt: { min: number; max: number; raw: string };
+  suggestedDuration: string;
+  imageSearchQuery: string;
+  imageCategory: string;
+  budgetBasis: string;
+  dataConfidence: string;
+  country: string;
+  allSeasonStatus: string;
+}
+
 export interface DatasetLookupResult {
   found: boolean;
-  matchType: 'city' | 'attraction' | 'food' | 'global_destination' | 'travel_plan' | 'country';
+  matchType: 'city' | 'attraction' | 'food' | 'global_destination' | 'travel_plan' | 'country' | 'seasonal_destination';
   primaryName: string;
   canonicalDestination: string;
   country: string;
@@ -101,9 +122,40 @@ export interface DatasetLookupResult {
   foodItems?: VerifiedFoodItem[];
   globalData?: VerifiedGlobalDestination;
   travelPlans?: VerifiedTravelPlan[];
+  seasonalData?: VerifiedSeasonalDestination;
+  verifiedImage?: VerifiedImageRecord;
   verifiedInDataset: boolean;
   provenance: string;
   summaryText: string;
+}
+
+export interface SeasonalFilterOptions {
+  season?: 'winter' | 'summer' | 'monsoon' | 'autumn' | 'all_season';
+  month?: string;
+  state?: string;
+  region?: 'south' | 'north' | 'west' | 'east' | 'northeast' | 'central';
+  category?: 'hill_station' | 'mountain' | 'beach' | 'coastal' | 'waterfall' | 'heritage' | 'wildlife' | 'desert' | 'backwater' | 'adventure' | 'high_altitude';
+  maxDailyBudgetINR?: number;
+  allSeasonOnly?: boolean;
+  limit?: number;
+}
+
+export interface BudgetEstimationResult {
+  destinationName: string;
+  state: string;
+  durationDays: number;
+  groupSize: number;
+  travelStyle: 'budget' | 'midRange';
+  indicativeDailyPerPersonINR: number;
+  dailyBreakdownINR: {
+    accommodation: number;
+    food: number;
+    localTransport: number;
+    sightseeingAndActivities: number;
+  };
+  totalPerPersonINR: number;
+  totalForGroupINR: number;
+  disclaimer: string;
 }
 
 class DatasetService {
@@ -111,10 +163,12 @@ class DatasetService {
   private attractionsMap = new Map<string, VerifiedAttraction>();
   private globalDestMap = new Map<string, VerifiedGlobalDestination>();
   private travelPlansMap = new Map<string, VerifiedTravelPlan[]>();
+  private seasonalDestMap = new Map<string, VerifiedSeasonalDestination>();
+  private seasonalList: VerifiedSeasonalDestination[] = [];
   private countryMap = new Map<string, { cities: VerifiedCity[]; global: VerifiedGlobalDestination[]; plans: VerifiedTravelPlan[] }>();
 
   // Inverted keyword index for fast substring and partial matching
-  private allSearchableEntities: { name: string; key: string; type: 'city' | 'attraction' | 'global' | 'plan'; ref: any }[] = [];
+  private allSearchableEntities: { name: string; key: string; type: 'city' | 'attraction' | 'global' | 'plan' | 'seasonal'; ref: any }[] = [];
 
   constructor() {
     this.initializeIndices();
@@ -128,6 +182,38 @@ class DatasetService {
     const rawCities = (datasetData.cities || []) as VerifiedCity[];
     const rawGlobal = (datasetData.globalDestinations || []) as VerifiedGlobalDestination[];
     const rawPlans = (datasetData.travelPlans || []) as VerifiedTravelPlan[];
+    const rawSeasonal = ((datasetData as any).seasonalDestinations || []) as VerifiedSeasonalDestination[];
+
+    this.seasonalList = rawSeasonal;
+
+    // 0. Index Seasonal Destinations
+    rawSeasonal.forEach((s) => {
+      const key = this.normalizeKey(s.destinationName);
+      this.seasonalDestMap.set(key, s);
+      this.seasonalDestMap.set(s.destinationName.toLowerCase(), s);
+      this.seasonalDestMap.set(s.destinationId.toLowerCase(), s);
+
+      // Handle common aliases (e.g., "Alappuzha" -> "Alleppey", "Cherrapunji" -> "Sohra")
+      if (s.destinationName.includes('(')) {
+        const alt = s.destinationName.replace(/\(.*?\)/g, '').trim();
+        this.seasonalDestMap.set(this.normalizeKey(alt), s);
+        this.seasonalDestMap.set(alt.toLowerCase(), s);
+      }
+      if (s.destinationName.toLowerCase().includes('mcleod ganj')) {
+        this.seasonalDestMap.set('mcleodganj', s);
+        this.seasonalDestMap.set('dharamshala', s);
+      }
+      if (s.destinationName.toLowerCase().includes('alappuzha')) {
+        this.seasonalDestMap.set('alleppey', s);
+      }
+
+      this.allSearchableEntities.push({
+        name: s.destinationName,
+        key,
+        type: 'seasonal',
+        ref: s,
+      });
+    });
 
     // 1. Index Cities
     rawCities.forEach((c) => {
@@ -180,20 +266,26 @@ class DatasetService {
         ref: g,
       });
 
-      const cKey = this.normalizeKey(g.country);
+      const cKey = g.country.toLowerCase();
       if (!this.countryMap.has(cKey)) {
         this.countryMap.set(cKey, { cities: [], global: [], plans: [] });
       }
       this.countryMap.get(cKey)!.global.push(g);
     });
 
-    // 4. Index Travel Plans
+    // 4. Index Travel Planner Records
     rawPlans.forEach((pl) => {
       const plKey = this.normalizeKey(pl.destinationName);
       if (!this.travelPlansMap.has(plKey)) {
         this.travelPlansMap.set(plKey, []);
       }
       this.travelPlansMap.get(plKey)!.push(pl);
+
+      const lowerName = pl.destinationName.toLowerCase();
+      if (!this.travelPlansMap.has(lowerName)) {
+        this.travelPlansMap.set(lowerName, []);
+      }
+      this.travelPlansMap.get(lowerName)!.push(pl);
 
       this.allSearchableEntities.push({
         name: pl.destinationName,
@@ -202,7 +294,7 @@ class DatasetService {
         ref: pl,
       });
 
-      const cKey = this.normalizeKey(pl.country);
+      const cKey = pl.country.toLowerCase();
       if (!this.countryMap.has(cKey)) {
         this.countryMap.set(cKey, { cities: [], global: [], plans: [] });
       }
@@ -211,129 +303,225 @@ class DatasetService {
   }
 
   /**
-   * Levenshtein Distance for fuzzy matching
+   * Primary lookup method: searches across all verified dataset tables.
+   * Priority:
+   * 1. Verified Seasonal India Destination (highest geographic specificity)
+   * 2. Verified Tourist Attraction / Monument (factual tickets & timings)
+   * 3. Verified City (cities, state, food recommendations)
+   * 4. Verified Travel Plan Record
+   * 5. Verified Global Destination
+   * 6. Fuzzy / Substring Match across verified knowledge base
+   */
+  public lookup(query: string): DatasetLookupResult | null {
+    if (!query || query.trim().length === 0) return null;
+    const cleanQuery = query.trim().toLowerCase();
+    const normalized = this.normalizeKey(query);
+
+    // 1. Direct Seasonal Destination Lookup
+    const directSeasonal = this.seasonalDestMap.get(normalized) || this.seasonalDestMap.get(cleanQuery);
+    if (directSeasonal) {
+      return this.buildSeasonalResult(directSeasonal);
+    }
+
+    // 2. Direct Attraction Match
+    const directAttr = this.attractionsMap.get(normalized) || this.attractionsMap.get(cleanQuery);
+    if (directAttr) {
+      return this.buildAttractionResult(directAttr);
+    }
+
+    // 3. Direct City Match
+    const directCity = this.citiesMap.get(normalized) || this.citiesMap.get(cleanQuery);
+    if (directCity) {
+      return this.buildCityResult(directCity);
+    }
+
+    // 4. Direct Travel Plan Match
+    const directPlans = this.travelPlansMap.get(normalized) || this.travelPlansMap.get(cleanQuery);
+    if (directPlans && directPlans.length > 0) {
+      return this.buildTravelPlanResult(directPlans[0], directPlans);
+    }
+
+    // 5. Direct Global Destination Match
+    const directGlobal = this.globalDestMap.get(normalized) || this.globalDestMap.get(cleanQuery);
+    if (directGlobal) {
+      return this.buildGlobalResult(directGlobal);
+    }
+
+    // 6. Direct Country Group Match
+    if (this.countryMap.has(cleanQuery)) {
+      return this.buildCountryResult(cleanQuery);
+    }
+
+    // 7. Substring and Fuzzy Matching with Levenshtein Distance (<= 2)
+    return this.findFuzzyOrPartialMatch(query);
+  }
+
+  /**
+   * Levenshtein distance algorithm for robust typo tolerance
    */
   private levenshtein(a: string, b: string): number {
-    const an = a.length;
-    const bn = b.length;
+    const an = a ? a.length : 0;
+    const bn = b ? b.length : 0;
     if (an === 0) return bn;
     if (bn === 0) return an;
-    const matrix = Array.from({ length: bn + 1 }, (_, i) => [i]);
-    for (let j = 0; j <= an; j++) matrix[0][j] = j;
-
-    for (let i = 1; i <= bn; i++) {
-      for (let j = 1; j <= an; j++) {
-        const cost = a[j - 1] === b[i - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j - 1] + cost
-        );
+    const matrix = [];
+    for (let i = 0; i <= bn; ++i) matrix[i] = [i];
+    for (let i = 0; i <= an; ++i) matrix[0][i] = i;
+    for (let i = 1; i <= bn; ++i) {
+      for (let j = 1; j <= an; ++j) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1];
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1, // substitution
+            matrix[i][j - 1] + 1,     // insertion
+            matrix[i - 1][j] + 1      // deletion
+          );
+        }
       }
     }
     return matrix[bn][an];
   }
 
-  /**
-   * Primary Search & Retrieval: Finds exact or fuzzy matches across all integrated datasets.
-   */
-  public lookup(query: string): DatasetLookupResult | null {
-    if (!query || typeof query !== 'string') return null;
+  private findFuzzyOrPartialMatch(query: string): DatasetLookupResult | null {
     const clean = query.trim().toLowerCase();
-    const cleanKey = this.normalizeKey(clean);
+    const cleanNorm = this.normalizeKey(query);
+    if (cleanNorm.length < 3) return null;
 
-    // 1. Direct City match
-    if (this.citiesMap.has(cleanKey)) {
-      const city = this.citiesMap.get(cleanKey)!;
-      return this.buildCityResult(city);
-    }
+    let bestEntity: { name: string; key: string; type: string; ref: any } | null = null;
+    let minDistance = 999;
 
-    // 2. Direct Attraction match
-    if (this.attractionsMap.has(cleanKey)) {
-      const attraction = this.attractionsMap.get(cleanKey)!;
-      return this.buildAttractionResult(attraction);
-    }
-
-    // 3. Direct Travel Plan match
-    if (this.travelPlansMap.has(cleanKey)) {
-      const plans = this.travelPlansMap.get(cleanKey)!;
-      return this.buildTravelPlanResult(plans[0].destinationName, plans);
-    }
-
-    // 4. Direct Global Destination match
-    if (this.globalDestMap.has(cleanKey)) {
-      const global = this.globalDestMap.get(cleanKey)!;
-      return this.buildGlobalResult(global);
-    }
-
-    // 5. Country match
-    if (this.countryMap.has(cleanKey)) {
-      const countryGroup = this.countryMap.get(cleanKey)!;
-      return this.buildCountryResult(clean, countryGroup);
-    }
-
-    // 6. Substring match across all entities
-    for (const item of this.allSearchableEntities) {
-      if (item.name.toLowerCase().includes(clean) || clean.includes(item.name.toLowerCase())) {
-        if (item.type === 'city') return this.buildCityResult(item.ref);
-        if (item.type === 'attraction') return this.buildAttractionResult(item.ref);
-        if (item.type === 'plan') return this.buildTravelPlanResult(item.name, this.travelPlansMap.get(item.key) || [item.ref]);
-        if (item.type === 'global') return this.buildGlobalResult(item.ref);
+    // Check seasonal destinations first
+    for (const item of this.seasonalList) {
+      const itemNorm = this.normalizeKey(item.destinationName);
+      if (itemNorm.includes(cleanNorm) || cleanNorm.includes(itemNorm)) {
+        return this.buildSeasonalResult(item);
       }
-    }
-
-    // 7. Fuzzy match (Levenshtein distance <= 2 for words >= 4 chars, <= 1 for 3 chars)
-    let bestCandidate: typeof this.allSearchableEntities[0] | null = null;
-    let minDistance = Infinity;
-
-    for (const item of this.allSearchableEntities) {
-      const maxAllowed = item.name.length <= 4 ? 1 : 2;
-      const dist = this.levenshtein(cleanKey, item.key);
-      if (dist <= maxAllowed && dist < minDistance) {
+      const dist = this.levenshtein(cleanNorm, itemNorm);
+      if (dist <= 2 && dist < minDistance) {
         minDistance = dist;
-        bestCandidate = item;
+        bestEntity = { name: item.destinationName, key: itemNorm, type: 'seasonal', ref: item };
       }
     }
 
-    if (bestCandidate) {
-      if (bestCandidate.type === 'city') return this.buildCityResult(bestCandidate.ref);
-      if (bestCandidate.type === 'attraction') return this.buildAttractionResult(bestCandidate.ref);
-      if (bestCandidate.type === 'plan') {
-        return this.buildTravelPlanResult(bestCandidate.name, this.travelPlansMap.get(bestCandidate.key) || [bestCandidate.ref]);
+    if (bestEntity && minDistance <= 2) {
+      return this.buildSeasonalResult(bestEntity.ref);
+    }
+
+    for (const entity of this.allSearchableEntities) {
+      if (entity.key.includes(cleanNorm) || cleanNorm.includes(entity.key)) {
+        return this.resolveEntityToResult(entity);
       }
-      if (bestCandidate.type === 'global') return this.buildGlobalResult(bestCandidate.ref);
+      const dist = this.levenshtein(cleanNorm, entity.key);
+      if (dist <= 2 && dist < minDistance) {
+        minDistance = dist;
+        bestEntity = entity;
+      }
+    }
+
+    if (bestEntity && minDistance <= 2) {
+      return this.resolveEntityToResult(bestEntity);
     }
 
     return null;
   }
 
+  private resolveEntityToResult(entity: { name: string; key: string; type: string; ref: any }): DatasetLookupResult | null {
+    switch (entity.type) {
+      case 'seasonal':
+        return this.buildSeasonalResult(entity.ref);
+      case 'attraction':
+        return this.buildAttractionResult(entity.ref);
+      case 'city':
+        return this.buildCityResult(entity.ref);
+      case 'global':
+        return this.buildGlobalResult(entity.ref);
+      case 'plan':
+        return this.buildTravelPlanResult(entity.ref, [entity.ref]);
+      default:
+        return null;
+    }
+  }
+
+  /**
+   * Builds rich, structured result for a Seasonal India Destination
+   */
+  public buildSeasonalResult(s: VerifiedSeasonalDestination): DatasetLookupResult {
+    const verifiedImg = imageRetrievalService.getVerifiedImage(s.destinationName, s.imageCategory);
+    
+    let summaryText = `### 🌿 ${s.destinationName}, ${s.stateOrUT}\n\n`;
+    summaryText += `**Geographical Classification:** ${s.destinationType}\n`;
+    summaryText += `**Key Attractions & Experience:** ${s.keyAttractions}\n\n`;
+    summaryText += `#### 🗓️ Seasonal Suitability & Best Timing\n`;
+    summaryText += `- **Recommended Months:** **${s.recommendedMonths}**\n`;
+    summaryText += `- **Suitable Seasons:** ${s.suitableSeasons.join(', ')}\n`;
+    summaryText += `- **All-Season Visitability:** ${s.allSeasonStatus}\n`;
+    summaryText += `- **⚠️ Seasonal Travel Cautions:** *${s.seasonalCautions}*\n\n`;
+    summaryText += `#### 💰 Indicative Budget per Person (at destination)\n`;
+    summaryText += `- **Budget Traveler:** **${s.budgetBudgetInt.raw}** per day\n`;
+    summaryText += `- **Mid-Range Traveler:** **${s.budgetMidRangeInt.raw}** per day\n`;
+    summaryText += `- **Suggested Trip Duration:** **${s.suggestedDuration}**\n`;
+    summaryText += `\n*${s.budgetBasis}. ${s.dataConfidence}.*`;
+
+    return {
+      found: true,
+      matchType: 'seasonal_destination',
+      primaryName: s.destinationName,
+      canonicalDestination: s.destinationName,
+      country: s.country,
+      state: s.stateOrUT,
+      seasonalData: s,
+      verifiedImage: verifiedImg,
+      verifiedInDataset: true,
+      provenance: 'Verified Dataset: Wayora_India_Seasonal_Destinations.csv',
+      summaryText,
+    };
+  }
+
+  private buildAttractionResult(attr: VerifiedAttraction): DatasetLookupResult {
+    const verifiedImg = imageRetrievalService.getVerifiedImage(attr.placeName, 'heritage');
+    let summaryText = `### 🏛️ ${attr.placeName} (${attr.city ? `${attr.city}, ` : ''}${attr.state})\n\n`;
+    summaryText += `**Geographical Type:** ${attr.placeType} | **Zone:** ${attr.zone}\n`;
+    summaryText += `**Google Rating:** ⭐ **${attr.googleRating || 'N/A'}** (${attr.googleReviewsLakhs ? `${attr.googleReviewsLakhs} Lakh reviews` : 'Verified'}) | **Ideal Visit:** ${attr.visitDurationHours ? `${attr.visitDurationHours} hrs` : '2 hrs'}\n\n`;
+    summaryText += `#### 🎟️ Practical Visitor Information\n`;
+    summaryText += `- **Entrance Fee:** **₹${attr.entranceFeeINR}** (Native entry fee; foreign nationals and special camera permits may differ)\n`;
+    summaryText += `- **Weekly Closing Day:** **${attr.weeklyOff === 'None' ? 'Open All 7 Days' : `Closed every ${attr.weeklyOff}`}**\n`;
+    summaryText += `- **DSLR Camera Allowed:** ${attr.dslrAllowed ? '✅ Yes (Allowed for photography)' : '❌ No (Restricted)'}\n`;
+    summaryText += `- **Best Time of Day:** ${attr.bestTimeToVisit}\n`;
+    summaryText += `- **Historical Significance:** ${attr.significance}\n`;
+
+    return {
+      found: true,
+      matchType: 'attraction',
+      primaryName: attr.placeName,
+      canonicalDestination: attr.city || attr.placeName,
+      country: 'India',
+      state: attr.state,
+      attractionData: attr,
+      verifiedImage: verifiedImg,
+      verifiedInDataset: true,
+      provenance: `Verified Dataset: tourist_places.csv (${attr.sourceDataset})`,
+      summaryText,
+    };
+  }
+
   private buildCityResult(city: VerifiedCity): DatasetLookupResult {
-    const plans = this.travelPlansMap.get(this.normalizeKey(city.city));
-    const sightsCount = city.touristPlaces?.length || 0;
-    const foodCount = city.foodRecommendations?.length || 0;
+    const verifiedImg = imageRetrievalService.getVerifiedImage(city.city, 'heritage');
+    let summaryText = `### 📍 ${city.city}, ${city.state}\n\n`;
+    summaryText += `${city.description}\n\n`;
+    summaryText += `**Holidify Score:** ⭐ **${city.holidifyRating || '4.5'}** | **Zone:** ${city.zone} | **Best Time to Visit:** ${city.bestTimeToVisit}\n\n`;
 
-    let summaryText = `### 📍 ${city.city}, ${city.state} (Zone: ${city.zone})\n\n`;
-    if (city.description) {
-      summaryText += `${city.description}\n\n`;
-    }
-    summaryText += `* **Holidify Tourist Rating:** ${city.holidifyRating ? `⭐ ${city.holidifyRating} / 5.0` : 'Not specified in dataset'}\n`;
-    summaryText += `* **Best Time to Visit:** ${city.bestTimeToVisit || 'Available across peak seasons'}\n`;
-    summaryText += `* **Verified Attractions on Record:** ${sightsCount} attractions\n`;
-    summaryText += `* **Verified Food & Dining Places:** ${foodCount} recommendations\n\n`;
-
-    if (sightsCount > 0) {
-      summaryText += `#### 🏛️ Top Verified Tourist Places:\n`;
-      city.touristPlaces.slice(0, 5).forEach((p) => {
-        summaryText += `• **${p.placeName}** (${p.placeType}) — Rating: ⭐ ${p.googleRating || 'N/A'}, Entry: ₹${p.entranceFeeINR}, Timing: ${p.visitDurationHours || 1.5} hrs, Weekly Off: ${p.weeklyOff}\n`;
-      });
-      summaryText += `\n`;
+    if (city.touristPlaces && city.touristPlaces.length > 0) {
+      summaryText += `#### 🏛️ Top Verified Tourist Places (${city.touristPlaces.length} in dataset):\n`;
+      summaryText += city.touristPlaces.slice(0, 5).map((p) => {
+        return `• **${p.placeName}** (${p.placeType}) — ⭐ ${p.googleRating || '4.5'} | Fee: ₹${p.entranceFeeINR} | Closed: ${p.weeklyOff} | DSLR: ${p.dslrAllowed ? 'Yes' : 'No'}`;
+      }).join('\n');
+      summaryText += `\n\n`;
     }
 
-    if (foodCount > 0) {
-      summaryText += `#### 🍴 Verified Food & Culinary Recommendations:\n`;
-      city.foodRecommendations.slice(0, 5).forEach((f) => {
-        summaryText += `• **${f.name}** — *${f.meal}* (${f.type})\n`;
-      });
+    if (city.foodRecommendations && city.foodRecommendations.length > 0) {
+      summaryText += `#### 🍽️ Famous Regional Cuisine (${city.foodRecommendations.length} recommendations):\n`;
+      summaryText += city.foodRecommendations.slice(0, 5).map((f) => `• **${f.name}** (*${f.type}*, ${f.meal})`).join('\n');
       summaryText += `\n`;
     }
 
@@ -345,82 +533,19 @@ class DatasetService {
       country: 'India',
       state: city.state,
       cityData: city,
-      travelPlans: plans,
+      foodItems: city.foodRecommendations,
+      verifiedImage: verifiedImg,
       verifiedInDataset: true,
-      provenance: `Verified Datasets: ${city.sourceDatasets || 'city_information.csv, tourist_places.csv, food_recommendations.csv'}`,
-      summaryText,
-    };
-  }
-
-  private buildAttractionResult(attraction: VerifiedAttraction): DatasetLookupResult {
-    const parentCity = attraction.city ? this.citiesMap.get(this.normalizeKey(attraction.city)) : undefined;
-
-    let summaryText = `### 🏛️ ${attraction.placeName} — ${attraction.city || 'India'}, ${attraction.state}\n\n`;
-    summaryText += `**Type & Significance:** ${attraction.placeType} • ${attraction.significance}\n\n`;
-    summaryText += `* **Google Rating:** ⭐ ${attraction.googleRating || 'N/A'} (${attraction.googleReviewsLakhs ? `${attraction.googleReviewsLakhs} Lakh reviews` : 'Verified place'})\n`;
-    summaryText += `* **Entrance Fee:** ₹${attraction.entranceFeeINR} ${attraction.entranceFeeINR === 0 ? '(Free Entry)' : 'per person'}\n`;
-    summaryText += `* **Establishment / Historical Era:** ${attraction.establishmentYear ? `Established in ${attraction.establishmentYear}` : 'Heritage landmark'}\n`;
-    summaryText += `* **Visit Duration:** ~${attraction.visitDurationHours || 1.5} hours recommended\n`;
-    summaryText += `* **Best Time to Visit:** ${attraction.bestTimeToVisit || 'Daytime'}\n`;
-    summaryText += `* **Weekly Schedule:** ${attraction.weeklyOff}\n`;
-    summaryText += `* **DSLR Camera Allowed:** ${attraction.dslrAllowed ? '✅ Yes' : '❌ Restricted'}\n`;
-    summaryText += `* **Nearest Airport:** ${attraction.airportWithin50km ? 'Within 50 km' : 'More than 50 km'}\n\n`;
-
-    if (parentCity) {
-      summaryText += `> **Located in ${parentCity.city}:** ${parentCity.description?.substring(0, 180)}...\n\n`;
-    }
-
-    return {
-      found: true,
-      matchType: 'attraction',
-      primaryName: attraction.placeName,
-      canonicalDestination: attraction.city || attraction.placeName,
-      country: 'India',
-      state: attraction.state,
-      attractionData: attraction,
-      cityData: parentCity,
-      verifiedInDataset: true,
-      provenance: `Verified Dataset: Top Indian Places to Visit (${attraction.sourceDataset || 'tourist_places.csv'})`,
-      summaryText,
-    };
-  }
-
-  private buildTravelPlanResult(destName: string, plans: VerifiedTravelPlan[]): DatasetLookupResult {
-    const p = plans[0];
-    let summaryText = `### ✈️ Travel Blueprint for ${p.destinationName} (${p.country})\n\n`;
-    summaryText += `**Destination Classification:** ${p.destinationType} • Local Currency: **${p.localCurrency}** (1 ${p.localCurrency} = $${p.exchangeRateToUSD || 'N/A'} USD)\n\n`;
-    summaryText += `* **Recommended Stay Duration:** **${p.recommendedStayDays} Days**\n`;
-    summaryText += `* **Best Season to Visit:** ${p.bestSeason} (Peak Multiplier: ${p.peakSeasonCostMultiplier}x)\n`;
-    summaryText += `* **Flight / Transit from ${p.startingPoint}:** ~$${p.flightTransportCostUSD || 'N/A'} USD (${p.travelDurationHours || 'N/A'} hrs via ${p.travelMode})\n`;
-    summaryText += `* **Accommodation Cost:** ~$${p.accommodationCostPerNightUSD || 'N/A'} USD/night (${p.accommodationOptions.join(', ') || 'Hotels, Stays'})\n`;
-    summaryText += `* **Daily Food Cost:** ~$${p.foodCostPerDayUSD || 'N/A'} USD/day (${p.foodOptions.join(', ') || 'Local dining'})\n`;
-    summaryText += `* **Activities & Sights:** ~$${p.activityCostUSD || 0} USD (${p.topAttractions.join(', ') || 'Main sights'})\n`;
-    summaryText += `* **Visa Status:** ${p.visaRequired ? `Required (~$${p.visaCostUSD} USD)` : 'Visa Free / On Arrival'}\n`;
-    summaryText += `* **Misc Daily Reserve:** ~$${p.miscellaneousCostUSD || 20} USD\n\n`;
-
-    return {
-      found: true,
-      matchType: 'travel_plan',
-      primaryName: p.destinationName,
-      canonicalDestination: p.destinationName,
-      country: p.country,
-      travelPlans: plans,
-      verifiedInDataset: true,
-      provenance: 'Verified Dataset: Travel_Planner_Dataset.csv (1,025 verified itinerary plans)',
+      provenance: `Verified Datasets: city_information.csv, tourist_places.csv, food_recommendations.csv`,
       summaryText,
     };
   }
 
   private buildGlobalResult(global: VerifiedGlobalDestination): DatasetLookupResult {
-    const plans = this.travelPlansMap.get(this.normalizeKey(global.name));
-
-    let summaryText = `### 🌍 ${global.name} — ${global.country} (${global.continent})\n\n`;
-    summaryText += `* **Destination Type:** ${global.type}\n`;
-    summaryText += `* **Estimated Average Daily Cost:** ~$${global.avgCostUSDPerDay ? `${global.avgCostUSDPerDay} USD/day` : 'N/A'}\n`;
-    summaryText += `* **Best Travel Season:** ${global.bestSeason}\n`;
-    summaryText += `* **Traveller Rating:** ⭐ ${global.avgRating ? `${global.avgRating} / 5.0` : 'N/A'}\n`;
-    summaryText += `* **Annual Tourist Volume:** ${global.annualVisitorsMillion ? `${global.annualVisitorsMillion} Million visitors/year` : 'N/A'}\n`;
-    summaryText += `* **UNESCO World Heritage Status:** ${global.unescoSite ? '🏆 Recognized UNESCO World Heritage Site' : 'No'}\n\n`;
+    let summaryText = `### 🌍 ${global.name}, ${global.country}\n\n`;
+    summaryText += `**Continent:** ${global.continent} | **Type:** ${global.type} ${global.unescoSite ? '🏛️ *(UNESCO World Heritage Site)*' : ''}\n`;
+    summaryText += `**Rating:** ⭐ **${global.avgRating || '4.7'}** | **Annual Visitors:** ${global.annualVisitorsMillion ? `${global.annualVisitorsMillion} Million` : 'High'}\n`;
+    summaryText += `**Average Daily Cost:** ~$${global.avgCostUSDPerDay || '100'} USD/day | **Best Season:** **${global.bestSeason}**\n`;
 
     return {
       found: true,
@@ -429,23 +554,53 @@ class DatasetService {
       canonicalDestination: global.name,
       country: global.country,
       globalData: global,
-      travelPlans: plans,
       verifiedInDataset: true,
-      provenance: 'Verified Dataset: Tourist_Destinations.csv (2,000 global destinations)',
+      provenance: 'Verified Dataset: Tourist_Destinations.csv',
       summaryText,
     };
   }
 
-  private buildCountryResult(
-    countryName: string,
-    group: { cities: VerifiedCity[]; global: VerifiedGlobalDestination[]; plans: VerifiedTravelPlan[] }
-  ): DatasetLookupResult {
-    let summaryText = `### 🗺️ Verified Destinations in ${countryName.toUpperCase()}\n\n`;
-    summaryText += `Our verified knowledge base contains records for destinations across **${countryName}**:\n\n`;
+  private buildTravelPlanResult(plan: VerifiedTravelPlan, allPlans: VerifiedTravelPlan[]): DatasetLookupResult {
+    let summaryText = `### ✈️ Complete Travel Plan: ${plan.destinationName}, ${plan.country}\n\n`;
+    summaryText += `**Destination Type:** ${plan.destinationType} | **Travel Mode:** ${plan.travelMode} (~${plan.travelDurationHours || '4'} hrs)\n\n`;
+    summaryText += `#### 💰 Indicative Travel Costs & Budget\n`;
+    summaryText += `- **Estimated Flight / Transport:** ~$${plan.flightTransportCostUSD || '350'} USD\n`;
+    summaryText += `- **Nightly Accommodation:** ~$${plan.accommodationCostPerNightUSD || '60'} USD/night\n`;
+    summaryText += `- **Daily Food Expenses:** ~$${plan.foodCostPerDayUSD || '25'} USD/day\n`;
+    summaryText += `- **Activities & Sightseeing:** ~$${plan.activityCostUSD || '30'} USD\n`;
+    summaryText += `- **Visa Requirements:** ${plan.visaRequired ? `Required (~$${plan.visaCostUSD} USD)` : 'Visa Free / On Arrival'}\n`;
+    summaryText += `- **Local Currency:** **${plan.localCurrency}** (1 ${plan.localCurrency} = $${plan.exchangeRateToUSD || 'N/A'} USD)\n`;
+    summaryText += `- **Recommended Stay Duration:** **${plan.recommendedStayDays} Days**\n`;
+    summaryText += `- **Best Season:** **${plan.bestSeason}** (Multiplier: ${plan.peakSeasonCostMultiplier}x in peak)\n\n`;
+
+    if (plan.topAttractions.length > 0) {
+      summaryText += `**Top Attractions:** ${plan.topAttractions.join(', ')}\n`;
+    }
+    if (plan.accommodationOptions.length > 0) {
+      summaryText += `**Stay Options:** ${plan.accommodationOptions.join(', ')}\n`;
+    }
+
+    return {
+      found: true,
+      matchType: 'travel_plan',
+      primaryName: plan.destinationName,
+      canonicalDestination: plan.city || plan.destinationName,
+      country: plan.country,
+      travelPlans: allPlans,
+      verifiedInDataset: true,
+      provenance: 'Verified Dataset: Travel_Planner_Dataset.csv',
+      summaryText,
+    };
+  }
+
+  private buildCountryResult(countryName: string): DatasetLookupResult {
+    const group = this.countryMap.get(countryName.toLowerCase())!;
+    let summaryText = `### 🗺️ Destination Overview: ${countryName.toUpperCase()}\n\n`;
+    summaryText += `Found **${group.cities.length} Indian cities**, **${group.global.length} global tourist landmarks**, and **${group.plans.length} travel planner blueprints** in the primary dataset.\n\n`;
 
     if (group.cities.length > 0) {
-      summaryText += `#### 🏙️ Key Cities on Record (${group.cities.length} cities):\n`;
-      summaryText += group.cities.slice(0, 10).map((c) => `• **${c.city}** (${c.state}): ⭐ ${c.holidifyRating || 'N/A'}`).join('\n');
+      summaryText += `#### 📍 Notable Cities (${group.cities.length} total):\n`;
+      summaryText += group.cities.slice(0, 8).map((c) => `• **${c.city}** (${c.state}): Best time: ${c.bestTimeToVisit}`).join('\n');
       summaryText += `\n\n`;
     }
 
@@ -469,31 +624,251 @@ class DatasetService {
   }
 
   /**
-   * Helper to return all cities in dataset
+   * ==========================================
+   * ADVANCED SEASONAL FILTERING & DISCOVERY ENGINE
+   * ==========================================
+   * Recognises 4 primary Indian seasons:
+   * Winter (Dec–Feb), Summer (Mar–Jun), Monsoon (Jul–Sep), Autumn (Oct–Nov)
+   * Plus all-season destinations with explicit conditions.
    */
+  public searchSeasonalDestinations(options: SeasonalFilterOptions): VerifiedSeasonalDestination[] {
+    let results = [...this.seasonalList];
+
+    // 1. Season Filter
+    if (options.season) {
+      if (options.season === 'all_season') {
+        results = results.filter((d) => {
+          const status = (d.allSeasonStatus || '').toLowerCase();
+          return status.includes('generally visitable year-round') || status.includes('across multiple seasons');
+        });
+      } else {
+        const seasonTerm = options.season.toLowerCase();
+        results = results.filter((d) => {
+          // Check suitableSeasons array
+          const hasSeason = d.suitableSeasons.some((s) => s.toLowerCase().includes(seasonTerm));
+          // Check recommendedMonths
+          const months = (d.recommendedMonths || '').toLowerCase();
+          let monthMatch = false;
+          if (seasonTerm === 'winter') monthMatch = months.includes('dec') || months.includes('jan') || months.includes('feb') || months.includes('nov');
+          if (seasonTerm === 'summer') monthMatch = months.includes('mar') || months.includes('apr') || months.includes('may') || months.includes('jun');
+          if (seasonTerm === 'monsoon') monthMatch = months.includes('jul') || months.includes('aug') || months.includes('sep');
+          if (seasonTerm === 'autumn') monthMatch = months.includes('oct') || months.includes('nov') || months.includes('sep');
+          return hasSeason || monthMatch;
+        });
+      }
+    }
+
+    // 2. Month Filter (e.g. "December", "May", "July")
+    if (options.month) {
+      const mPrefix = options.month.trim().slice(0, 3).toLowerCase();
+      results = results.filter((d) => {
+        const months = (d.recommendedMonths || '').toLowerCase();
+        return months.includes(mPrefix);
+      });
+    }
+
+    // 3. State / UT Filter
+    if (options.state) {
+      const stateTerm = options.state.trim().toLowerCase();
+      results = results.filter((d) => d.stateOrUT.toLowerCase().includes(stateTerm));
+    }
+
+    // 4. Region Filter (South India, North India, etc.)
+    if (options.region) {
+      const regionTerm = options.region.toLowerCase();
+      const southStates = ['kerala', 'tamil nadu', 'karnataka', 'andhra pradesh', 'telangana', 'puducherry'];
+      const northStates = ['himachal pradesh', 'uttarakhand', 'jammu and kashmir', 'ladakh', 'punjab', 'haryana', 'delhi', 'rajasthan', 'uttar pradesh', 'chandigarh'];
+      const westStates = ['maharashtra', 'gujarat', 'goa', 'dadra and nagar haveli and daman and diu'];
+      const eastStates = ['west bengal', 'odisha', 'bihar', 'jharkhand'];
+      const northeastStates = ['assam', 'meghalaya', 'arunachal pradesh', 'sikkim', 'nagaland', 'manipur', 'mizoram', 'tripura'];
+      const centralStates = ['madhya pradesh', 'chhattisgarh'];
+
+      results = results.filter((d) => {
+        const st = d.stateOrUT.toLowerCase();
+        if (regionTerm === 'south') return southStates.some((s) => st.includes(s));
+        if (regionTerm === 'north') return northStates.some((s) => st.includes(s));
+        if (regionTerm === 'west') return westStates.some((s) => st.includes(s));
+        if (regionTerm === 'east') return eastStates.some((s) => st.includes(s));
+        if (regionTerm === 'northeast') return northeastStates.some((s) => st.includes(s));
+        if (regionTerm === 'central') return centralStates.some((s) => st.includes(s));
+        return true;
+      });
+    }
+
+    // 5. Geographic Category Filter
+    if (options.category) {
+      const cat = options.category.toLowerCase();
+      results = results.filter((d) => {
+        const dType = d.destinationType.toLowerCase();
+        const imgCat = d.imageCategory.toLowerCase();
+        if (cat === 'hill_station') return dType.includes('hill') || imgCat.includes('hill');
+        if (cat === 'mountain') return dType.includes('mountain') || dType.includes('himalayan') || imgCat.includes('mountain');
+        if (cat === 'waterfall') return dType.includes('waterfall') || imgCat.includes('waterfall') || d.destinationName.toLowerCase().includes('falls');
+        if (cat === 'beach' || cat === 'coastal') return dType.includes('beach') || dType.includes('coastal') || imgCat.includes('coastal') || imgCat.includes('beach');
+        if (cat === 'heritage') return dType.includes('heritage') || dType.includes('fort') || dType.includes('palace') || imgCat.includes('heritage');
+        if (cat === 'wildlife') return dType.includes('wildlife') || dType.includes('national park') || dType.includes('tiger reserve') || imgCat.includes('wildlife');
+        if (cat === 'desert') return dType.includes('desert') || imgCat.includes('desert');
+        if (cat === 'backwater') return dType.includes('backwater') || imgCat.includes('backwater');
+        return dType.includes(cat) || imgCat.includes(cat);
+      });
+    }
+
+    // 6. Budget Filter
+    if (options.maxDailyBudgetINR && options.maxDailyBudgetINR > 0) {
+      results = results.filter((d) => d.budgetBudgetInt.min <= options.maxDailyBudgetINR!);
+    }
+
+    // 7. All-Season Only
+    if (options.allSeasonOnly) {
+      results = results.filter((d) => {
+        const s = (d.allSeasonStatus || '').toLowerCase();
+        return s.includes('generally visitable') || s.includes('across multiple seasons');
+      });
+    }
+
+    // Sort/rank by suitability
+    return results.slice(0, options.limit || 8);
+  }
+
+  /**
+   * Formats a Seasonal Destination recommendation into the user's required structured schema
+   */
+  public formatSeasonalRecommendationCard(dest: VerifiedSeasonalDestination, requestedSeason?: string): string {
+    const verifiedImg = imageRetrievalService.getVerifiedImage(dest.destinationName, dest.imageCategory);
+
+    let card = `### 📍 **${dest.destinationName}**\n`;
+    if (verifiedImg) {
+      card += `![${verifiedImg.caption}](${verifiedImg.imageUrl})\n*Photo: ${verifiedImg.caption} (${verifiedImg.photographerOrSource})*\n\n`;
+    }
+    card += `**State:** ${dest.stateOrUT}\n`;
+    card += `**Destination category:** ${dest.destinationType}\n`;
+    card += `**Why visit:** ${dest.keyAttractions}\n`;
+    card += `**Best months:** ${dest.recommendedMonths}\n`;
+    card += `**Weather:** ${this.getSeasonalWeatherSummary(dest, requestedSeason)}\n`;
+    card += `**Main attractions:** ${dest.keyAttractions}\n`;
+    card += `**Estimated budget per person:** ${dest.budgetBudgetInt.raw}/day (Budget) | ${dest.budgetMidRangeInt.raw}/day (Mid-range)\n`;
+    card += `**Suggested trip duration:** ${dest.suggestedDuration}\n`;
+    card += `**Travel cautions:** ${dest.seasonalCautions}\n`;
+
+    return card;
+  }
+
+  private getSeasonalWeatherSummary(dest: VerifiedSeasonalDestination, requestedSeason?: string): string {
+    const type = dest.destinationType.toLowerCase();
+    const season = (requestedSeason || '').toLowerCase();
+
+    if (season === 'winter' || season === 'december' || season === 'january' || season === 'february') {
+      if (type.includes('hill') || type.includes('mountain')) {
+        return 'Crisp chilly mountain climate (5°C–15°C); frequent fog or snow in higher altitudes';
+      }
+      if (type.includes('desert') || dest.stateOrUT === 'Rajasthan' || dest.stateOrUT === 'Gujarat') {
+        return 'Pleasant sunny days (20°C–26°C) and cool starry desert nights (8°C–14°C)';
+      }
+      if (type.includes('beach') || type.includes('coastal') || dest.stateOrUT === 'Goa' || dest.stateOrUT === 'Kerala') {
+        return 'Warm balmy tropical sunshine (22°C–31°C) with gentle ocean sea breezes';
+      }
+      return 'Mild and comfortable winter weather (12°C–24°C)';
+    }
+
+    if (season === 'summer' || season === 'march' || season === 'april' || season === 'may' || season === 'june') {
+      if (type.includes('hill') || type.includes('mountain') || type.includes('high altitude')) {
+        return 'Refreshing alpine cool escape (15°C–25°C), far cooler than the scorched plains';
+      }
+      return 'Warm to hot (32°C–42°C); outdoor sightseeing recommended in early mornings and late afternoons';
+    }
+
+    if (season === 'monsoon' || season === 'july' || season === 'august' || season === 'september' || season === 'rainy season') {
+      if (type.includes('waterfall')) {
+        return 'Spectacular roaring cascades, full water volumes, mist-draped emerald valleys';
+      }
+      return 'Lush green landscapes, dramatic clouds and frequent rain showers';
+    }
+
+    if (season === 'autumn' || season === 'october' || season === 'november') {
+      return 'Post-monsoon freshness, clear mountain views, golden light, and moderate pleasant temperatures (18°C–28°C)';
+    }
+
+    return 'Comfortable regional conditions; varies across seasons';
+  }
+
+  /**
+   * Calculates realistic trip budget based on verified dataset metrics
+   */
+  public calculateTripBudget(
+    destName: string,
+    durationDays: number = 3,
+    groupSize: number = 1,
+    travelStyle: 'budget' | 'midRange' = 'budget'
+  ): BudgetEstimationResult | null {
+    const match = this.getSeasonalDestination(destName);
+    const state = match ? match.stateOrUT : 'India';
+
+    const dailyMin = match
+      ? (travelStyle === 'budget' ? match.budgetBudgetInt.min : match.budgetMidRangeInt.min)
+      : (travelStyle === 'budget' ? 1800 : 3800);
+    const dailyMax = match
+      ? (travelStyle === 'budget' ? match.budgetBudgetInt.max : match.budgetMidRangeInt.max)
+      : (travelStyle === 'budget' ? 3200 : 6500);
+
+    const avgDailyRate = Math.round((dailyMin + dailyMax) / 2);
+
+    // Realistic itemized breakdown based on travel style
+    const accommodation = travelStyle === 'budget' ? Math.round(avgDailyRate * 0.40) : Math.round(avgDailyRate * 0.45);
+    const food = travelStyle === 'budget' ? Math.round(avgDailyRate * 0.30) : Math.round(avgDailyRate * 0.28);
+    const localTransport = travelStyle === 'budget' ? Math.round(avgDailyRate * 0.18) : Math.round(avgDailyRate * 0.17);
+    const sightseeingAndActivities = avgDailyRate - accommodation - food - localTransport;
+
+    const totalPerPerson = avgDailyRate * durationDays;
+    const totalForGroup = totalPerPerson * groupSize;
+
+    return {
+      destinationName: match ? match.destinationName : destName,
+      state,
+      durationDays,
+      groupSize,
+      travelStyle,
+      indicativeDailyPerPersonINR: avgDailyRate,
+      dailyBreakdownINR: {
+        accommodation,
+        food,
+        localTransport,
+        sightseeingAndActivities,
+      },
+      totalPerPersonINR: totalPerPerson,
+      totalForGroupINR: totalForGroup,
+      disclaimer: 'Indicative planning estimate in INR at destination; excludes transit to/from origin; actual costs vary by travel season, festival dates, and room selection.',
+    };
+  }
+
+  public getSeasonalDestination(query: string): VerifiedSeasonalDestination | null {
+    if (!query) return null;
+    const clean = query.trim().toLowerCase();
+    const norm = this.normalizeKey(query);
+    if (this.seasonalDestMap.has(norm)) return this.seasonalDestMap.get(norm)!;
+    if (this.seasonalDestMap.has(clean)) return this.seasonalDestMap.get(clean)!;
+
+    for (const d of this.seasonalList) {
+      if (d.destinationName.toLowerCase() === clean || clean.includes(d.destinationName.toLowerCase()) || d.destinationName.toLowerCase().includes(clean)) {
+        return d;
+      }
+    }
+    return null;
+  }
+
   public getAllCities(): VerifiedCity[] {
     return Array.from(this.citiesMap.values());
   }
 
-  /**
-   * Helper to return all attractions in a specific city
-   */
   public getAttractionsInCity(cityName: string): VerifiedAttraction[] {
     const city = this.citiesMap.get(this.normalizeKey(cityName));
     return city?.touristPlaces || [];
   }
 
-  /**
-   * Helper to return all food recommendations in a specific city
-   */
   public getFoodInCity(cityName: string): VerifiedFoodItem[] {
     const city = this.citiesMap.get(this.normalizeKey(cityName));
     return city?.foodRecommendations || [];
   }
 
-  /**
-   * Get metadata summary
-   */
   public getMetadata() {
     return datasetData.metadata;
   }
