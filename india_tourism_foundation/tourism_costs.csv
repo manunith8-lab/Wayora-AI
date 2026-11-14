@@ -1,0 +1,9 @@
+cost_id,attraction_id,item,amount_inr,status,note,source_urls,last_verified
+CO_KL_0001,AT_KL_0001,Entry fee (Indian adult),200,verified,Forest Dept entry ticket including bus transfer at Eravikulam National Park,https://eravikulam.org,2026-11-14
+CO_KL_0002,AT_KL_0001,Foreign tourist entry ticket,500,verified,International visitor admission including bus transfer,https://eravikulam.org,2026-11-14
+CO_KL_0003,AT_KL_0002,"Speed boat ride (15 mins, 5 persons)",1000,verified,DTPC Mattupetty speed boat hire,https://www.keralatourism.org,2026-11-14
+CO_KL_0004,AT_KL_0004,Tea museum admission and factory demonstration,125,verified,Tata Tea Museum entry including tea tasting cup,https://www.keralatourism.org,2026-11-14
+CO_UP_0001,AT_UP_0001,ASI Monument Entry Ticket (Indian),50,verified,Standard Archaeological Survey of India ticket,https://asi.nic.in,2026-11-14
+CO_UP_0002,AT_UP_0001,Main Mausoleum Entry Ticket (All nationalities),200,verified,Additional ticket required to step onto the main marble terrace of Taj Mahal,https://www.tajmahal.gov.in,2026-11-14
+CO_RJ_0001,AT_RJ_0001,Amber Fort composite admission (Indian),100,verified,Department of Archaeology & Museums Rajasthan ticket,https://tourism.rajasthan.gov.in,2026-11-14
+CO_DL_0001,AT_DL_0001,Red Fort admission ticket (Indian),50,verified,ASI ticket for Red Fort and museum pavilions,https://asi.nic.in,2026-11-14

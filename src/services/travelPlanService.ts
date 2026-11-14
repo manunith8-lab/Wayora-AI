@@ -34,9 +34,9 @@ export class TravelPlanService {
   ): Promise<TravelPlanData> {
     const cleanQuery = (query || '').trim().toLowerCase();
     
-    // 0. Check Primary Verified Datasets (Seasonal, Travel Planner, City Information, Tourist Places)
+    // 0. Check Primary Verified Datasets (Seasonal, Travel Planner, City Information, Tourist Places, Attractions)
     const datasetMatch = datasetService.lookup(query);
-    if (datasetMatch && (datasetMatch.seasonalData || datasetMatch.travelPlans?.length || datasetMatch.cityData)) {
+    if (datasetMatch && (datasetMatch.seasonalData || datasetMatch.travelPlans?.length || datasetMatch.cityData || datasetMatch.attractionData)) {
       return this.buildFromVerifiedDataset(datasetMatch, requestedDays, preferredTier);
     }
 
@@ -337,6 +337,194 @@ export class TravelPlanService {
           },
         ],
         seasonalAdvisory: `${s.recommendedMonths} is the recommended visiting window (${s.suitableSeasons.join(', ')}). ${s.seasonalCautions}`,
+      };
+    }
+
+    // Scenario 0.5: Verified Attraction Record (India Tourism Foundation Database)
+    if (match.attractionData) {
+      const a = match.attractionData;
+      const defaultDays = 2;
+      const durationDays = requestedDays && requestedDays > 0 ? requestedDays : defaultDays;
+      const verifiedImg = match.verifiedImage || imageRetrievalService.getVerifiedImage(a.placeName, 'heritage');
+
+      const budgetDailyUSD = 25;
+      const midDailyUSD = 50;
+      const luxuryDailyUSD = 110;
+
+      const costTiers = {
+        budget: {
+          tier: 'budget' as const,
+          label: 'Budget Explorer',
+          perDayPerPersonUSD: budgetDailyUSD,
+          totalPerPersonUSD: budgetDailyUSD * durationDays,
+          accommodationExample: `Comfortable homestay in ${a.city || a.state}`,
+          diningStyle: 'Local thalis, regional eateries and tea stalls',
+          breakdown: {
+            accommodationPerDayUSD: 12,
+            foodPerDayUSD: 8,
+            localTransitPerDayUSD: 3,
+            activitiesPerDayUSD: Math.round(a.entranceFeeINR / 84) || 2,
+            miscPerDayUSD: 3,
+          },
+        },
+        midRange: {
+          tier: 'midRange' as const,
+          label: 'Comfort & Value',
+          perDayPerPersonUSD: midDailyUSD,
+          totalPerPersonUSD: midDailyUSD * durationDays,
+          accommodationExample: `Heritage hotel / boutique resort in ${a.city || a.state}`,
+          diningStyle: 'Accredited restaurants and traditional specialty cafes',
+          breakdown: {
+            accommodationPerDayUSD: 25,
+            foodPerDayUSD: 15,
+            localTransitPerDayUSD: 6,
+            activitiesPerDayUSD: Math.round(a.entranceFeeINR / 84) + 5,
+            miscPerDayUSD: 5,
+          },
+        },
+        luxury: {
+          tier: 'luxury' as const,
+          label: 'Luxury & Indulgence',
+          perDayPerPersonUSD: luxuryDailyUSD,
+          totalPerPersonUSD: luxuryDailyUSD * durationDays,
+          accommodationExample: `5-Star luxury resort / palace stay in ${a.city || a.state}`,
+          diningStyle: 'Fine dining, private tastings, and chef-curated dining',
+          breakdown: {
+            accommodationPerDayUSD: 65,
+            foodPerDayUSD: 30,
+            localTransitPerDayUSD: 15,
+            activitiesPerDayUSD: 15,
+            miscPerDayUSD: 10,
+          },
+        },
+      };
+
+      const itinerary: TravelPlanDay[] = [
+        {
+          dayNumber: 1,
+          title: `Day 1: ${a.placeName} Exploration & Heritage`,
+          theme: 'Arrival, Iconic Sightseeing & Scenic Exploration',
+          slots: [
+            {
+              timeSlot: 'Morning',
+              activity: `Visit ${a.placeName} (${a.openingHours || '08:00 AM onwards'}). Entry fee: ₹${a.entranceFeeINR}. Ideal duration: ${a.visitDurationHours || 2} hours.`,
+              attractionName: a.placeName,
+              durationHours: a.visitDurationHours || 2,
+              order: 1,
+              tips: `DSLR photography ${a.dslrAllowed ? 'allowed' : 'restricted'}. Best visited in morning light.`,
+            },
+            {
+              timeSlot: 'Afternoon',
+              activity: `Explore surrounding viewpoints, gardens, and cultural landmarks of ${a.city || a.state}.`,
+              durationHours: 2.5,
+              travelTimeMinutes: 15,
+              order: 2,
+              mealRecommendation: {
+                dish: `Authentic regional lunch in ${a.city || a.state}`,
+                description: 'Traditional thali and local specialties',
+                estimatedCostUSD: 5,
+              },
+              tips: 'Carry drinking water and comfortable walking shoes.',
+            },
+            {
+              timeSlot: 'Evening',
+              activity: `Twilight stroll through traditional bazaars, sunset vistas, and authentic dinner.`,
+              durationHours: 2.0,
+              travelTimeMinutes: 15,
+              order: 3,
+              tips: 'Browse local shops for authentic regional teas, spices, and handicrafts.',
+            },
+          ],
+          dayTotalEstimatedUSD: preferredTier === 'budget' ? budgetDailyUSD : preferredTier === 'luxury' ? luxuryDailyUSD : midDailyUSD,
+          highlights: [a.placeName, `${a.city || a.state} Heritage`],
+        },
+      ];
+
+      if (durationDays > 1) {
+        for (let d = 2; d <= durationDays; d++) {
+          itinerary.push({
+            dayNumber: d,
+            title: `Day ${d}: ${a.city || a.state} Extended Discovery`,
+            theme: 'Nature Trails, Local Culture & Leisure',
+            slots: [
+              {
+                timeSlot: 'Morning',
+                activity: `Scenic excursion and local sightseeing around ${a.city || a.state}.`,
+                durationHours: 3.0,
+                order: 1,
+              },
+              {
+                timeSlot: 'Afternoon',
+                activity: 'Artisan craft shopping and regional museum visits.',
+                durationHours: 2.5,
+                travelTimeMinutes: 15,
+                order: 2,
+                mealRecommendation: {
+                  dish: 'Regional specialty meal',
+                  description: 'Authentic local delicacies',
+                  estimatedCostUSD: 6,
+                },
+              },
+              {
+                timeSlot: 'Evening',
+                activity: 'Evening leisure, local delicacies, and cultural relaxation.',
+                durationHours: 2.0,
+                travelTimeMinutes: 10,
+                order: 3,
+              },
+            ],
+            dayTotalEstimatedUSD: preferredTier === 'budget' ? budgetDailyUSD : preferredTier === 'luxury' ? luxuryDailyUSD : midDailyUSD,
+            highlights: [`${a.city || a.state} Countryside`, 'Local Culture'],
+          });
+        }
+      }
+
+      return {
+        destinationId: a.placeId,
+        destinationName: a.placeName,
+        country: 'India',
+        flagEmoji: '🇮🇳',
+        bannerPhoto: verifiedImg?.imageUrl || 'https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=1200&q=80',
+        tagline: `${a.placeType} in ${a.city || a.state} • ${a.significance.slice(0, 75)}`,
+        recommendedDurationDays: defaultDays,
+        planDurationDays: durationDays,
+        bestTimeToVisit: {
+          season: a.bestTimeToVisit,
+          months: a.bestTimeToVisit,
+          weatherSummary: `Ideal visiting months: ${a.bestTimeToVisit}. Weekly off: ${a.weeklyOff}.`,
+        },
+        transitGuide: {
+          nearestAirports: a.transport?.airportName ? [`${a.transport.airportName} (${a.transport.airportCode}) - ${a.transport.airportRoadKm} km (~${a.transport.airportDriveTimeMin} mins)`] : [],
+          railwayConnectivity: a.transport?.railwayStation ? [`${a.transport.railwayStation} (${a.transport.railwayCode}) - ${a.transport.railwayRoadKm} km (~${a.transport.railwayDriveTimeMin} mins)`] : [],
+          localTransportTips: a.transport?.publicTransport ? [a.transport.publicTransport, 'Taxis and auto-rickshaws available for point-to-point travel.'] : ['State transport buses and taxis available.'],
+          airportToCityEstimateUSD: 15,
+        },
+        neighborhoodGuides: [
+          {
+            name: `${a.city || a.state} Central`,
+            vibe: 'Convenient base with access to sightseeing, transit, and local dining',
+            bestFor: 'Couples, families, and solo travelers',
+            avgPricePerNightUSD: Math.round(midDailyUSD * 0.45),
+          },
+        ],
+        costTiers,
+        itinerary,
+        photographySpots: [
+          {
+            spot: `${a.placeName} Main Viewpoint`,
+            bestTime: 'Morning or Golden Hour',
+            tip: `DSLR allowed: ${a.dslrAllowed ? 'Yes' : 'No'}. Capture architectural symmetry and morning lighting.`,
+          },
+        ],
+        localDishes: [
+          {
+            name: `Specialties of ${a.state}`,
+            category: 'traditional' as const,
+            description: `Authentic regional recipes and traditional flavors of ${a.state}`,
+            priceRangeUSD: '$2 - $6',
+          },
+        ],
+        seasonalAdvisory: `Best months to plan your visit: ${a.bestTimeToVisit}. Check opening hours (${a.openingHours || '06:00 - 18:00'}) and weekly off (${a.weeklyOff}).`,
       };
     }
 

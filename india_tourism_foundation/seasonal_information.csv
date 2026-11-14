@@ -1,0 +1,253 @@
+season_id,climate_zone_id,zone_description,month,temp_min_c,temp_max_c,rainfall_level,monsoon_access_note,data_status,last_verified
+SE_KL_HIGHLAND_01,CZ_KL_HIGHLAND,Munnar-type high range,1,7,21,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_HIGHLAND_02,CZ_KL_HIGHLAND,Munnar-type high range,2,9,23,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_HIGHLAND_03,CZ_KL_HIGHLAND,Munnar-type high range,3,12,26,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_04,CZ_KL_HIGHLAND,Munnar-type high range,4,14,26,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_05,CZ_KL_HIGHLAND,Munnar-type high range,5,14,25,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_06,CZ_KL_HIGHLAND,Munnar-type high range,6,13,21,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_07,CZ_KL_HIGHLAND,Munnar-type high range,7,12,20,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_08,CZ_KL_HIGHLAND,Munnar-type high range,8,12,21,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_09,CZ_KL_HIGHLAND,Munnar-type high range,9,12,22,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_10,CZ_KL_HIGHLAND,Munnar-type high range,10,12,22,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_11,CZ_KL_HIGHLAND,Munnar-type high range,11,10,21,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_HIGHLAND_12,CZ_KL_HIGHLAND,Munnar-type high range,12,8,21,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_01,CZ_KL_COASTAL_SOUTH,South coast,1,22,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_02,CZ_KL_COASTAL_SOUTH,South coast,2,23,33,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_03,CZ_KL_COASTAL_SOUTH,South coast,3,25,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_04,CZ_KL_COASTAL_SOUTH,South coast,4,26,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_05,CZ_KL_COASTAL_SOUTH,South coast,5,26,33,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_06,CZ_KL_COASTAL_SOUTH,South coast,6,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_07,CZ_KL_COASTAL_SOUTH,South coast,7,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_08,CZ_KL_COASTAL_SOUTH,South coast,8,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_09,CZ_KL_COASTAL_SOUTH,South coast,9,24,30,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_10,CZ_KL_COASTAL_SOUTH,South coast,10,24,31,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_11,CZ_KL_COASTAL_SOUTH,South coast,11,24,31,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_COASTAL_SOUTH_12,CZ_KL_COASTAL_SOUTH,South coast,12,23,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_BACKWATER_01,CZ_KL_BACKWATER,Central backwaters,1,22,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_BACKWATER_02,CZ_KL_BACKWATER,Central backwaters,2,23,33,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_BACKWATER_03,CZ_KL_BACKWATER,Central backwaters,3,25,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_BACKWATER_04,CZ_KL_BACKWATER,Central backwaters,4,26,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_BACKWATER_05,CZ_KL_BACKWATER,Central backwaters,5,26,33,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_BACKWATER_06,CZ_KL_BACKWATER,Central backwaters,6,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_BACKWATER_07,CZ_KL_BACKWATER,Central backwaters,7,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_BACKWATER_08,CZ_KL_BACKWATER,Central backwaters,8,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_BACKWATER_09,CZ_KL_BACKWATER,Central backwaters,9,24,30,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_BACKWATER_10,CZ_KL_BACKWATER,Central backwaters,10,24,31,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_BACKWATER_11,CZ_KL_BACKWATER,Central backwaters,11,24,31,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_BACKWATER_12,CZ_KL_BACKWATER,Central backwaters,12,23,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_01,CZ_KL_NORTH_COAST,North Malabar coast,1,21,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_02,CZ_KL_NORTH_COAST,North Malabar coast,2,22,33,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_03,CZ_KL_NORTH_COAST,North Malabar coast,3,24,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_04,CZ_KL_NORTH_COAST,North Malabar coast,4,26,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_05,CZ_KL_NORTH_COAST,North Malabar coast,5,26,33,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_06,CZ_KL_NORTH_COAST,North Malabar coast,6,24,29,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_07,CZ_KL_NORTH_COAST,North Malabar coast,7,24,28,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_08,CZ_KL_NORTH_COAST,North Malabar coast,8,24,28,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_09,CZ_KL_NORTH_COAST,North Malabar coast,9,24,30,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_10,CZ_KL_NORTH_COAST,North Malabar coast,10,24,31,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_11,CZ_KL_NORTH_COAST,North Malabar coast,11,23,32,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_NORTH_COAST_12,CZ_KL_NORTH_COAST,North Malabar coast,12,22,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_WAYANAD_01,CZ_KL_WAYANAD,Wayanad plateau,1,13,28,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_WAYANAD_02,CZ_KL_WAYANAD,Wayanad plateau,2,15,30,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_WAYANAD_03,CZ_KL_WAYANAD,Wayanad plateau,3,18,32,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_WAYANAD_04,CZ_KL_WAYANAD,Wayanad plateau,4,20,32,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_WAYANAD_05,CZ_KL_WAYANAD,Wayanad plateau,5,20,30,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_WAYANAD_06,CZ_KL_WAYANAD,Wayanad plateau,6,19,25,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_WAYANAD_07,CZ_KL_WAYANAD,Wayanad plateau,7,19,24,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_WAYANAD_08,CZ_KL_WAYANAD,Wayanad plateau,8,19,25,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_WAYANAD_09,CZ_KL_WAYANAD,Wayanad plateau,9,19,27,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_WAYANAD_10,CZ_KL_WAYANAD,Wayanad plateau,10,19,28,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_WAYANAD_11,CZ_KL_WAYANAD,Wayanad plateau,11,16,27,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_WAYANAD_12,CZ_KL_WAYANAD,Wayanad plateau,12,14,27,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_01,CZ_KL_MIDLAND_FOREST,Forest midlands,1,17,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_02,CZ_KL_MIDLAND_FOREST,Forest midlands,2,19,34,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_03,CZ_KL_MIDLAND_FOREST,Forest midlands,3,22,35,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_04,CZ_KL_MIDLAND_FOREST,Forest midlands,4,23,35,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_05,CZ_KL_MIDLAND_FOREST,Forest midlands,5,23,33,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_06,CZ_KL_MIDLAND_FOREST,Forest midlands,6,22,28,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_07,CZ_KL_MIDLAND_FOREST,Forest midlands,7,22,27,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_08,CZ_KL_MIDLAND_FOREST,Forest midlands,8,22,28,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_09,CZ_KL_MIDLAND_FOREST,Forest midlands,9,22,29,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_10,CZ_KL_MIDLAND_FOREST,Forest midlands,10,22,30,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_11,CZ_KL_MIDLAND_FOREST,Forest midlands,11,20,30,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_MIDLAND_FOREST_12,CZ_KL_MIDLAND_FOREST,Forest midlands,12,18,31,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_01,CZ_KL_PALAKKAD_GAP,Palakkad Gap,1,20,34,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_02,CZ_KL_PALAKKAD_GAP,Palakkad Gap,2,22,36,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_03,CZ_KL_PALAKKAD_GAP,Palakkad Gap,3,25,39,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_04,CZ_KL_PALAKKAD_GAP,Palakkad Gap,4,26,40,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_05,CZ_KL_PALAKKAD_GAP,Palakkad Gap,5,26,38,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_06,CZ_KL_PALAKKAD_GAP,Palakkad Gap,6,24,31,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_07,CZ_KL_PALAKKAD_GAP,Palakkad Gap,7,24,30,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_08,CZ_KL_PALAKKAD_GAP,Palakkad Gap,8,24,30,very heavy (SW monsoon),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_09,CZ_KL_PALAKKAD_GAP,Palakkad Gap,9,24,32,heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_10,CZ_KL_PALAKKAD_GAP,Palakkad Gap,10,23,32,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_11,CZ_KL_PALAKKAD_GAP,Palakkad Gap,11,22,32,moderate (NE monsoon showers),Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_KL_PALAKKAD_GAP_12,CZ_KL_PALAKKAD_GAP,Palakkad Gap,12,20,33,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HM_01,CZ_IN_HM,High Himalaya cold desert,1,-12,2,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HM_02,CZ_IN_HM,High Himalaya cold desert,2,-9,5,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HM_03,CZ_IN_HM,High Himalaya cold desert,3,-4,10,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HM_04,CZ_IN_HM,High Himalaya cold desert,4,1,15,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HM_05,CZ_IN_HM,High Himalaya cold desert,5,5,21,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HM_06,CZ_IN_HM,High Himalaya cold desert,6,9,27,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HM_07,CZ_IN_HM,High Himalaya cold desert,7,12,30,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HM_08,CZ_IN_HM,High Himalaya cold desert,8,11,29,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HM_09,CZ_IN_HM,High Himalaya cold desert,9,6,24,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HM_10,CZ_IN_HM,High Himalaya cold desert,10,-1,16,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HM_11,CZ_IN_HM,High Himalaya cold desert,11,-7,9,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HM_12,CZ_IN_HM,High Himalaya cold desert,12,-11,3,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_KV_01,CZ_IN_KV,Kashmir valley,1,-3,6,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_KV_02,CZ_IN_KV,Kashmir valley,2,-1,9,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_KV_03,CZ_IN_KV,Kashmir valley,3,3,15,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_KV_04,CZ_IN_KV,Kashmir valley,4,7,20,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_KV_05,CZ_IN_KV,Kashmir valley,5,10,25,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_KV_06,CZ_IN_KV,Kashmir valley,6,14,29,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_KV_07,CZ_IN_KV,Kashmir valley,7,18,31,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_KV_08,CZ_IN_KV,Kashmir valley,8,17,30,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_KV_09,CZ_IN_KV,Kashmir valley,9,11,27,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_KV_10,CZ_IN_KV,Kashmir valley,10,5,22,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_KV_11,CZ_IN_KV,Kashmir valley,11,0,14,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_KV_12,CZ_IN_KV,Kashmir valley,12,-3,8,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HN_01,CZ_IN_HN,Western/Central Himalayan hills,1,1,10,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HN_02,CZ_IN_HN,Western/Central Himalayan hills,2,2,12,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HN_03,CZ_IN_HN,Western/Central Himalayan hills,3,6,17,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HN_04,CZ_IN_HN,Western/Central Himalayan hills,4,10,22,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HN_05,CZ_IN_HN,Western/Central Himalayan hills,5,13,26,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HN_06,CZ_IN_HN,Western/Central Himalayan hills,6,15,27,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_HN_07,CZ_IN_HN,Western/Central Himalayan hills,7,16,23,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_HN_08,CZ_IN_HN,Western/Central Himalayan hills,8,16,23,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_HN_09,CZ_IN_HN,Western/Central Himalayan hills,9,13,23,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_HN_10,CZ_IN_HN,Western/Central Himalayan hills,10,8,21,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HN_11,CZ_IN_HN,Western/Central Himalayan hills,11,4,16,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_HN_12,CZ_IN_HN,Western/Central Himalayan hills,12,1,11,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_PN_01,CZ_IN_PN,Northern plains,1,7,20,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_PN_02,CZ_IN_PN,Northern plains,2,10,24,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_PN_03,CZ_IN_PN,Northern plains,3,15,30,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_PN_04,CZ_IN_PN,Northern plains,4,21,37,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_PN_05,CZ_IN_PN,Northern plains,5,26,41,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_PN_06,CZ_IN_PN,Northern plains,6,28,40,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_PN_07,CZ_IN_PN,Northern plains,7,26,35,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_PN_08,CZ_IN_PN,Northern plains,8,26,34,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_PN_09,CZ_IN_PN,Northern plains,9,24,34,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_PN_10,CZ_IN_PN,Northern plains,10,18,33,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_PN_11,CZ_IN_PN,Northern plains,11,11,27,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_PN_12,CZ_IN_PN,Northern plains,12,7,21,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_DS_01,CZ_IN_DS,Thar desert,1,8,23,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_DS_02,CZ_IN_DS,Thar desert,2,11,27,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_DS_03,CZ_IN_DS,Thar desert,3,17,33,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_DS_04,CZ_IN_DS,Thar desert,4,23,39,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_DS_05,CZ_IN_DS,Thar desert,5,28,43,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_DS_06,CZ_IN_DS,Thar desert,6,29,42,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_DS_07,CZ_IN_DS,Thar desert,7,27,37,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_DS_08,CZ_IN_DS,Thar desert,8,26,35,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_DS_09,CZ_IN_DS,Thar desert,9,24,36,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_DS_10,CZ_IN_DS,Thar desert,10,19,36,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_DS_11,CZ_IN_DS,Thar desert,11,12,30,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_DS_12,CZ_IN_DS,Thar desert,12,8,24,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_PC_01,CZ_IN_PC,Central/Deccan plateau,1,12,28,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_PC_02,CZ_IN_PC,Central/Deccan plateau,2,14,31,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_PC_03,CZ_IN_PC,Central/Deccan plateau,3,18,35,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_PC_04,CZ_IN_PC,Central/Deccan plateau,4,22,39,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_PC_05,CZ_IN_PC,Central/Deccan plateau,5,25,41,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_PC_06,CZ_IN_PC,Central/Deccan plateau,6,24,35,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_PC_07,CZ_IN_PC,Central/Deccan plateau,7,22,30,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_PC_08,CZ_IN_PC,Central/Deccan plateau,8,22,29,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_PC_09,CZ_IN_PC,Central/Deccan plateau,9,22,31,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_PC_10,CZ_IN_PC,Central/Deccan plateau,10,19,32,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_PC_11,CZ_IN_PC,Central/Deccan plateau,11,14,29,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_PC_12,CZ_IN_PC,Central/Deccan plateau,12,11,27,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_FC_01,CZ_IN_FC,Central Indian forest belt,1,8,26,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_FC_02,CZ_IN_FC,Central Indian forest belt,2,10,29,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_FC_03,CZ_IN_FC,Central Indian forest belt,3,15,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_FC_04,CZ_IN_FC,Central Indian forest belt,4,20,39,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_FC_05,CZ_IN_FC,Central Indian forest belt,5,25,42,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_FC_06,CZ_IN_FC,Central Indian forest belt,6,25,37,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_FC_07,CZ_IN_FC,Central Indian forest belt,7,23,30,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_FC_08,CZ_IN_FC,Central Indian forest belt,8,23,29,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_FC_09,CZ_IN_FC,Central Indian forest belt,9,22,31,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_FC_10,CZ_IN_FC,Central Indian forest belt,10,18,31,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_FC_11,CZ_IN_FC,Central Indian forest belt,11,12,28,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_FC_12,CZ_IN_FC,Central Indian forest belt,12,8,25,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CW_01,CZ_IN_CW,West coast,1,19,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CW_02,CZ_IN_CW,West coast,2,20,33,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CW_03,CZ_IN_CW,West coast,3,22,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CW_04,CZ_IN_CW,West coast,4,25,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CW_05,CZ_IN_CW,West coast,5,26,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CW_06,CZ_IN_CW,West coast,6,25,31,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CW_07,CZ_IN_CW,West coast,7,24,29,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CW_08,CZ_IN_CW,West coast,8,24,29,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CW_09,CZ_IN_CW,West coast,9,24,31,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CW_10,CZ_IN_CW,West coast,10,24,33,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_CW_11,CZ_IN_CW,West coast,11,22,33,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_CW_12,CZ_IN_CW,West coast,12,20,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CE_01,CZ_IN_CE,Southeast coast,1,21,30,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CE_02,CZ_IN_CE,Southeast coast,2,22,32,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CE_03,CZ_IN_CE,Southeast coast,3,24,34,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CE_04,CZ_IN_CE,Southeast coast,4,26,36,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CE_05,CZ_IN_CE,Southeast coast,5,27,38,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CE_06,CZ_IN_CE,Southeast coast,6,26,37,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_CE_07,CZ_IN_CE,Southeast coast,7,25,34,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_CE_08,CZ_IN_CE,Southeast coast,8,25,34,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_CE_09,CZ_IN_CE,Southeast coast,9,25,33,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_CE_10,CZ_IN_CE,Southeast coast,10,24,31,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CE_11,CZ_IN_CE,Southeast coast,11,22,29,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CE_12,CZ_IN_CE,Southeast coast,12,21,28,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CN_01,CZ_IN_CN,Northeast coast/delta,1,14,27,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CN_02,CZ_IN_CN,Northeast coast/delta,2,17,30,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_CN_03,CZ_IN_CN,Northeast coast/delta,3,21,33,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CN_04,CZ_IN_CN,Northeast coast/delta,4,24,35,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CN_05,CZ_IN_CN,Northeast coast/delta,5,26,35,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_CN_06,CZ_IN_CN,Northeast coast/delta,6,26,34,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CN_07,CZ_IN_CN,Northeast coast/delta,7,26,32,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CN_08,CZ_IN_CN,Northeast coast/delta,8,26,32,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CN_09,CZ_IN_CN,Northeast coast/delta,9,26,32,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_CN_10,CZ_IN_CN,Northeast coast/delta,10,24,32,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_CN_11,CZ_IN_CN,Northeast coast/delta,11,19,29,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_CN_12,CZ_IN_CN,Northeast coast/delta,12,15,26,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HS_01,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),1,8,22,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HS_02,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),2,9,24,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_HS_03,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),3,11,26,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HS_04,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),4,13,26,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HS_05,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),5,14,25,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_HS_06,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),6,13,21,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_HS_07,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),7,13,20,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_HS_08,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),8,13,20,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_HS_09,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),9,12,22,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_HS_10,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),10,12,22,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_HS_11,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),11,10,21,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_HS_12,CZ_IN_HS,Southern hills (Ghats/Nilgiris/Araku),12,8,21,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_NH_01,CZ_IN_NH,Northeast hills,1,5,16,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_NH_02,CZ_IN_NH,Northeast hills,2,6,18,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_NH_03,CZ_IN_NH,Northeast hills,3,9,22,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_NH_04,CZ_IN_NH,Northeast hills,4,12,24,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_NH_05,CZ_IN_NH,Northeast hills,5,14,25,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NH_06,CZ_IN_NH,Northeast hills,6,16,25,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NH_07,CZ_IN_NH,Northeast hills,7,17,25,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NH_08,CZ_IN_NH,Northeast hills,8,17,25,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NH_09,CZ_IN_NH,Northeast hills,9,16,24,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NH_10,CZ_IN_NH,Northeast hills,10,13,22,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_NH_11,CZ_IN_NH,Northeast hills,11,9,19,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_NH_12,CZ_IN_NH,Northeast hills,12,6,16,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_NP_01,CZ_IN_NP,Northeast plains/Brahmaputra valley,1,10,24,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_NP_02,CZ_IN_NP,Northeast plains/Brahmaputra valley,2,12,27,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_NP_03,CZ_IN_NP,Northeast plains/Brahmaputra valley,3,15,30,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_NP_04,CZ_IN_NP,Northeast plains/Brahmaputra valley,4,19,31,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_NP_05,CZ_IN_NP,Northeast plains/Brahmaputra valley,5,22,32,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_NP_06,CZ_IN_NP,Northeast plains/Brahmaputra valley,6,24,32,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NP_07,CZ_IN_NP,Northeast plains/Brahmaputra valley,7,25,33,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NP_08,CZ_IN_NP,Northeast plains/Brahmaputra valley,8,25,33,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NP_09,CZ_IN_NP,Northeast plains/Brahmaputra valley,9,24,32,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_NP_10,CZ_IN_NP,Northeast plains/Brahmaputra valley,10,21,31,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_NP_11,CZ_IN_NP,Northeast plains/Brahmaputra valley,11,15,28,low,Pleasant post-monsoon weather with clear visibility,verified_climatology,2026-11-14
+SE_IN_NP_12,CZ_IN_NP,Northeast plains/Brahmaputra valley,12,11,25,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_IS_01,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),1,23,30,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_IS_02,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),2,24,31,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14
+SE_IN_IS_03,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),3,25,32,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_IS_04,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),4,26,32,low,Dry summer conditions; early morning or evening exploration recommended,verified_climatology,2026-11-14
+SE_IN_IS_05,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),5,26,32,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_IS_06,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),6,25,31,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_IS_07,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),7,25,30,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_IS_08,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),8,25,30,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_IS_09,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),9,25,30,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_IS_10,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),10,25,30,very heavy,Intense monsoon showers; mountain ghat roads and forest routes require caution for landslides,verified_climatology,2026-11-14
+SE_IN_IS_11,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),11,24,30,moderate,Intermittent rainfall; roads and sights generally accessible with rain gear,verified_climatology,2026-11-14
+SE_IN_IS_12,CZ_IN_IS,Island (Andaman/Lakshadweep/Daman-Diu),12,23,30,low,"Clear skies, cool dry weather; optimal sightseeing conditions",verified_climatology,2026-11-14

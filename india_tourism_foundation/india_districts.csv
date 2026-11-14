@@ -1,0 +1,209 @@
+district_id,state_id,name,headquarters,source_status,last_verified
+DT_KL_TVM,ST_KL,Thiruvananthapuram,Thiruvananthapuram,verified_official_census,2026-11-14
+DT_KL_KLM,ST_KL,Kollam,Kollam,verified_official_census,2026-11-14
+DT_KL_PTA,ST_KL,Pathanamthitta,Pathanamthitta,verified_official_census,2026-11-14
+DT_KL_ALP,ST_KL,Alappuzha,Alappuzha,verified_official_census,2026-11-14
+DT_KL_KTM,ST_KL,Kottayam,Kottayam,verified_official_census,2026-11-14
+DT_KL_IDK,ST_KL,Idukki,Painavu,verified_official_census,2026-11-14
+DT_KL_EKM,ST_KL,Ernakulam,Kakkanad,verified_official_census,2026-11-14
+DT_KL_TSR,ST_KL,Thrissur,Thrissur,verified_official_census,2026-11-14
+DT_KL_PKD,ST_KL,Palakkad,Palakkad,verified_official_census,2026-11-14
+DT_KL_MLP,ST_KL,Malappuram,Malappuram,verified_official_census,2026-11-14
+DT_KL_KZD,ST_KL,Kozhikode,Kozhikode,verified_official_census,2026-11-14
+DT_KL_WYD,ST_KL,Wayanad,Kalpetta,verified_official_census,2026-11-14
+DT_KL_KNR,ST_KL,Kannur,Kannur,verified_official_census,2026-11-14
+DT_KL_KSD,ST_KL,Kasaragod,Kasaragod,verified_official_census,2026-11-14
+DT_AP_TIRUPATI,ST_AP,Tirupati,Tirupati,verified_official_census,2026-11-14
+DT_AP_ALLURI_SITHARAMA_RAJU,ST_AP,Alluri Sitharama Raju,Alluri Sitharama Raju,verified_official_census,2026-11-14
+DT_AP_VISAKHAPATNAM,ST_AP,Visakhapatnam,Visakhapatnam,verified_official_census,2026-11-14
+DT_AP_GUNTUR,ST_AP,Guntur,Guntur,verified_official_census,2026-11-14
+DT_AP_PALNADU,ST_AP,Palnadu,Palnadu,verified_official_census,2026-11-14
+DT_AP_SRI_SATHYA_SAI,ST_AP,Sri Sathya Sai,Sri Sathya Sai,verified_official_census,2026-11-14
+DT_AP_YSR_KADAPA,ST_AP,YSR Kadapa,YSR Kadapa,verified_official_census,2026-11-14
+DT_AP_NANDYAL,ST_AP,Nandyal,Nandyal,verified_official_census,2026-11-14
+DT_AR_TAWANG,ST_AR,Tawang,Tawang,verified_official_census,2026-11-14
+DT_AR_LOWER_SUBANSIRI,ST_AR,Lower Subansiri,Lower Subansiri,verified_official_census,2026-11-14
+DT_AR_CHANGLANG,ST_AR,Changlang,Changlang,verified_official_census,2026-11-14
+DT_AR_WEST_KAMENG,ST_AR,West Kameng,West Kameng,verified_official_census,2026-11-14
+DT_AR_LOHIT,ST_AR,Lohit,Lohit,verified_official_census,2026-11-14
+DT_AR_PAPUM_PARE,ST_AR,Papum Pare,Papum Pare,verified_official_census,2026-11-14
+DT_AS_GOLAGHAT,ST_AS,Golaghat,Golaghat,verified_official_census,2026-11-14
+DT_AS_BAKSA,ST_AS,Baksa,Baksa,verified_official_census,2026-11-14
+DT_AS_KAMRUP_METROPOLITAN,ST_AS,Kamrup Metropolitan,Kamrup Metropolitan,verified_official_census,2026-11-14
+DT_AS_MAJULI,ST_AS,Majuli,Majuli,verified_official_census,2026-11-14
+DT_AS_SIVASAGAR,ST_AS,Sivasagar,Sivasagar,verified_official_census,2026-11-14
+DT_AS_DIMA_HASAO,ST_AS,Dima Hasao,Dima Hasao,verified_official_census,2026-11-14
+DT_AS_MORIGAON,ST_AS,Morigaon,Morigaon,verified_official_census,2026-11-14
+DT_BR_GAYA,ST_BR,Gaya,Gaya,verified_official_census,2026-11-14
+DT_BR_NALANDA,ST_BR,Nalanda,Nalanda,verified_official_census,2026-11-14
+DT_BR_PATNA,ST_BR,Patna,Patna,verified_official_census,2026-11-14
+DT_BR_VAISHALI,ST_BR,Vaishali,Vaishali,verified_official_census,2026-11-14
+DT_BR_ROHTAS,ST_BR,Rohtas,Rohtas,verified_official_census,2026-11-14
+DT_CG_BASTAR,ST_CG,Bastar,Bastar,verified_official_census,2026-11-14
+DT_CG_KABIRDHAM,ST_CG,Kabirdham,Kabirdham,verified_official_census,2026-11-14
+DT_CG_MAHASAMUND,ST_CG,Mahasamund,Mahasamund,verified_official_census,2026-11-14
+DT_CG_SURGUJA,ST_CG,Surguja,Surguja,verified_official_census,2026-11-14
+DT_CG_DANTEWADA,ST_CG,Dantewada,Dantewada,verified_official_census,2026-11-14
+DT_GA_NORTH_GOA,ST_GA,North Goa,North Goa,verified_official_census,2026-11-14
+DT_GA_SOUTH_GOA,ST_GA,South Goa,South Goa,verified_official_census,2026-11-14
+DT_GJ_NARMADA,ST_GJ,Narmada,Narmada,verified_official_census,2026-11-14
+DT_GJ_GIR_SOMNATH,ST_GJ,Gir Somnath,Gir Somnath,verified_official_census,2026-11-14
+DT_GJ_DEVBHUMI_DWARKA,ST_GJ,Devbhumi Dwarka,Devbhumi Dwarka,verified_official_census,2026-11-14
+DT_GJ_KUTCH,ST_GJ,Kutch,Kutch,verified_official_census,2026-11-14
+DT_GJ_PATAN,ST_GJ,Patan,Patan,verified_official_census,2026-11-14
+DT_GJ_PANCHMAHAL,ST_GJ,Panchmahal,Panchmahal,verified_official_census,2026-11-14
+DT_GJ_AHMEDABAD,ST_GJ,Ahmedabad,Ahmedabad,verified_official_census,2026-11-14
+DT_GJ_MEHSANA,ST_GJ,Mehsana,Mehsana,verified_official_census,2026-11-14
+DT_HR_KURUKSHETRA,ST_HR,Kurukshetra,Kurukshetra,verified_official_census,2026-11-14
+DT_HR_FARIDABAD,ST_HR,Faridabad,Faridabad,verified_official_census,2026-11-14
+DT_HR_PANCHKULA,ST_HR,Panchkula,Panchkula,verified_official_census,2026-11-14
+DT_HR_GURUGRAM,ST_HR,Gurugram,Gurugram,verified_official_census,2026-11-14
+DT_HR_HISAR,ST_HR,Hisar,Hisar,verified_official_census,2026-11-14
+DT_HP_SHIMLA,ST_HP,Shimla,Shimla,verified_official_census,2026-11-14
+DT_HP_KULLU,ST_HP,Kullu,Kullu,verified_official_census,2026-11-14
+DT_HP_LAHAUL_AND_SPITI,ST_HP,Lahaul and Spiti,Lahaul and Spiti,verified_official_census,2026-11-14
+DT_HP_KANGRA,ST_HP,Kangra,Kangra,verified_official_census,2026-11-14
+DT_HP_CHAMBA,ST_HP,Chamba,Chamba,verified_official_census,2026-11-14
+DT_HP_KINNAUR,ST_HP,Kinnaur,Kinnaur,verified_official_census,2026-11-14
+DT_HP_SOLAN,ST_HP,Solan,Solan,verified_official_census,2026-11-14
+DT_JH_DEOGHAR,ST_JH,Deoghar,Deoghar,verified_official_census,2026-11-14
+DT_JH_GIRIDIH,ST_JH,Giridih,Giridih,verified_official_census,2026-11-14
+DT_JH_RANCHI,ST_JH,Ranchi,Ranchi,verified_official_census,2026-11-14
+DT_JH_LATEHAR,ST_JH,Latehar,Latehar,verified_official_census,2026-11-14
+DT_JH_RAMGARH,ST_JH,Ramgarh,Ramgarh,verified_official_census,2026-11-14
+DT_KA_MYSURU,ST_KA,Mysuru,Mysuru,verified_official_census,2026-11-14
+DT_KA_VIJAYANAGARA,ST_KA,Vijayanagara,Vijayanagara,verified_official_census,2026-11-14
+DT_KA_KODAGU,ST_KA,Kodagu,Kodagu,verified_official_census,2026-11-14
+DT_KA_UTTARA_KANNADA,ST_KA,Uttara Kannada,Uttara Kannada,verified_official_census,2026-11-14
+DT_KA_SHIVAMOGGA,ST_KA,Shivamogga,Shivamogga,verified_official_census,2026-11-14
+DT_KA_BAGALKOT,ST_KA,Bagalkot,Bagalkot,verified_official_census,2026-11-14
+DT_KA_CHIKKAMAGALURU,ST_KA,Chikkamagaluru,Chikkamagaluru,verified_official_census,2026-11-14
+DT_KA_CHAMARAJANAGAR,ST_KA,Chamarajanagar,Chamarajanagar,verified_official_census,2026-11-14
+DT_KA_UDUPI,ST_KA,Udupi,Udupi,verified_official_census,2026-11-14
+DT_KA_BENGALURU_URBAN,ST_KA,Bengaluru Urban,Bengaluru Urban,verified_official_census,2026-11-14
+DT_KA_HASSAN,ST_KA,Hassan,Hassan,verified_official_census,2026-11-14
+DT_KA_CHIKKABALLAPUR,ST_KA,Chikkaballapur,Chikkaballapur,verified_official_census,2026-11-14
+DT_MP_CHHATARPUR,ST_MP,Chhatarpur,Chhatarpur,verified_official_census,2026-11-14
+DT_MP_RAISEN,ST_MP,Raisen,Raisen,verified_official_census,2026-11-14
+DT_MP_MANDLA,ST_MP,Mandla,Mandla,verified_official_census,2026-11-14
+DT_MP_UMARIA,ST_MP,Umaria,Umaria,verified_official_census,2026-11-14
+DT_MP_NARMADAPURAM,ST_MP,Narmadapuram,Narmadapuram,verified_official_census,2026-11-14
+DT_MP_GWALIOR,ST_MP,Gwalior,Gwalior,verified_official_census,2026-11-14
+DT_MP_NIWARI,ST_MP,Niwari,Niwari,verified_official_census,2026-11-14
+DT_MP_DHAR,ST_MP,Dhar,Dhar,verified_official_census,2026-11-14
+DT_MP_UJJAIN,ST_MP,Ujjain,Ujjain,verified_official_census,2026-11-14
+DT_MP_KHANDWA,ST_MP,Khandwa,Khandwa,verified_official_census,2026-11-14
+DT_MP_JABALPUR,ST_MP,Jabalpur,Jabalpur,verified_official_census,2026-11-14
+DT_MP_KHARGONE,ST_MP,Khargone,Khargone,verified_official_census,2026-11-14
+DT_MH_CHHATRAPATI_SAMBHAJINAGA,ST_MH,Chhatrapati Sambhajinagar,Chhatrapati Sambhajinagar,verified_official_census,2026-11-14
+DT_MH_MUMBAI_CITY,ST_MH,Mumbai City,Mumbai City,verified_official_census,2026-11-14
+DT_MH_RAIGAD,ST_MH,Raigad,Raigad,verified_official_census,2026-11-14
+DT_MH_PUNE,ST_MH,Pune,Pune,verified_official_census,2026-11-14
+DT_MH_SATARA,ST_MH,Satara,Satara,verified_official_census,2026-11-14
+DT_MH_AHMEDNAGAR_AHILYANAGAR,ST_MH,Ahmednagar (Ahilyanagar),Ahmednagar (Ahilyanagar),verified_official_census,2026-11-14
+DT_MH_CHANDRAPUR,ST_MH,Chandrapur,Chandrapur,verified_official_census,2026-11-14
+DT_MH_NASHIK,ST_MH,Nashik,Nashik,verified_official_census,2026-11-14
+DT_MN_BISHNUPUR,ST_MN,Bishnupur,Bishnupur,verified_official_census,2026-11-14
+DT_MN_IMPHAL_WEST,ST_MN,Imphal West,Imphal West,verified_official_census,2026-11-14
+DT_MN_UKHRUL,ST_MN,Ukhrul,Ukhrul,verified_official_census,2026-11-14
+DT_ML_EAST_KHASI_HILLS,ST_ML,East Khasi Hills,East Khasi Hills,verified_official_census,2026-11-14
+DT_ML_WEST_JAINTIA_HILLS,ST_ML,West Jaintia Hills,West Jaintia Hills,verified_official_census,2026-11-14
+DT_MZ_AIZAWL,ST_MZ,Aizawl,Aizawl,verified_official_census,2026-11-14
+DT_MZ_LAWNGTLAI,ST_MZ,Lawngtlai,Lawngtlai,verified_official_census,2026-11-14
+DT_MZ_MAMIT,ST_MZ,Mamit,Mamit,verified_official_census,2026-11-14
+DT_MZ_CHAMPHAI,ST_MZ,Champhai,Champhai,verified_official_census,2026-11-14
+DT_NL_KOHIMA,ST_NL,Kohima,Kohima,verified_official_census,2026-11-14
+DT_OD_PURI,ST_OD,Puri,Puri,verified_official_census,2026-11-14
+DT_OD_KHORDHA,ST_OD,Khordha,Khordha,verified_official_census,2026-11-14
+DT_OD_MAYURBHANJ,ST_OD,Mayurbhanj,Mayurbhanj,verified_official_census,2026-11-14
+DT_OD_KENDRAPARA,ST_OD,Kendrapara,Kendrapara,verified_official_census,2026-11-14
+DT_PB_AMRITSAR,ST_PB,Amritsar,Amritsar,verified_official_census,2026-11-14
+DT_PB_RUPNAGAR,ST_PB,Rupnagar,Rupnagar,verified_official_census,2026-11-14
+DT_PB_PATIALA,ST_PB,Patiala,Patiala,verified_official_census,2026-11-14
+DT_RJ_JAIPUR,ST_RJ,Jaipur,Jaipur,verified_official_census,2026-11-14
+DT_RJ_UDAIPUR,ST_RJ,Udaipur,Udaipur,verified_official_census,2026-11-14
+DT_RJ_JODHPUR,ST_RJ,Jodhpur,Jodhpur,verified_official_census,2026-11-14
+DT_RJ_JAISALMER,ST_RJ,Jaisalmer,Jaisalmer,verified_official_census,2026-11-14
+DT_RJ_SAWAI_MADHOPUR,ST_RJ,Sawai Madhopur,Sawai Madhopur,verified_official_census,2026-11-14
+DT_RJ_AJMER,ST_RJ,Ajmer,Ajmer,verified_official_census,2026-11-14
+DT_RJ_SIROHI,ST_RJ,Sirohi,Sirohi,verified_official_census,2026-11-14
+DT_RJ_CHITTORGARH,ST_RJ,Chittorgarh,Chittorgarh,verified_official_census,2026-11-14
+DT_RJ_RAJSAMAND,ST_RJ,Rajsamand,Rajsamand,verified_official_census,2026-11-14
+DT_RJ_BIKANER,ST_RJ,Bikaner,Bikaner,verified_official_census,2026-11-14
+DT_RJ_BHARATPUR,ST_RJ,Bharatpur,Bharatpur,verified_official_census,2026-11-14
+DT_SK_GANGTOK,ST_SK,Gangtok,Gangtok,verified_official_census,2026-11-14
+DT_SK_GYALSHING,ST_SK,Gyalshing,Gyalshing,verified_official_census,2026-11-14
+DT_SK_MANGAN,ST_SK,Mangan,Mangan,verified_official_census,2026-11-14
+DT_SK_NAMCHI,ST_SK,Namchi,Namchi,verified_official_census,2026-11-14
+DT_TN_MADURAI,ST_TN,Madurai,Madurai,verified_official_census,2026-11-14
+DT_TN_THANJAVUR,ST_TN,Thanjavur,Thanjavur,verified_official_census,2026-11-14
+DT_TN_CHENGALPATTU,ST_TN,Chengalpattu,Chengalpattu,verified_official_census,2026-11-14
+DT_TN_RAMANATHAPURAM,ST_TN,Ramanathapuram,Ramanathapuram,verified_official_census,2026-11-14
+DT_TN_KANYAKUMARI,ST_TN,Kanyakumari,Kanyakumari,verified_official_census,2026-11-14
+DT_TN_NILGIRIS,ST_TN,Nilgiris,Nilgiris,verified_official_census,2026-11-14
+DT_TN_DINDIGUL,ST_TN,Dindigul,Dindigul,verified_official_census,2026-11-14
+DT_TN_CHENNAI,ST_TN,Chennai,Chennai,verified_official_census,2026-11-14
+DT_TN_KANCHIPURAM,ST_TN,Kanchipuram,Kanchipuram,verified_official_census,2026-11-14
+DT_TN_ARIYALUR,ST_TN,Ariyalur,Ariyalur,verified_official_census,2026-11-14
+DT_TN_TIRUCHIRAPPALLI,ST_TN,Tiruchirappalli,Tiruchirappalli,verified_official_census,2026-11-14
+DT_TS_HYDERABAD,ST_TS,Hyderabad,Hyderabad,verified_official_census,2026-11-14
+DT_TS_RANGAREDDY,ST_TS,Rangareddy,Rangareddy,verified_official_census,2026-11-14
+DT_TS_WARANGAL,ST_TS,Warangal,Warangal,verified_official_census,2026-11-14
+DT_TS_MULUGU,ST_TS,Mulugu,Mulugu,verified_official_census,2026-11-14
+DT_TS_HANAMKONDA,ST_TS,Hanamkonda,Hanamkonda,verified_official_census,2026-11-14
+DT_TS_YADADRI_BHUVANAGIRI,ST_TS,Yadadri Bhuvanagiri,Yadadri Bhuvanagiri,verified_official_census,2026-11-14
+DT_TS_MEDAK,ST_TS,Medak,Medak,verified_official_census,2026-11-14
+DT_TR_WEST_TRIPURA,ST_TR,West Tripura,West Tripura,verified_official_census,2026-11-14
+DT_TR_SEPAHIJALA,ST_TR,Sepahijala,Sepahijala,verified_official_census,2026-11-14
+DT_TR_UNAKOTI,ST_TR,Unakoti,Unakoti,verified_official_census,2026-11-14
+DT_TR_GOMATI,ST_TR,Gomati,Gomati,verified_official_census,2026-11-14
+DT_UP_AGRA,ST_UP,Agra,Agra,verified_official_census,2026-11-14
+DT_UP_VARANASI,ST_UP,Varanasi,Varanasi,verified_official_census,2026-11-14
+DT_UP_AYODHYA,ST_UP,Ayodhya,Ayodhya,verified_official_census,2026-11-14
+DT_UP_MATHURA,ST_UP,Mathura,Mathura,verified_official_census,2026-11-14
+DT_UP_LUCKNOW,ST_UP,Lucknow,Lucknow,verified_official_census,2026-11-14
+DT_UP_PRAYAGRAJ,ST_UP,Prayagraj,Prayagraj,verified_official_census,2026-11-14
+DT_UP_KUSHINAGAR,ST_UP,Kushinagar,Kushinagar,verified_official_census,2026-11-14
+DT_UP_JHANSI,ST_UP,Jhansi,Jhansi,verified_official_census,2026-11-14
+DT_UK_HARIDWAR,ST_UK,Haridwar,Haridwar,verified_official_census,2026-11-14
+DT_UK_DEHRADUN,ST_UK,Dehradun,Dehradun,verified_official_census,2026-11-14
+DT_UK_NAINITAL,ST_UK,Nainital,Nainital,verified_official_census,2026-11-14
+DT_UK_CHAMOLI,ST_UK,Chamoli,Chamoli,verified_official_census,2026-11-14
+DT_UK_RUDRAPRAYAG,ST_UK,Rudraprayag,Rudraprayag,verified_official_census,2026-11-14
+DT_UK_UTTARKASHI,ST_UK,Uttarkashi,Uttarkashi,verified_official_census,2026-11-14
+DT_UK_ALMORA,ST_UK,Almora,Almora,verified_official_census,2026-11-14
+DT_WB_KOLKATA,ST_WB,Kolkata,Kolkata,verified_official_census,2026-11-14
+DT_WB_HOWRAH,ST_WB,Howrah,Howrah,verified_official_census,2026-11-14
+DT_WB_NORTH_24_PARGANAS,ST_WB,North 24 Parganas,North 24 Parganas,verified_official_census,2026-11-14
+DT_WB_DARJEELING,ST_WB,Darjeeling,Darjeeling,verified_official_census,2026-11-14
+DT_WB_SOUTH_24_PARGANAS,ST_WB,South 24 Parganas,South 24 Parganas,verified_official_census,2026-11-14
+DT_WB_BIRBHUM,ST_WB,Birbhum,Birbhum,verified_official_census,2026-11-14
+DT_WB_PURBA_MEDINIPUR,ST_WB,Purba Medinipur,Purba Medinipur,verified_official_census,2026-11-14
+DT_WB_BANKURA,ST_WB,Bankura,Bankura,verified_official_census,2026-11-14
+DT_WB_NADIA,ST_WB,Nadia,Nadia,verified_official_census,2026-11-14
+DT_WB_ALIPURDUAR,ST_WB,Alipurduar,Alipurduar,verified_official_census,2026-11-14
+DT_WB_KALIMPONG,ST_WB,Kalimpong,Kalimpong,verified_official_census,2026-11-14
+DT_WB_JALPAIGURI,ST_WB,Jalpaiguri,Jalpaiguri,verified_official_census,2026-11-14
+DT_WB_MURSHIDABAD,ST_WB,Murshidabad,Murshidabad,verified_official_census,2026-11-14
+DT_AN_SOUTH_ANDAMAN,ST_AN,South Andaman,South Andaman,verified_official_census,2026-11-14
+DT_AN_NORTH_AND_MIDDLE_ANDAMAN,ST_AN,North and Middle Andaman,North and Middle Andaman,verified_official_census,2026-11-14
+DT_CH_CHANDIGARH,ST_CH,Chandigarh,Chandigarh,verified_official_census,2026-11-14
+DT_DH_DADRA_AND_NAGAR_HAVELI,ST_DH,Dadra and Nagar Haveli,Dadra and Nagar Haveli,verified_official_census,2026-11-14
+DT_DH_DAMAN,ST_DH,Daman,Daman,verified_official_census,2026-11-14
+DT_DH_DIU,ST_DH,Diu,Diu,verified_official_census,2026-11-14
+DT_DL_CENTRAL_DELHI,ST_DL,Central Delhi,Central Delhi,verified_official_census,2026-11-14
+DT_DL_NEW_DELHI,ST_DL,New Delhi,New Delhi,verified_official_census,2026-11-14
+DT_DL_SOUTH_DELHI,ST_DL,South Delhi,South Delhi,verified_official_census,2026-11-14
+DT_DL_SOUTH_EAST_DELHI,ST_DL,South East Delhi,South East Delhi,verified_official_census,2026-11-14
+DT_DL_EAST_DELHI,ST_DL,East Delhi,East Delhi,verified_official_census,2026-11-14
+DT_JK_SRINAGAR,ST_JK,Srinagar,Srinagar,verified_official_census,2026-11-14
+DT_JK_BARAMULLA,ST_JK,Baramulla,Baramulla,verified_official_census,2026-11-14
+DT_JK_ANANTNAG,ST_JK,Anantnag,Anantnag,verified_official_census,2026-11-14
+DT_JK_GANDERBAL,ST_JK,Ganderbal,Ganderbal,verified_official_census,2026-11-14
+DT_JK_REASI,ST_JK,Reasi,Reasi,verified_official_census,2026-11-14
+DT_JK_JAMMU,ST_JK,Jammu,Jammu,verified_official_census,2026-11-14
+DT_JK_UDHAMPUR,ST_JK,Udhampur,Udhampur,verified_official_census,2026-11-14
+DT_LA_LEH,ST_LA,Leh,Leh,verified_official_census,2026-11-14
+DT_LA_KARGIL,ST_LA,Kargil,Kargil,verified_official_census,2026-11-14
+DT_LD_LAKSHADWEEP,ST_LD,Lakshadweep,Lakshadweep,verified_official_census,2026-11-14
+DT_PY_PUDUCHERRY,ST_PY,Puducherry,Puducherry,verified_official_census,2026-11-14

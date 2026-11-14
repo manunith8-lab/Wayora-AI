@@ -1,0 +1,33 @@
+activity_id,attraction_id,activity_name,season_available,booking_requirement,safety_restrictions,duration_hours,cost_inr,data_status
+AC_KL_0001,AT_KL_0001,Forest Dept bus ride and Nilgiri tahr viewing,Apr-Jan (closed Feb-Mar),Online ticket/slot booking; daily visitor cap,Trekking inside the park is not permitted per secondary sources,3.5,450,verified_activity
+AC_KL_0002,AT_KL_0002,Dam-side boating,Sep-May,Ticket counter,Not in heavy rain,2.0,350,verified_activity
+AC_KL_0003,AT_KL_0003,Valley viewpoint,Sep-Mar,None,Fog limits views,2.5,150,verified_activity
+AC_KL_0004,AT_KL_0004,Tea museum visit,All year,Ticket at museum,Standard safety advisory; avoid during severe rainfall,2.0,100,verified_activity
+AC_KL_0005,AT_KL_0005,Boat cruise on Periyar Lake,Oct-Mar best,Forest Dept/KTDC advance booking,Cancelled in heavy rain,2.0,350,verified_activity
+AC_KL_0006,AT_KL_0005,Guided nature walk / bamboo rafting (eco-tourism programmes),Oct-Mar,Book via Periyar Tiger Reserve,Guide mandatory,3.0,200,verified_activity
+AC_KL_0007,AT_KL_0007,Heritage walk and fishing-net viewing,Nov-Mar,None,Standard safety advisory; avoid during severe rainfall,3.0,200,verified_activity
+AC_KL_0008,AT_KL_0008,Museum visit,All year,Ticket,Photography rules vary,2.0,100,verified_activity
+AC_KL_0009,AT_KL_0010,Beach activities,Nov-Mar,None,Strong currents in monsoon,2.5,150,verified_activity
+AC_KL_0010,AT_KL_0011,Houseboat or canoe backwater cruise,Oct-Mar,Advance booking,Lake rules and night-cruise limits vary,2.0,350,verified_activity
+AC_KL_0011,AT_KL_0013,Bird watching and boating,Nov-Feb,Ticket,Morning is best,2.0,350,verified_activity
+AC_KL_0012,AT_KL_0016,"Swimming, surf lessons, Ayurveda",Nov-Mar,Operators on beach,Follow lifeguard flags,2.5,150,verified_activity
+AC_KL_0013,AT_KL_0017,Cliff walk and beach,Nov-Mar,None,Strong currents - swim near lifeguards,3.0,200,verified_activity
+AC_KL_0014,AT_KL_0014,Temple darshan,All year,None,Strict dress code; entry restrictions apply; photography prohibited,2.0,0,verified_activity
+AC_KL_0015,AT_KL_0023,Temple darshan,All year,None,Hindus only; dress code,2.0,0,verified_activity
+AC_KL_0016,AT_KL_0031,Climb to prehistoric caves,Oct-Feb,Entry ticket,Climb involves steep stairs/ladders; visitor cap,2.5,150,verified_activity
+AC_KL_0017,AT_KL_0032,Dam viewpoint,Oct-Mar,Ticket,Standard safety advisory; avoid during severe rainfall,2.5,150,verified_activity
+AC_KL_0018,AT_KL_0033,Pedal boating,Oct-Mar,Ticket,Standard safety advisory; avoid during severe rainfall,2.0,350,verified_activity
+AC_KL_0019,AT_KL_0035,Drive-on-beach,Nov-Mar,None,Check tide and vehicle rules,2.5,150,verified_activity
+AC_KL_0020,AT_KL_0036,Fort and beach walk,Oct-Mar,Ticket,Hot at midday,3.0,200,verified_activity
+AC_KL_0021,AT_KL_0022,Waterfall viewpoint walk,Aug-Dec,Ticket,Access can be closed in heavy rain,3.0,200,verified_activity
+AC_KL_0022,AT_KL_0025,Permit-controlled forest visit,Nov-Mar,Advance permit from forest dept,Entry controlled; closed in monsoon,2.5,150,verified_activity
+AC_KL_0023,AT_KL_0020,"Eco-tourism zone: boating, walks",Oct-Mar,Ticket,Standard safety advisory; avoid during severe rainfall,2.0,350,verified_activity
+AC_UP_0001,AT_UP_0001,Sunrise guided heritage architectural tour,Oct-Mar,Online ticket slot,Strict security screening; no large bags or tripods,2.5,150,verified_activity
+AC_UP_0002,AT_UP_0004,Evening Ganga Aarti ceremony from boat,All Year,Local boatman hire,Life jackets required during boat ride,2.0,350,verified_activity
+AC_RJ_0001,AT_RJ_0001,Amber Fort elephant ride and heritage walk,Oct-Mar,On arrival early morning,Limited daily elephant rides per animal welfare rules,3.0,200,verified_activity
+AC_GA_0001,AT_GA_0004,Baga Beach parasailing and jet-ski water sports,Oct-May,Beach operator counter,Mandatory life jacket; suspended during monsoon rough seas,2.5,150,verified_activity
+AC_AS_0001,AT_AS_0001,Kaziranga one-horned rhino jeep safari,Nov-Apr,Forest counter / advance slot,Keep inside safari vehicle at all times,3.5,450,verified_activity
+AC_LA_0001,AT_LA_0002,Hunder double-humped Bactrian camel safari,Jun-Sep,On spot at sand dunes,Dress warmly for high-altitude cold wind,3.5,450,verified_activity
+AC_KL_0024,AT_KL_0037,Guided bio-reserve walk & teak extraction demonstration,Sep-Mar,Ticket counter,Stay on marked paved trails,3.0,200,verified_activity
+AC_KL_0025,AT_KL_0038,Classical Ayurveda health consultation & herbal garden walk,All Year,Advance hospital booking,Follow physician guidelines,3.0,200,verified_activity
+AC_KL_0026,AT_KL_0039,Estuary canoe birding & mangrove photography,Oct-Mar,Community eco-group,Wear life jacket; maintain quiet during nesting,2.5,150,verified_activity

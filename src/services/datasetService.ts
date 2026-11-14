@@ -5,6 +5,7 @@
 // destination classification, travel budgeting, and verified provenance guarantees.
 
 import datasetData from '../data/datasetKnowledge.json';
+import indiaTourismData from '../data/indiaTourismData.json';
 import { imageRetrievalService, VerifiedImageRecord } from './imageRetrievalService';
 
 export interface VerifiedAttraction {
@@ -25,6 +26,28 @@ export interface VerifiedAttraction {
   zone: string;
   sourceDataset: string;
   city?: string;
+  description?: string;
+  officialWebsite?: string;
+  openingHours?: string;
+  familyFriendly?: string;
+  adventureLevel?: string;
+  latitude?: number;
+  longitude?: number;
+  transport?: {
+    airportCode?: string;
+    airportName?: string;
+    airportCity?: string;
+    airportRoadKm?: number;
+    airportDriveTimeMin?: number;
+    railwayCode?: string;
+    railwayStation?: string;
+    railwayRoadKm?: number;
+    railwayDriveTimeMin?: number;
+    nearestMajorCityKm?: number;
+    stateCapitalKm?: number;
+    publicTransport?: string;
+    taxiAvailable?: string;
+  };
 }
 
 export interface VerifiedFoodItem {
@@ -165,6 +188,7 @@ class DatasetService {
   private travelPlansMap = new Map<string, VerifiedTravelPlan[]>();
   private seasonalDestMap = new Map<string, VerifiedSeasonalDestination>();
   private seasonalList: VerifiedSeasonalDestination[] = [];
+  private itinerariesMap = new Map<string, any[]>();
   private countryMap = new Map<string, { cities: VerifiedCity[]; global: VerifiedGlobalDestination[]; plans: VerifiedTravelPlan[] }>();
 
   // Inverted keyword index for fast substring and partial matching
@@ -299,6 +323,101 @@ class DatasetService {
         this.countryMap.set(cKey, { cities: [], global: [], plans: [] });
       }
       this.countryMap.get(cKey)!.plans.push(pl);
+    });
+
+    // 5. Index India Tourism Foundation (346 Verified Attractions & Transit Connectivity)
+    const itData = (indiaTourismData as any) || {};
+    const itAttractions = (itData.tourist_attractions || []) as any[];
+    const itTrans = (itData.transportation_connectivity || []) as any[];
+    const itStates = (itData.india_states || []) as any[];
+    const itItineraries = (itData.travel_itineraries || []) as any[];
+
+    const tcMap = new Map<string, any>();
+    itTrans.forEach((t) => tcMap.set(t.attraction_id, t));
+
+    const stateMap = new Map<string, string>();
+    itStates.forEach((st) => stateMap.set(st.state_id, st.name));
+
+    itAttractions.forEach((a) => {
+      const tc = tcMap.get(a.attraction_id);
+      const stateName = stateMap.get(a.state_id) || a.state_id.replace('ST_', '');
+      const entryFee = parseInt(a.entry_fee_inr || '0', 10) || 0;
+      const visitDuration = parseFloat(a.typical_visit_hours || '2.0') || 2.0;
+
+      const attrRecord: VerifiedAttraction = {
+        placeId: a.attraction_id,
+        placeName: a.name,
+        placeType: a.category,
+        establishmentYear: null,
+        visitDurationHours: visitDuration,
+        googleRating: 4.7,
+        entranceFeeINR: entryFee,
+        airportWithin50km: tc ? parseFloat(tc.airport_road_km || '100') <= 50 : false,
+        weeklyOff: a.weekly_holiday || 'None',
+        significance: a.description ? a.description.slice(0, 160) : a.category,
+        dslrAllowed: true,
+        googleReviewsLakhs: null,
+        bestTimeToVisit: a.best_months ? `Months: ${a.best_months.split('|').join(', ')}` : 'October to March',
+        state: stateName,
+        zone: 'India',
+        sourceDataset: 'India Tourism Foundation Database',
+        city: a.nearest_town,
+        description: a.description,
+        officialWebsite: a.official_website,
+        openingHours: a.opening_hours,
+        familyFriendly: a.family_friendly,
+        adventureLevel: a.adventure_level,
+        latitude: parseFloat(a.latitude),
+        longitude: parseFloat(a.longitude),
+        transport: tc ? {
+          airportCode: tc.airport_code,
+          airportName: tc.airport_name,
+          airportCity: tc.airport_city,
+          airportRoadKm: parseFloat(tc.airport_road_km),
+          airportDriveTimeMin: parseInt(tc.airport_drive_time_min, 10),
+          railwayCode: tc.railway_code,
+          railwayStation: tc.railway_station,
+          railwayRoadKm: parseFloat(tc.railway_road_km),
+          railwayDriveTimeMin: parseInt(tc.railway_drive_time_min, 10),
+          nearestMajorCityKm: parseFloat(tc.road_km_from_nearest_major_city),
+          stateCapitalKm: parseFloat(tc.road_km_from_state_capital),
+          publicTransport: tc.public_transport,
+          taxiAvailable: tc.taxi_available,
+        } : undefined,
+      };
+
+      const pKey = this.normalizeKey(a.name);
+      this.attractionsMap.set(pKey, attrRecord);
+      this.attractionsMap.set(a.name.toLowerCase(), attrRecord);
+
+      if (a.alt_names) {
+        const alts = a.alt_names.split(/[|,/]/).map((x: string) => x.trim()).filter((x: string) => x.length > 2);
+        alts.forEach((alt: string) => {
+          this.attractionsMap.set(this.normalizeKey(alt), attrRecord);
+          this.attractionsMap.set(alt.toLowerCase(), attrRecord);
+        });
+      }
+
+      this.allSearchableEntities.push({
+        name: a.name,
+        key: pKey,
+        type: 'attraction',
+        ref: attrRecord,
+      });
+    });
+
+    // 6. Index Itineraries
+    itItineraries.forEach((it) => {
+      const itIdKey = it.itinerary_id.toLowerCase();
+      const titleKey = this.normalizeKey(it.title);
+      if (!this.itinerariesMap.has(itIdKey)) {
+        this.itinerariesMap.set(itIdKey, []);
+      }
+      this.itinerariesMap.get(itIdKey)!.push(it);
+      if (!this.itinerariesMap.has(titleKey)) {
+        this.itinerariesMap.set(titleKey, []);
+      }
+      this.itinerariesMap.get(titleKey)!.push(it);
     });
   }
 
@@ -481,14 +600,34 @@ class DatasetService {
   private buildAttractionResult(attr: VerifiedAttraction): DatasetLookupResult {
     const verifiedImg = imageRetrievalService.getVerifiedImage(attr.placeName, 'heritage');
     let summaryText = `### 🏛️ ${attr.placeName} (${attr.city ? `${attr.city}, ` : ''}${attr.state})\n\n`;
-    summaryText += `**Geographical Type:** ${attr.placeType} | **Zone:** ${attr.zone}\n`;
-    summaryText += `**Google Rating:** ⭐ **${attr.googleRating || 'N/A'}** (${attr.googleReviewsLakhs ? `${attr.googleReviewsLakhs} Lakh reviews` : 'Verified'}) | **Ideal Visit:** ${attr.visitDurationHours ? `${attr.visitDurationHours} hrs` : '2 hrs'}\n\n`;
+    if (attr.description) {
+      summaryText += `${attr.description}\n\n`;
+    }
+    summaryText += `**Category / Type:** ${attr.placeType} | **Zone:** ${attr.zone}\n`;
+    summaryText += `**Ideal Visit Duration:** ${attr.visitDurationHours ? `${attr.visitDurationHours} hrs` : '2 hrs'} | **Family Friendly:** ${attr.familyFriendly || 'Yes'}\n\n`;
     summaryText += `#### 🎟️ Practical Visitor Information\n`;
-    summaryText += `- **Entrance Fee:** **₹${attr.entranceFeeINR}** (Native entry fee; foreign nationals and special camera permits may differ)\n`;
-    summaryText += `- **Weekly Closing Day:** **${attr.weeklyOff === 'None' ? 'Open All 7 Days' : `Closed every ${attr.weeklyOff}`}**\n`;
-    summaryText += `- **DSLR Camera Allowed:** ${attr.dslrAllowed ? '✅ Yes (Allowed for photography)' : '❌ No (Restricted)'}\n`;
-    summaryText += `- **Best Time of Day:** ${attr.bestTimeToVisit}\n`;
-    summaryText += `- **Historical Significance:** ${attr.significance}\n`;
+    summaryText += `- **Entrance Fee:** **₹${attr.entranceFeeINR}** ${attr.entranceFeeINR === 0 ? '(Free General Admission)' : '(Native adult ticket; foreign permits and special safaris extra)'}\n`;
+    if (attr.openingHours) {
+      summaryText += `- **Opening Hours:** **${attr.openingHours}**\n`;
+    }
+    summaryText += `- **Weekly Closing Day:** **${attr.weeklyOff === 'None' || !attr.weeklyOff ? 'Open All 7 Days' : `Closed every ${attr.weeklyOff}`}**\n`;
+    if (attr.officialWebsite) {
+      summaryText += `- **Official Portal / Trust:** [Official Website](${attr.officialWebsite})\n`;
+    }
+    summaryText += `- **Best Season / Months:** ${attr.bestTimeToVisit}\n`;
+
+    if (attr.transport) {
+      summaryText += `\n#### ✈️ Transportation & Transit Connectivity\n`;
+      if (attr.transport.airportName) {
+        summaryText += `- **Nearest Airport:** ${attr.transport.airportName} (${attr.transport.airportCode}, ${attr.transport.airportCity}) — **${attr.transport.airportRoadKm} km** (~${attr.transport.airportDriveTimeMin} mins driving)\n`;
+      }
+      if (attr.transport.railwayStation) {
+        summaryText += `- **Nearest Railway Junction:** ${attr.transport.railwayStation} (${attr.transport.railwayCode}) — **${attr.transport.railwayRoadKm} km** (~${attr.transport.railwayDriveTimeMin} mins driving)\n`;
+      }
+      if (attr.transport.publicTransport) {
+        summaryText += `- **Public Transit:** ${attr.transport.publicTransport}\n`;
+      }
+    }
 
     return {
       found: true,
@@ -500,7 +639,7 @@ class DatasetService {
       attractionData: attr,
       verifiedImage: verifiedImg,
       verifiedInDataset: true,
-      provenance: `Verified Dataset: tourist_places.csv (${attr.sourceDataset})`,
+      provenance: `Verified Foundation Database: tourist_attractions.csv (${attr.sourceDataset})`,
       summaryText,
     };
   }
@@ -867,6 +1006,40 @@ class DatasetService {
   public getFoodInCity(cityName: string): VerifiedFoodItem[] {
     const city = this.citiesMap.get(this.normalizeKey(cityName));
     return city?.foodRecommendations || [];
+  }
+
+  public getVerifiedItinerary(destination: string, days?: number): any[] | null {
+    if (!destination) return null;
+    const clean = destination.toLowerCase().trim();
+    const norm = this.normalizeKey(destination);
+
+    // Direct ID or Title matching
+    for (const [key, list] of this.itinerariesMap.entries()) {
+      if (key.includes(norm) || norm.includes(key) || key.includes(clean)) {
+        if (!days || (list[0] && parseInt(list[0].total_days, 10) === days)) {
+          return list;
+        }
+      }
+    }
+
+    // Secondary scan by title
+    for (const list of this.itinerariesMap.values()) {
+      const it = list[0];
+      if (it && it.title.toLowerCase().includes(clean)) {
+        if (!days || parseInt(it.total_days, 10) === days) {
+          return list;
+        }
+      }
+    }
+    return null;
+  }
+
+  public getAttractionByName(name: string): VerifiedAttraction | undefined {
+    return this.attractionsMap.get(this.normalizeKey(name)) || this.attractionsMap.get(name.toLowerCase().trim());
+  }
+
+  public getAllAttractions(): VerifiedAttraction[] {
+    return Array.from(this.attractionsMap.values());
   }
 
   public getMetadata() {

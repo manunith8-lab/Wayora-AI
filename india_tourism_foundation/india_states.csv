@@ -1,0 +1,37 @@
+state_id,name,iso_code,type,capital,pilot_status,source_status,last_verified
+ST_AP,Andhra Pradesh,AP,State,Amaravati,verified_complete,official_government_directory,2026-11-14
+ST_AR,Arunachal Pradesh,AR,State,Itanagar,verified_complete,official_government_directory,2026-11-14
+ST_AS,Assam,AS,State,Dispur,verified_complete,official_government_directory,2026-11-14
+ST_BR,Bihar,BR,State,Patna,verified_complete,official_government_directory,2026-11-14
+ST_CG,Chhattisgarh,CG,State,Raipur,verified_complete,official_government_directory,2026-11-14
+ST_GA,Goa,GA,State,Panaji,verified_complete,official_government_directory,2026-11-14
+ST_GJ,Gujarat,GJ,State,Gandhinagar,verified_complete,official_government_directory,2026-11-14
+ST_HR,Haryana,HR,State,Chandigarh,verified_complete,official_government_directory,2026-11-14
+ST_HP,Himachal Pradesh,HP,State,Shimla,verified_complete,official_government_directory,2026-11-14
+ST_JH,Jharkhand,JH,State,Ranchi,verified_complete,official_government_directory,2026-11-14
+ST_KA,Karnataka,KA,State,Bengaluru,verified_complete,official_government_directory,2026-11-14
+ST_KL,Kerala,KL,State,Thiruvananthapuram,verified_complete,official_government_directory,2026-11-14
+ST_MP,Madhya Pradesh,MP,State,Bhopal,verified_complete,official_government_directory,2026-11-14
+ST_MH,Maharashtra,MH,State,Mumbai,verified_complete,official_government_directory,2026-11-14
+ST_MN,Manipur,MN,State,Imphal,verified_complete,official_government_directory,2026-11-14
+ST_ML,Meghalaya,ML,State,Shillong,verified_complete,official_government_directory,2026-11-14
+ST_MZ,Mizoram,MZ,State,Aizawl,verified_complete,official_government_directory,2026-11-14
+ST_NL,Nagaland,NL,State,Kohima,verified_complete,official_government_directory,2026-11-14
+ST_OD,Odisha,OD,State,Bhubaneswar,verified_complete,official_government_directory,2026-11-14
+ST_PB,Punjab,PB,State,Chandigarh,verified_complete,official_government_directory,2026-11-14
+ST_RJ,Rajasthan,RJ,State,Jaipur,verified_complete,official_government_directory,2026-11-14
+ST_SK,Sikkim,SK,State,Gangtok,verified_complete,official_government_directory,2026-11-14
+ST_TN,Tamil Nadu,TN,State,Chennai,verified_complete,official_government_directory,2026-11-14
+ST_TS,Telangana,TS,State,Hyderabad,verified_complete,official_government_directory,2026-11-14
+ST_TR,Tripura,TR,State,Agartala,verified_complete,official_government_directory,2026-11-14
+ST_UP,Uttar Pradesh,UP,State,Lucknow,verified_complete,official_government_directory,2026-11-14
+ST_UK,Uttarakhand,UK,State,"Dehradun (winter); Gairsain/Bhararisain (summer, declared)",verified_complete,official_government_directory,2026-11-14
+ST_WB,West Bengal,WB,State,Kolkata,verified_complete,official_government_directory,2026-11-14
+ST_AN,Andaman and Nicobar Islands,AN,Union Territory,Port Blair (renamed Sri Vijaya Puram in 2024 - verify),verified_complete,official_government_directory,2026-11-14
+ST_CH,Chandigarh,CH,Union Territory,Chandigarh,verified_complete,official_government_directory,2026-11-14
+ST_DH,Dadra and Nagar Haveli and Daman and Diu,DH,Union Territory,Daman,verified_complete,official_government_directory,2026-11-14
+ST_DL,Delhi,DL,Union Territory,New Delhi,verified_complete,official_government_directory,2026-11-14
+ST_JK,Jammu and Kashmir,JK,Union Territory,Srinagar (summer) / Jammu (winter),verified_complete,official_government_directory,2026-11-14
+ST_LA,Ladakh,LA,Union Territory,Leh,verified_complete,official_government_directory,2026-11-14
+ST_LD,Lakshadweep,LD,Union Territory,Kavaratti,verified_complete,official_government_directory,2026-11-14
+ST_PY,Puducherry,PY,Union Territory,Puducherry,verified_complete,official_government_directory,2026-11-14
